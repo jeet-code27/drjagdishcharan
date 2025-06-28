@@ -38,7 +38,7 @@ const legalLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-50  dark:bg-[#003153] text-gray-700 dark:text-gray-300">
+    <footer className=" bg-[#003153] text-gray-700 dark:text-gray-300">
       <div className="max-w-7xl mx-auto px-4 py-10">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-[2.5fr_1.2fr_1fr_1fr]">
           {/* Logo and Description */}
