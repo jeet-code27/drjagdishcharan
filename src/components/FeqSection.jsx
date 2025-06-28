@@ -45,7 +45,7 @@ export default function FeqSection() {
 
   return (
     <section className="py-12 ">
-      <div className="max-w-4xl mx-auto px-4">
+      <div className="max-w-4xl mx-auto border-1 shadow-2xl rounded-2xl px-8 pb-8">
       <div className="  text-[#333] flex justify-center py-7 px-5">
       <div
         className="max-w-full text-center"

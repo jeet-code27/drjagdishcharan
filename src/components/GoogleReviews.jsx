@@ -11,7 +11,7 @@ export default function GoogleReviews() {
   }, []);
 
   return (
-    <section className="bg-gray-50 py-12 px-4 md:px-8 lg:px-16 text-center bg-gradient-to-b from-[#AECEF3] to-[#9ab8e7] text-[#333]">
+    <section className="bg-gray-50 py-12 px-4 md:px-8 lg:px-16 text-center bg-gradient-to-b from-[#ffffff] to-[#ffffff] text-[#333]">
       <h2 className="text-3xl font-bold mb-6 text-gray-800">
         What Our Customers Say
       </h2>

@@ -7,22 +7,26 @@ import { FaUserMd } from 'react-icons/fa';
 
 function AboutDoctor() {
   return (
-    <section  style={{ background: 'linear-gradient(to bottom, #B2D8FE, #B2D8FE)' }} className="py-16 px-4 md:px-8 lg:px-16 bg-gray-50 text-gray-800">
+    <section  style={{ background: 'linear-gradient(to bottom, #ffffff, #F0F8FF)' }} className="py-16 px-4 md:px-8 lg:px-16 bg-gray-50 text-gray-800">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-start gap-12">
 
        {/* Doctor Profile Card Section */}
 <div className="w-full  transition-transform duration-300 ease-in-out hover:scale-[1.02] cursor-pointer lg:w-2/5 flex justify-center">
-  <div className="bg-white bg-gradient-to-b from-[#B3E6FE] to-[#bddee7] text-[#333] text-center h-fit rounded-2xl shadow-xl p-6 w-full max-w-sm">
+  <div className="bg-white bg-gradient-to-b from-[#ffffff] to-[#ffffff] text-[#333] text-center h-fit rounded-2xl shadow-xl p-6 w-full max-w-sm">
     {/* Doctor Image */}
-    <div className="relative w-80 h-80 mx-auto mb-4">
-      <Image
-        src="/images/home/doctor.png" // update the path as needed
-        alt="Dr. Jagdish Singh Charan"
-        fill
-        style={{ objectFit: 'cover' }}
-        className="rounded-xl"
-      />
-    </div>
+    <div className="relative h-100 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto mb-4">
+  <Image
+    src="/images/home/doctor.png" // update the path as needed
+    alt="Dr. Jagdish Singh Charan"
+    fill
+    className="rounded-xl object-cover"
+    sizes="(max-width: 640px) 100vw, 
+           (max-width: 768px) 100vw, 
+           (max-width: 1024px) 50vw, 
+           33vw"
+  />
+</div>
+
 
     {/* Doctor Info */}
     <h2 className="text-xl font-bold text-gray-900">Dr. Jagdish Singh Charan</h2>
@@ -68,7 +72,7 @@ function AboutDoctor() {
        
 
           {/* Services Offered */}
-          <div className="bg-white bg-gradient-to-b from-[#B3E6FE] to-[#bddee7] text-[#333] p-6 rounded-lg shadow">
+          <div className="bg-white bg-gradient-to-b from-[#ffffff] to-[#ffffff] text-[#333] p-6 rounded-lg shadow">
             <h2 className="text-2xl font-semibold text-blue-800 mb-4">Specialization</h2>
             <ul className="list-disc pl-5 space-y-2">
             <li><strong>Endoscopic Spine Surgery</strong> and <strong>Arthroscopic Procedures</strong></li>

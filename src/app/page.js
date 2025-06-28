@@ -10,18 +10,18 @@ import GoogleReviews from "@/components/GoogleReviews";
 import TopNavbar from "@/components/TopNavbar";
 export default function Home() {
   return (
-     <div>
+     <>
       <TopNavbar/>
       <Navbar/>
       <HeroSection />
       <AboutDoctor/>
       <Service/>
-      <hr className="text-gray-400"></hr>
+      <hr className="text-gray-300"></hr>
      
       <GoogleReviews />
-       
-      <div className="bg-gradient-to-b from-[#9FBEEA] to-[#a5badc] text-[#333]  "><FeqSection/></div>
+      <hr className="text-gray-300"></hr>
+       <FeqSection/>
       <Footer/>
-     </div>
+     </>
   );
 }

@@ -67,7 +67,7 @@ const ServiceSection = () => {
   const visibleCards = showAll ? filteredCards : filteredCards.slice(0, 3);
 
   return (
-    <section className="py-12 bg-gradient-to-b from-[bg-gradient-to-b from-[#B2D8FE] to-[#AECEF3] text-[#333]]  ">
+    <section className="py-12 bg-gradient-to-b from-[bg-gradient-to-b from-[#ffffff] to-[#ffffff] text-[#333]]  ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl sm:text-4xl font-bold text-center text-blue-800 mb-4">
           Our Services
@@ -88,7 +88,7 @@ const ServiceSection = () => {
               className={`px-4 py-2 rounded-full text-sm font-medium border ${
                 selectedCategory === cat
                   ? "bg-blue-600 text-white border-blue-600"
-                  : "bg-blue-200 text-blue-600 border-blue-600"
+                  : "bg-[#f0f2f5] text-blue-600 border-blue-600"
               } hover:bg-blue-100 cursor-pointer transition`}
             >
               {cat}
@@ -101,7 +101,7 @@ const ServiceSection = () => {
           {visibleCards.map((card) => (
             <div
               key={card.id}
-              className="bg-white bg-gradient-to-b from-[#8ABBF0] to-[#e7eaef] text-[#333] rounded-xl shadow-md overflow-hidden flex flex-col transition hover:shadow-lg"
+              className="bg-white bg-gradient-to-b from-[#ffffff] to-[#f1f3f7] text-[#333] rounded-xl shadow-md overflow-hidden flex flex-col transition hover:shadow-lg"
             >
               <img
                 src={card.image}

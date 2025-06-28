@@ -2,17 +2,19 @@
 import { BsTelephone } from "react-icons/bs";
 import { FaFacebookF } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
+import { IoLocationOutline } from "react-icons/io5";
+import { FaRegClock } from "react-icons/fa";
 
 export default function TopNavbar() {
   return (
-    <nav className="bg-[#005A9C] text-white text-sm font-sans hidden md:block">
+    <nav className="bg-[#003153] text-white text-sm font-sans hidden md:block">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center py-2">
           {/* Left Section */}
           <div className="flex space-x-10">
             {/* Contact Info */}
             <div className="flex items-center space-x-2">
-            <BsTelephone className="size-4" />
+            <BsTelephone className="size-5" />
               <div>
                 <div>Contact No.</div>
                 <div className="font-semibold text-base">+91 82409 70287</div>
@@ -21,10 +23,7 @@ export default function TopNavbar() {
 
             {/* Address */}
             <div className="flex items-center space-x-2">
-              <svg className="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                <path d="M12 2C8 2 5 5 5 8.5 5 14 12 22 12 22s7-8 7-13.5C19 5 16 2 12 2z" strokeLinecap="round" strokeLinejoin="round" />
-                <circle cx="12" cy="8.5" r="2.5" />
-              </svg>
+            <IoLocationOutline className="size-6" />
               <div>
                 <div>4/172, Gyan marg, Makarwali Rd,</div>
                 <div className="font-semibold text-base">Panchsheel Nagar, Ajmer, Rajasthan</div>
@@ -33,10 +32,7 @@ export default function TopNavbar() {
 
             {/* Working Hours */}
             <div className="flex items-center space-x-2">
-              <svg className="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                <circle cx="12" cy="12" r="10" />
-                <path d="M12 6v6l4 2" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
+            <FaRegClock className="size-5"/>
               <div>
                 <div>Working Hours</div>
                 <div className="font-semibold text-base">Mon-Sat: 4PM - 7PM</div>

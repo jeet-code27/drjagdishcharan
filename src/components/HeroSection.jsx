@@ -9,7 +9,7 @@ export default function HeroSection() {
     <section className="relative py-12 px-4 md:px-12 lg:px-24 flex flex-col-reverse md:flex-row items-center justify-between gap-12 overflow-hidden">
 
       {/* Background Image with Opacity */}
-      <div className="absolute inset-0 bg-[url('/images/home/background.jpg')] bg-cover bg-center opacity-30 -z-10" />
+      <div className="absolute inset-0 bg-[url('/images/home/background.jpg')] bg-cover bg-center opacity-10 -z-10" />
 
       {/* Left Content */}
       <div className="flex-1 text-center md:text-left relative z-10">
@@ -46,8 +46,7 @@ export default function HeroSection() {
           <p className="text-gray-700 text-sm">
             Rated <span className="text-green-600 font-semibold">4.9/5</span> by 950+ Happy Patients
           </p>
-          <Image src="/images/home/google-rev1.png" alt="Google Badge" width={40} height={40} />
-          <Image src="/images/home/google-rev2.png" alt="G2 Badge" width={40} height={40} />
+ 
         </div>
       </div>
 

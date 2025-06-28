@@ -76,9 +76,10 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-3">
           <img src="/images/home/logo.png" className="h-10 sm:h-12" alt="Logo" />
-          <span className="text-base sm:text-lg md:text-xl font-semibold text-blue-900 whitespace-nowrap">
-            AGASTYA <span className="hidden sm:inline">(अगस्त्य)</span> SPINE & ORTHO AAROGY
-          </span>
+          <span className="text-[10px] sm:text-sm md:text-base lg:text-lg xl:text-xl font-semibold text-blue-900 whitespace-nowrap">
+  AGASTYA <span className="hidden sm:inline">(अगस्त्य)</span> SPINE & ORTHO AAROGY
+</span>
+
         </Link>
 
         {/* Mobile Toggle */}

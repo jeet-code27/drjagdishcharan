@@ -38,9 +38,9 @@ const legalLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-50  dark:bg-[#005A9C] text-gray-700 dark:text-gray-300">
+    <footer className="bg-gray-50  dark:bg-[#003153] text-gray-700 dark:text-gray-300">
       <div className="max-w-7xl mx-auto px-4 py-10">
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-[2.5fr_1fr_1fr_1fr]">
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-[2.5fr_1.2fr_1fr_1fr]">
           {/* Logo and Description */}
           <div className="space-y-4">
             <Link href="/" className="flex items-center space-x-3">
@@ -53,14 +53,14 @@ export default function Footer() {
               Providing expert orthopedic and spine care with advanced technology, personalized treatment, and compassionate support to help you move pain-free and live better.
             </p>
             <ul className="space-y-2 text-sm">
-              <li className="flex items-center gap-2">
-                <FaMap /> <span>123, XYZ Road, Jaipur, Rajasthan - 302001</span>
+              <li className="flex items-baseline gap-2">
+                <FaMap /> <span>1/9, PNB Marg, B Block, housing board, Panchsheel Nagar, Ajmer, Rajasthan 305004</span>
               </li>
               <li className="flex items-center gap-2">
-                <FaPhoneAlt /> <Link href="tel:+919876543210">+91 9876543210</Link>
+                <FaPhoneAlt /> <Link href="tel:+919876543210">+91 8003474733</Link>
               </li>
               <li className="flex items-center gap-2">
-                <MdEmail /> <Link href="mailto:info@mayurspinecare.com">info@mayurspinecare.com</Link>
+                <MdEmail /> <Link href="mailto:info@mayurspinecare.com">info@Jagdishspinecare.com</Link>
               </li>
               <li className="flex items-center gap-2">
                 <MdWatchLater /> <span>Mon-Sat: 9:00 AM - 7:00 PM</span>
