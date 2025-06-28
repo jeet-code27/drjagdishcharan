@@ -51,7 +51,7 @@ export default function HeroSection() {
       </div>
 
       {/* Right Image */}
-      <div className="flex-1 relative border-4 rounded-lg overflow-hidden min-h-[300px] md:min-h-[500px] w-full z-10">
+      <div className="flex-1 relative   overflow-hidden min-h-[300px] md:min-h-[500px] w-full z-10">
         <Image
           src="/images/home/heroposter.png"
           alt="Orthopedic Specialist"

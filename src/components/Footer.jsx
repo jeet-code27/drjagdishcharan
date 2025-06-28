@@ -70,7 +70,7 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h2 className="mb-4 text-sm font-semibold uppercase text-gray-900 dark:text-white">Services</h2>
+            <h2 className="mb-4 text-sm font-semibold uppercase text-white">Services</h2>
             <ul className="list-disc pl-5 space-y-2 text-sm marker:text-lg marker:text-white">
   {services.map(service => (
     <li key={service.name}>
@@ -85,7 +85,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h2 className="mb-4 text-sm font-semibold uppercase text-gray-900 dark:text-white">Quick Links</h2>
+            <h2 className="mb-4 text-sm font-semibold uppercase   text-white">Quick Links</h2>
             <ul className="list-disc pl-5 space-y-2 text-sm marker:text-lg marker:text-white">
   {quickLinks.map(link => (
     <li key={link.name}>
@@ -100,7 +100,7 @@ export default function Footer() {
 
           {/* Legal */}
           <div>
-            <h2 className="mb-4 text-sm font-semibold uppercase text-gray-900 dark:text-white">Legal</h2>
+            <h2 className="mb-4 text-sm font-semibold uppercase text-white">Legal</h2>
             <ul className="list-disc pl-5 space-y-2 text-sm marker:text-lg marker:text-white">
   {legalLinks.map(link => (
     <li key={link.name}>
