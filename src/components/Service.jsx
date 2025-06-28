@@ -67,15 +67,16 @@ const ServiceSection = () => {
   const visibleCards = showAll ? filteredCards : filteredCards.slice(0, 3);
 
   return (
-    <section className="py-12 bg-gradient-to-b from-[bg-gradient-to-b from-[#ffffff] to-[#ffffff] text-[#333]]  ">
+    <section className="py-12 bg-gradient-to-b from-[#ffffff] to-[#ffffff] text-[#333]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl sm:text-4xl font-bold text-center text-blue-800 mb-4">
           Our Services
         </h2>
 
         <p className="text-center text-gray-700 text-base sm:text-lg max-w-3xl mx-auto">
-    Discover specialized treatments in spine, joint, and orthopedic care — tailored for faster recovery, lasting relief, and enhanced mobility.
-  </p>
+          Discover specialized treatments in spine, joint, and orthopedic care — tailored for faster recovery, lasting relief, and enhanced mobility.
+        </p>
+
         {/* Category Filter */}
         <div className="flex flex-wrap justify-center gap-3 mt-5 mb-10">
           {categories.map((cat) => (
@@ -99,28 +100,28 @@ const ServiceSection = () => {
         {/* Service Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {visibleCards.map((card) => (
-            <div
+            <a
               key={card.id}
-              className="bg-white bg-gradient-to-b from-[#ffffff] to-[#f1f3f7] text-[#333] rounded-xl shadow-md overflow-hidden flex flex-col transition hover:shadow-lg"
+              href={card.href}
+              className="relative block max-w-xs bg-[#f2f8f9] rounded-md p-8 overflow-hidden m-3 text-decoration-none z-0 group"
             >
+              {/* Smooth radial background */}
+              <span className="absolute -top-4 -right-4 w-8 h-8 bg-[#00838d] rounded-full transform scale-100 opacity-0 origin-center transition-all duration-700 ease-in-out group-hover:scale-[35] group-hover:opacity-80 z-[-1]"></span>
+
               <img
                 src={card.image}
                 alt={card.title}
-                className="w-full h-48 object-cover sm:h-52 lg:h-56"
+                className="w-full h-48 object-cover mb-4 rounded"
               />
-              <div className="p-5 flex flex-col justify-between h-full">
-                <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                  {card.title}
-                </h3>
-                <p className="text-sm text-gray-600 mb-4">{card.description}</p>
-                <a
-                  href={card.href}
-                  className="text-blue-600 font-medium hover:underline text-sm"
-                >
-                  Read more
-                </a>
-              </div>
-            </div>
+
+              <h3 className="text-lg font-semibold text-gray-800 mb-2 transition-colors duration-300 group-hover:text-white">
+                {card.title}
+              </h3>
+
+              <p className="text-[17px] font-normal leading-5 text-[#666] transition-colors duration-300 group-hover:text-white/80">
+                {card.description}
+              </p>
+            </a>
           ))}
         </div>
 
