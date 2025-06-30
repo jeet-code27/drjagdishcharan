@@ -1,76 +1,148 @@
-"use client";
+'use client';
 
-import Image from "next/image";
-import Link from "next/link";
-import { FaStar, FaPhoneAlt } from "react-icons/fa";
+import Image from 'next/image';
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import { useState, useEffect, useRef } from 'react';
 
 export default function HeroSection() {
+  const slides = [
+    {
+      id: 1,
+      image: '/images/home/slide1.jpg',
+      title: 'Welcome to Our Service',
+      description: 'High quality and reliable solutions tailored to your needs.',
+      buttonText: 'Learn More',
+    },
+    {
+      id: 2,
+      image: '/images/home/slide2.png',
+      title: 'Trusted by Thousands',
+      description: 'Our customers love what we do.',
+      buttonText: 'View Testimonials',
+    },
+  ];
+
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const containerRef = useRef(null);
+  const [containerWidth, setContainerWidth] = useState(0);
+  const slideInterval = 4000;
+  const timerRef = useRef(null);
+
+  useEffect(() => {
+    const updateWidth = () => {
+      if (containerRef.current) {
+        setContainerWidth(containerRef.current.clientWidth);
+      }
+    };
+    updateWidth();
+    window.addEventListener('resize', updateWidth);
+    return () => window.removeEventListener('resize', updateWidth);
+  }, []);
+
+  useEffect(() => {
+    if (containerWidth > 0) {
+      startAutoSlide();
+      return () => stopAutoSlide();
+    }
+  }, [containerWidth, slides.length]);
+
+  const startAutoSlide = () => {
+    timerRef.current = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, slideInterval);
+  };
+
+  const stopAutoSlide = () => {
+    clearInterval(timerRef.current);
+  };
+
+  const handlePrev = () => {
+    stopAutoSlide();
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+    startAutoSlide();
+  };
+
+  const handleNext = () => {
+    stopAutoSlide();
+    setCurrentSlide((prev) => (prev + 1) % slides.length);
+    startAutoSlide();
+  };
+
+  const sliderStyle = {
+    transform: `translateX(-${currentSlide * containerWidth}px)`,
+    transition: 'transform 0.7s ease-in-out',
+    display: 'flex',
+    width: `${slides.length * containerWidth}px`,
+    height: '100%',
+  };
+
+  const slideStyle = {
+    flexShrink: 0,
+    width: containerWidth ? `${containerWidth}px` : '100%',
+    height: '100%',
+    position: 'relative',
+  };
+
   return (
-    <section className="relative py-12 px-4 md:px-12 lg:px-24 flex flex-col-reverse md:flex-row items-center justify-between gap-12 overflow-hidden">
+    <section
+      ref={containerRef}
+      className="relative w-full h-[500px] overflow-hidden"
+      aria-label="Hero image slider"
+    >
+      {/* Slides */}
+      {containerWidth > 0 && (
+        <div style={sliderStyle}>
+          {slides.map((slide) => (
+            <div key={slide.id} style={slideStyle}>
+              {/* Make sure parent is relative and has height! */}
+              <div className="relative w-full h-full">
+                <Image
+                  src={slide.image}
+                  alt={`Slide ${slide.id}`}
+                  fill
+                  className="object-cover"
+                  priority
+                  sizes="100vw"
+                />
+              </div>
 
-      {/* Background Image with Opacity */}
-      <div className="absolute inset-0 bg-[url('/images/home/background.jpg')] bg-cover bg-center opacity-10 -z-10" />
-
-      {/* Left Content */}
-      <div className="flex-1 text-center md:text-left relative z-10">
-        <div className="inline-flex items-center mb-4 px-4 py-1 bg-green-100 text-green-600 rounded-full text-sm font-semibold">
-          <span>💚 Advanced Ortho-Spine Care</span>
+              {/* Text Overlay */}
+              <div className="absolute inset-0  bg-opacity-40 flex items-center justify-start px-6 md:px-20">
+                <div className="max-w-xl border-2 p-4 rounded-2xl bg-[rgba(0,0,0,0.5)]  text-left">
+                  <h2 className="text-white text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+                    {slide.title}
+                  </h2>
+                  <p className="text-white text-lg sm:text-xl mb-6">
+                    {slide.description}
+                  </p>
+                  <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition-all">
+                    {slide.buttonText}
+                  </button>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
+      )}
 
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
-          Personalized Spine & Orthopedic Treatments by{" "}
-          <span className="text-green-600">Dr. Jagdish Singh Charan</span>
-        </h1>
+      {/* Navigation Buttons */}
+      {/* Left Button */}
+      <button
+        onClick={handlePrev}
+        className="absolute   left-1/4 transform -translate-x-1/2 sm:top-1/2 sm:left-4 sm:transform sm:-translate-y-1/2 bg-black bg-opacity-50 text-white p-2 sm:p-3 rounded-full hover:bg-opacity-70 z-20 focus:outline-none"
+        aria-label="Previous Slide"
+      >
+        <FaChevronLeft size={18} className="sm:size-5" />
+      </button>
 
-        <p className="text-gray-600 text-base md:text-lg mb-8">
-          Experience minimally invasive spine surgery, joint replacement, and pain management with expert orthopedic care tailored just for you.
-        </p>
-
-        <div className="flex flex-col sm:flex-row items-center gap-4 mb-8">
-          <button className="bg-green-600 text-white px-6 py-3 rounded-lg font-medium shadow hover:bg-green-700 transition-all">
-            Book Appointment
-          </button>
-          <button className="border border-green-600 text-green-600 px-6 py-3 rounded-lg font-medium hover:bg-green-50 transition-all">
-            View Services
-          </button>
-        </div>
-
-        <div className="flex flex-wrap items-center gap-3">
-          <div className="flex text-yellow-500">
-            {Array(5)
-              .fill(0)
-              .map((_, idx) => (
-                <FaStar key={idx} />
-              ))}
-          </div>
-          <p className="text-gray-700 text-sm">
-            Rated <span className="text-green-600 font-semibold">4.9/5</span> by 950+ Happy Patients
-          </p>
- 
-        </div>
-      </div>
-
-      {/* Right Image */}
-      <div className="flex-1 relative   overflow-hidden min-h-[300px] md:min-h-[500px] w-full z-10">
-        <Image
-          src="/images/home/heroposter.png"
-          alt="Orthopedic Specialist"
-          fill
-          className="object-cover rounded-lg"
-          priority
-        />
-      </div>
-
-      {/* Emergency Call Floating Card */}
-      <div className="hidden md:flex absolute bottom-4 right-4 bg-white border shadow-lg rounded-xl px-4 py-2 items-center gap-3 z-20">
-        <div className="bg-red-100 p-2 rounded-full">
-          <FaPhoneAlt className="text-red-600" />
-        </div>
-        <div>
-          <p className="text-sm font-semibold text-gray-700">Emergency Call</p>
-          <p className="text-xs text-gray-500">24/7 Available For Help</p>
-        </div>
-      </div>
+      {/* Right Button */}
+      <button
+        onClick={handleNext}
+        className="absolute   right-1/4 transform translate-x-1/2 sm:top-1/2 sm:right-4 sm:transform sm:-translate-y-1/2 bg-black bg-opacity-50 text-white p-2 sm:p-3 rounded-full hover:bg-opacity-70 z-20 focus:outline-none"
+        aria-label="Next Slide"
+      >
+        <FaChevronRight size={18} className="sm:size-5" />
+      </button>
     </section>
   );
 }

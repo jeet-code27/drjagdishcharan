@@ -9,6 +9,8 @@ import FeqSection from "@/components/FeqSection";
 import GoogleReviews from "@/components/GoogleReviews";
 import TopNavbar from "@/components/TopNavbar";
 import Test from "@/components/Test";
+import Doctorinfo from "@/components/Doctorinfo";
+import WhyChoose from "@/components/WhyChoose";
 export default function Home() {
   return (
      <>
@@ -19,9 +21,10 @@ export default function Home() {
       <AboutDoctor/>
       <Service/>
       <hr className="text-gray-300"></hr>
-     
+     <Doctorinfo/>
       <GoogleReviews />
       <hr className="text-gray-300"></hr>
+      <WhyChoose/>
        <FeqSection/>
       <Footer/>
      </>

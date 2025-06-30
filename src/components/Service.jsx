@@ -103,10 +103,10 @@ const ServiceSection = () => {
             <a
               key={card.id}
               href={card.href}
-              className="relative block max-w-xs bg-[#f2f8f9] rounded-md p-8 overflow-hidden m-3 text-decoration-none z-0 group"
+              className="relative block max-w-xs bg-[#ebeef8] rounded-md p-4 overflow-hidden m-3 text-decoration-none z-0 group"
             >
               {/* Smooth radial background */}
-              <span className="absolute -top-4 -right-4 w-8 h-8 bg-[#00838d] rounded-full transform scale-100 opacity-0 origin-center transition-all duration-700 ease-in-out group-hover:scale-[35] group-hover:opacity-80 z-[-1]"></span>
+              <span className="absolute -top-4 -right-4 w-8 h-8 bg-[#003153] rounded-full transform scale-100 opacity-0 origin-center transition-all duration-700 ease-in-out group-hover:scale-[35] group-hover:opacity-80 z-[-1]"></span>
 
               <img
                 src={card.image}
@@ -130,7 +130,7 @@ const ServiceSection = () => {
           <div className="mt-10 text-center">
             <button
               onClick={() => setShowAll(!showAll)}
-              className="px-6 py-2 text-sm font-semibold border border-blue-500 text-blue-600 rounded hover:bg-blue-50 transition"
+              className="px-6 py-2 text-sm font-semibold border border-blue-500 text-blue-600 cursor-pointer rounded hover:bg-blue-50 transition"
             >
               {showAll ? "Show Less" : "Show More"}
             </button>
