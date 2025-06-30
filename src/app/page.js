@@ -17,7 +17,6 @@ export default function Home() {
      <>
       <TopNavbar/>
       <Navbar/>
-      HeroSection
       <HeroSectiontwo/>
       {/* <HeroSection /> */}
       {/* <Test/> */}
