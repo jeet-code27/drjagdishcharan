@@ -45,7 +45,7 @@ export default function FeqSection() {
 
   return (
     <section className="py-12 ">
-      <div className="max-w-4xl mx-auto border-1 shadow-2xl rounded-2xl px-8 pb-8">
+      <div className="max-w-4xl mx-auto shadow-2xl rounded-2xl px-8 pb-8">
       <div className="  text-[#333] flex justify-center py-7 px-5">
       <div
         className="max-w-full text-center"
@@ -82,7 +82,7 @@ export default function FeqSection() {
           {faqs.map((faq, i) => {
             const isOpen = openFaqs.includes(i);
             return (
-              <div key={i} className="border rounded-lg shadow-sm">
+              <div key={i} className=" rounded-lg shadow-sm">
                 <button
                   onClick={() => toggleFaq(i)}
                   className="w-full p-4 text-left text-black hover:text-blue-700 cursor-pointer flex justify-between items-center font-medium text-lg"

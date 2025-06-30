@@ -74,7 +74,7 @@ const WhyChoose = ({ imagePath = "/images/home/allService.jpg" }) => {
                 <div className="flex items-start space-x-4">
                   {/* Icon */}
                   <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center text-white text-xl font-semibold shadow-lg group-hover:from-blue-600 group-hover:to-indigo-700 transition-all duration-300">
+                    <div className="w-12 h-12 bg-gray-300 rounded-xl flex items-center justify-center text-white text-xl font-semibold shadow-lg group-hover:from-blue-600 group-hover:to-indigo-700 transition-all duration-300">
                       {feature.icon}
                     </div>
                   </div>
