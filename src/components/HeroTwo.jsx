@@ -7,7 +7,7 @@ export default function HeroSectiontwo() {
   const slides = [
     {
       id: 1,
-      image: '/images/home/slide1.jpg',
+      image: '/images/home/slide3.png',
       title: 'Expert Spine Care',
       subtitle: 'Dr. Jagdish Singh Charan',
       description: 'Advanced spine surgery with precision and compassion. Your journey to pain-free living starts here.',
@@ -23,7 +23,7 @@ export default function HeroSectiontwo() {
     },
     {
       id: 3,
-      image: '/images/home/slide3.jpg',
+      image: '/images/home/slide5.png',
       title: 'Advanced Spine Surgery',
       subtitle: 'Precision & Innovation',
       description: 'Leading-edge surgical techniques for complex spine conditions with faster recovery times.',
