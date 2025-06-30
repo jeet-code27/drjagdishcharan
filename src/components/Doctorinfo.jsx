@@ -67,7 +67,7 @@ const Doctorinfo = () => {
         </div>
 
         {/* Right Image - 40% white background area */}
-        <div className="flex-1 relative h-[300px] lg:h-full min-h-[450px] w-full lg:w-auto lg:max-w-[40%]">
+        <div className="flex-1 relative h-[300px] lg:h-full min-h-[450px] w-[90%] lg:w-auto lg:max-w-[40%]">
           <div className="absolute inset-0 lg:inset-y-4 lg:right-4">
             <Image
               src="/images/home/bookimg.jpg" // Update this path to your doctor image

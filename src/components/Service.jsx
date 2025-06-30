@@ -106,7 +106,7 @@ const ServiceSection = () => {
               className="relative block max-w-xs bg-[#ebeef8] rounded-md p-4 overflow-hidden m-3 text-decoration-none z-0 group"
             >
               {/* Smooth radial background */}
-              <span className="absolute -top-4 -right-4 w-8 h-8 bg-[#003153] rounded-full transform scale-100 opacity-0 origin-center transition-all duration-700 ease-in-out group-hover:scale-[35] group-hover:opacity-80 z-[-1]"></span>
+              <span className="absolute -top-4 -right-4 w-8 h-8 bg-[#155DFC] rounded-full transform scale-100 opacity-0 origin-center transition-all duration-700 ease-in-out group-hover:scale-[35] group-hover:opacity-80 z-[-1]"></span>
 
               <img
                 src={card.image}
