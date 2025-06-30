@@ -17,15 +17,15 @@ export default function TopNavbar() {
             <BsTelephone className="size-5" />
               <div>
                 <div>Contact No.</div>
-                <div className="font-semibold text-base">+91 82409 70287</div>
+                <div className="font-semibold text-base">+91 8003474733</div>
               </div>
             </div>
-
+            
             {/* Address */}
             <div className="flex items-center space-x-2">
             <IoLocationOutline className="size-6" />
               <div>
-                <div>4/172, Gyan marg, Makarwali Rd,</div>
+                <div>1/9, PNB Marg, B Block, housing board,</div>
                 <div className="font-semibold text-base">Panchsheel Nagar, Ajmer, Rajasthan</div>
               </div>
             </div>

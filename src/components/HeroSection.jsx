@@ -11,14 +11,14 @@ export default function HeroSection() {
       image: '/images/home/slide1.jpg',
       title: 'Welcome to Our Service',
       description: 'High quality and reliable solutions tailored to your needs.',
-      buttonText: 'Learn More',
+      buttonText: 'Book Appointment',
     },
     {
       id: 2,
-      image: '/images/home/slide2.png',
+      image: '/images/home/slide.jpg',
       title: 'Trusted by Thousands',
       description: 'Our customers love what we do.',
-      buttonText: 'View Testimonials',
+      buttonText: 'Book Appointment',
     },
   ];
 
@@ -86,7 +86,7 @@ export default function HeroSection() {
   return (
     <section
       ref={containerRef}
-      className="relative w-full h-[500px] overflow-hidden"
+      className="relative w-full h-[700px] overflow-hidden"
       aria-label="Hero image slider"
     >
       {/* Slides */}
@@ -108,16 +108,17 @@ export default function HeroSection() {
 
               {/* Text Overlay */}
               <div className="absolute inset-0  bg-opacity-40 flex items-center justify-start px-6 md:px-20">
-                <div className="max-w-xl border-2 p-4 rounded-2xl bg-[rgba(0,0,0,0.5)]  text-left">
+                <div className="max-w-xl  p-4 rounded-2xl  text-left">
                   <h2 className="text-white text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
                     {slide.title}
                   </h2>
                   <p className="text-white text-lg sm:text-xl mb-6">
                     {slide.description}
                   </p>
-                  <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition-all">
-                    {slide.buttonText}
+                  <button className="special">
+                  {slide.buttonText}
                   </button>
+                  
                 </div>
               </div>
             </div>

@@ -13,7 +13,7 @@ export default function GoogleReviews() {
   return (
     <section className="bg-gray-50 py-12 px-4 md:px-8 lg:px-16 text-center bg-gradient-to-b from-[#ffffff] to-[#ffffff] text-[#333]">
       <h2 className="text-3xl font-bold mb-6 text-gray-800">
-        What Our Customers Say
+      What our patients are saying about their experience.
       </h2>
       <p className="text-gray-600 mb-10 max-w-2xl mx-auto">
         Read some of the latest reviews from our satisfied customers.

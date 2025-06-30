@@ -11,12 +11,15 @@ import TopNavbar from "@/components/TopNavbar";
 import Test from "@/components/Test";
 import Doctorinfo from "@/components/Doctorinfo";
 import WhyChoose from "@/components/WhyChoose";
+import HeroSectiontwo from "@/components/HeroTwo";
 export default function Home() {
   return (
      <>
       <TopNavbar/>
       <Navbar/>
-      <HeroSection />
+      HeroSection
+      <HeroSectiontwo/>
+      {/* <HeroSection /> */}
       {/* <Test/> */}
       <AboutDoctor/>
       <Service/>

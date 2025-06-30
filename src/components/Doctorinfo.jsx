@@ -8,9 +8,9 @@ const Doctorinfo = () => {
       <div className="absolute left-0 top-0 w-full lg:w-[80%] rounded-r-3xl h-full bg-[#003153]"></div>
       
       {/* Background Pattern - Left Side */}
-      <div className="absolute left-0 top-0 w-full lg:w-[40%] h-full opacity-20">
+      <div className="absolute left-0 top-0 w-full lg:w-[40%] h-full opacity-10">
         <Image
-          src="/images/home/backstyle.jpg" // Update this path
+          src="/images/home/backstyle.png" // Update this path
           alt="Background pattern"
           fill
           className="object-cover"

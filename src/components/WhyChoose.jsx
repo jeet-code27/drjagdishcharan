@@ -1,29 +1,30 @@
 import React from 'react';
 import Image from 'next/image';
 
-const WhyChoose = ({ imagePath = "/images/home/allService.png" }) => {
+const WhyChoose = ({ imagePath = "/images/home/allService.jpg" }) => {
   const features = [
     {
-      icon: "🏥",
-      title: "Health Partner",
-      description: "Your trusted partner in health, providing comprehensive and compassionate care."
+      icon: "🦴",
+      title: "Spine & Ortho Expertise",
+      description: "Specialized in treating complex spine and orthopedic conditions with precision and care."
     },
     {
-      icon: "⭐",
-      title: "Medical Excellence",
-      description: "Leaders in medical excellence, offering advanced treatments and concern care."
+      icon: "🩺",
+      title: "Advanced Surgical Techniques",
+      description: "Utilizing minimally invasive and robotic-assisted surgery for faster recovery and better outcomes."
     },
     {
       icon: "🤝",
-      title: "Our Commitment",
-      description: "Dedicated to your health and well-being with personalized care."
+      title: "Personalized Treatment Plans",
+      description: "Tailored care solutions to suit your specific orthopedic and spinal needs."
     },
     {
-      icon: "👤",
-      title: "Patient Focus",
-      description: "Centered on you, delivering personalized care with compassion and expertise."
+      icon: "❤️",
+      title: "Patient-Centered Approach",
+      description: "Focused on comfort, mobility, and quality of life — every step of your healing journey."
     }
   ];
+  
 
   return (
     <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
