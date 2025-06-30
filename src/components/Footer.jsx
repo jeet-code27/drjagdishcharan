@@ -115,16 +115,17 @@ export default function Footer() {
           </div>
         </div>
         <div className="w-full h-[350px] my-8 rounded-lg overflow-hidden shadow-lg">
-      <iframe
-        title="Jaipur Airport Location"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.2562438123167!2d75.80338397523468!3d26.82864967670656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396dc911e2ec13d3%3A0xe4a9fd56b3f8be99!2sJaipur%20International%20Airport!5e0!3m2!1sen!2sin!4v1719574087235!5m2!1sen!2sin"
-        width="100%"
-        height="100%"
-        style={{ border: 0 }}
-        allowFullScreen=""
-        loading="lazy"
-        referrerPolicy="no-referrer-when-downgrade"
-      ></iframe>
+        <iframe
+  title="Custom Location"
+  src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3557.3753805200045!2d75.75136958947722!3d26.897749455694516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1719746260000!5m2!1sen!2sin"
+  width="100%"
+  height="100%"
+  style={{ border: 0 }}
+  allowFullScreen=""
+  loading="lazy"
+  referrerPolicy="no-referrer-when-downgrade"
+/>
+
     </div>
         <hr className="my-6 border-gray-200 dark:border-gray-700" />
 
