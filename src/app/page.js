@@ -15,11 +15,8 @@ import HeroSectiontwo from "@/components/HeroTwo";
 export default function Home() {
   return (
      <>
-      <TopNavbar/>
-      <Navbar/>
+      
       <HeroSectiontwo/>
-      {/* <HeroSection /> */}
-      {/* <Test/> */}
       <AboutDoctor/>
       <Service/>
       <hr className="text-gray-300"></hr>
@@ -28,7 +25,6 @@ export default function Home() {
       <hr className="text-gray-300"></hr>
       <WhyChoose/>
        <FeqSection/>
-      <Footer/>
      </>
   );
 }
