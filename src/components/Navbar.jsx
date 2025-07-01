@@ -124,11 +124,12 @@ export default function Navbar() {
                 href="/services"
                 >
               <button
-                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+               
                 className="flex items-center gap-1 py-2 px-3 text-gray-900 hover:text-blue-700 md:p-0"
               >
                 Services
-                <svg className="w-2.5 h-2.5" fill="none" viewBox="0 0 10 6">
+                <div className="cursor-poiner">
+                <svg   onClick={() => setIsDropdownOpen(!isDropdownOpen)} className="w-2.5 h-2.5 " fill="none " viewBox="0 0 10 6">
                   <path
                     d="M1 1l4 4 4-4"
                     stroke="currentColor"
@@ -136,7 +137,7 @@ export default function Navbar() {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                   />
-                </svg>
+                </svg></div>
               </button>
 </Link>
               {isDropdownOpen && (
