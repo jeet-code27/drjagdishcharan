@@ -4,6 +4,7 @@ import MissionVision from "@/components/MissionVision";
 import GoogleReviews from "@/components/GoogleReviews";
 import { motion } from "framer-motion";
 import React from "react";
+import Link from "next/link";
 export default function Home() {
   return (
     <div className="text-blue-800">
@@ -41,9 +42,9 @@ export default function Home() {
           <button className="bg-blue-700 text-white py-3 px-6 rounded-xl hover:bg-blue-800 transition-all duration-300">
             Book an Appointment
           </button>
-          <button className="border border-blue-700 text-blue-700 py-3 px-6 rounded-xl hover:bg-blue-100 transition-all duration-300">
+          <Link href={"/services"}  className="border border-blue-700 text-blue-700 py-3 px-6 rounded-xl hover:bg-blue-100 transition-all duration-300">
             Explore Treatment Options
-          </button>
+          </Link>
         </motion.div>
       </section>
 
@@ -82,7 +83,7 @@ export default function Home() {
           Our Journey of Precision & Compassion
         </h2>
         <p className="max-w-3xl mx-auto text-lg">
-          Founded by <strong>Dr. Jagdish Singh Charan</strong>, our center is
+          Founded by <strong className="">Dr. Jagdish Singh Charan</strong>, our center is
           rooted in a deep commitment to healing with empathy and skill. Trained
           at premier institutions like Apollo and SKIMS, Dr. Charan’s vision is
           to make cutting-edge spine and joint care accessible and personalized
@@ -137,7 +138,7 @@ export default function Home() {
           <h3 className="font-semibold text-xl mb-2 text-blue-800">
             {title}
           </h3>
-          <p className="text-sm text-gray-700">{text}</p>
+          <p className=" text-sm text-gray-700">{text}</p>
         </div>
       ))}
     </div>

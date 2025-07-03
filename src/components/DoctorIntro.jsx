@@ -2,15 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import {
-  FaUserMd,
-  FaClock,
-  FaGraduationCap,
-  FaHospitalUser,
-  FaStethoscope,
-  FaFileMedical,
-  FaAward,
-} from "react-icons/fa";
+import { FaStethoscope } from "react-icons/fa";
 
 export default function DoctorIntro() {
   return (
@@ -37,11 +29,11 @@ export default function DoctorIntro() {
           <div>
             <motion.h2
               className="text-4xl font-bold font-serif text-blue-800 mb-2"
-              whileHover={{ scale: 1.05, color: "#1E40AF" }} // slightly enlarge & deeper blue
+              whileHover={{ scale: 1.02,  }} // slightly enlarge & deeper blue
               whileTap={{ scale: 0.98 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
-              Dr. Jagdish Singh Charan
+              <span className="hover:text-blue-900">Dr.</span> Jagdish Singh Charan
             </motion.h2>
 
             <motion.p
@@ -53,19 +45,20 @@ export default function DoctorIntro() {
               Orthopedic Spine Surgeon – Department of Orthopaedics
             </motion.p>
           </div>
-       
 
-         
           {/* Experience */}
           <div className="flex gap-4 items-start bg-white shadow-md hover:shadow-lg transition-all rounded-xl p-5 border border-gray-100">
             <Image
-            src="/images/home/work.jpg"
-            alt="Dr. Jagdish Singh Charan"
-            width={40}
-            height={40}
-            className=" border-2 rounded-3xl shadow-xl object-cover" />
+              src="/images/home/work.jpg"
+              alt="Dr. Jagdish Singh Charan"
+              width={40}
+              height={40}
+              className=" border-2 rounded-3xl shadow-xl object-cover"
+            />
             <div>
-              <h4 className="font-semibold  text-left  text-lg">Previous Experience</h4>
+              <h4 className="font-semibold  text-left  text-lg">
+                Previous Experience
+              </h4>
               <ul className="list-disc  space-y-1 text-left">
                 <li>Assistant Professor & Spine Unit Head – NIMS University</li>
                 <li>Consultant Spine Surgeon – Apollo Spectra, Jaipur</li>

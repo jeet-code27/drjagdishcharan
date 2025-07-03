@@ -3,13 +3,14 @@ import ExpertiseSection from "@/components/ExpertiseSection";
 import ScheduleHealthcare from "@/components/ScheduleHealthcare";
 import ServiceHero from "@/components/ServiceHero";
 
-export default function Service() {
+export default function Home() {
   return (
     <>
-<EachHero/>
-    <ServiceHero/>
-      <ExpertiseSection/> 
-      <ScheduleHealthcare/>
+      <EachHero />
+      <ServiceHero />
+      <ExpertiseSection />
+      <ScheduleHealthcare />
+          
     </>
   );
 }

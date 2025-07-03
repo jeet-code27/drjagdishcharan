@@ -11,17 +11,14 @@ export default function ServiceHero() {
     >
       {/* Overlay */}
       <div className="absolute   inset-0 bg-[#ffffff]"></div>
-
       <main className="relative bg-white/95 max-w-7xl w-full rounded-lg p-8 overflow-hidden shadow-lg">
-
         <div className="relative flex flex-col md:flex-row items-center">
-
           {/* Left side image with circles */}
           <div className="relative flex-shrink-0 mb-10 md:mb-0 md:mr-16">
             <div className="absolute w-60 h-60 rounded-full bg-[#003366] left-4 top-8"></div>
             <div className="absolute w-40 h-40 rounded-full bg-[#00a896] left-2 top-16"></div>
             <img
-              src="/images/home/doctor.png"
+              src="/images/home/doctor2.jpg"
               alt="Spine and Orthopaedic Doctor"
               className="relative rounded-lg shadow-lg z-10 w-72 md:w-80 object-cover"
             />
@@ -36,7 +33,9 @@ export default function ServiceHero() {
                 <span className="text-gray-900 font-semibold text-sm truncate">
                   Dr. Jagdish S. Charan
                 </span>
-                <span className="text-gray-500 text-xs">Spine & Orthopaedics</span>
+                <span className="text-gray-500 text-xs">
+                  Spine & Orthopaedics
+                </span>
               </div>
             </div>
           </div>
@@ -49,10 +48,28 @@ export default function ServiceHero() {
             </h1>
 
             <p className="text-gray-700 text-base md:text-lg mb-6">
-              We offer comprehensive diagnosis, surgical treatments, and rehabilitation care for spine disorders, fractures, joint issues, and all orthopaedic conditions with advanced medical expertise.
+              We offer comprehensive diagnosis, surgical treatments, and
+              rehabilitation care for spine disorders, fractures, joint issues,
+              and all orthopaedic conditions with advanced medical expertise.
             </p>
 
-            <button className="bg-[#003366] text-white px-6 py-3 rounded-md font-semibold mb-12 hover:bg-[#004E64] transition">
+            <button className="relative mb-3  px-5 py-2 text-white font-bold rounded-full bg-[#006bb3] border-[3px] border-white/30 flex items-center justify-center gap-2 text-sm cursor-pointer overflow-hidden shadow-[0px_10px_20px_rgba(0,0,0,0.2)] transition-all duration-300 ease-in-out hover:scale-105 hover:border-white/90 group">
+              {/* Shine Effect */}
+              <span className="absolute top-0 left-[-100px] w-[100px] h-full opacity-60 bg-gradient-to-r from-transparent via-white to-transparent animate-shine"></span>
+              {/* Icon */}
+              <svg
+                className="w-6 h-6 transition-all duration-300 ease-in-out group-hover:translate-x-1"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M13 7l5 5m0 0l-5 5m5-5H6"
+                />
+              </svg>
               Book Appointment
             </button>
 
@@ -74,6 +91,7 @@ export default function ServiceHero() {
           </section>
         </div>
       </main>
+       
     </div>
   );
 }
