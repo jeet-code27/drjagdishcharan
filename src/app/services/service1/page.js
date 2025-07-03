@@ -1,7 +1,7 @@
 import ConditionWeTreat from "@/components/ConditionWeTreat";
 import ServiceFeq from "@/components/ServiceFeq";
 import Image from "next/image";
-import { motion } from "framer-motion";
+
 const conditions = [
   {
     title: "Herniated Discs",
