@@ -47,7 +47,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav ref={navRef} className="bg-white border-b border-gray-200 z-50 w-screen sticky top-0">
+    <nav ref={navRef} className="bg-white border-b border-gray-200 z-50 w-[100%] sticky top-0">
       <div className="max-w-screen-xl mx-auto flex flex-wrap items-center justify-between px-4 py-3">
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-3" onClick={handleLinkClick}>
