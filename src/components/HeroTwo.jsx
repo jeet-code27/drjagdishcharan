@@ -14,6 +14,15 @@ export default function HeroSectiontwo() {
       specialty: 'Minimally Invasive Spine Surgery'
     },
     {
+      id: 5,
+      image: '/images/home/slide6.webp', // Replace with the actual path where you save the uploaded logo image
+      title: 'Agastya Spine & Ortho Aarogyam',
+      subtitle: 'Excellence in Spine & Orthopedic Care',
+      description: 'Delivering advanced treatments with expertise, ethics, and empathy for your complete musculoskeletal health.',
+      specialty: 'Trusted Spine & Ortho Center'
+    }
+,    
+    {
       id: 2,
       image: '/images/home/slide.jpg',
       title: 'Orthopedic Excellence',

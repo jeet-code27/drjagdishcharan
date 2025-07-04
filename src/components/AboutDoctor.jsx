@@ -34,11 +34,9 @@ function AboutDoctor() {
               Dr. Jagdish Singh Charan
             </h2>
             <p className="text-blue-900 font-medium mt-1">
-            FNB & Spine Surgery, DNB Ortho, MNAMS, MBBS 
+            FNB & Spine Surgery, DNB Ortho, MNAMS, FAOS Asia Specialist
             </p>
-            <p className="text-gray-600 text-sm mt-1 mb-4">
-              AO Spine and Orthopedic Association of India
-            </p>
+           
 
             {/* Icons and Experience */}
             <div className="flex justify-center gap-6 text-sm text-gray-700 border-t pt-4">
@@ -60,29 +58,32 @@ function AboutDoctor() {
             Dr. Jagdish Singh Charan — Expert Spine & Orthopedic Surgeon
           </h1>
 
-          <p>
-            <strong>Dr. Jagdish Singh Charan</strong> is a highly experienced{" "}
-            <strong>spine and orthopedic surgeon</strong> with over{" "}
-            <strong>15 years</strong> of clinical expertise. He holds advanced
-            qualifications including <strong>DNB Orthopedics</strong> and{" "}
-            <strong>FNB & Spine Surgery</strong>, and has trained at leading
-            institutions like <strong>AO Spine and Orthopedic Association of India</strong> and{" "}
-             His work focuses on{" "}
-            <strong>minimally invasive spine procedures</strong>,{" "}
-            <strong>joint replacements</strong>, and{" "}
-            <strong>complex trauma care</strong>.
-          </p>
+          <p> 
+  <strong>Dr. Jagdish Singh Charan</strong> is a highly experienced{" "}
+  <strong>spine and orthopedic surgeon</strong> with over{" "}
+  <strong>15 years</strong> of clinical expertise. He holds advanced
+  qualifications including <strong>DNB Ortho</strong>,{" "}
+  <strong>FNB & Spine Surgery</strong>,{" "}
+  <strong>MNAMS</strong>, and <strong>FAOS Asia Specialist</strong>. He has trained at leading
+  institutions like <strong>Skims and Shri, Ahmedabad</strong>,{" "}
+  <strong>AO Spine</strong>, and the{" "}
+  <strong>Orthopedic Association of India</strong>. His work focuses on{" "}
+  <strong>minimally invasive spine procedures</strong>,{" "}
+  <strong>joint replacements</strong>, and{" "}
+  <strong>complex trauma care</strong>.
+</p>
 
-          <p>
-            <strong>Dr. Charan</strong> has served in key roles at top hospitals
-            and universities, including <strong>NIMS University</strong> and{" "}
-            <strong>Apollo Spectra, Jaipur</strong>. He is a member of respected
-            medical associations such as <strong>MNAMS</strong>,{" "}
-            <strong>MASSI</strong>, and <strong>AO Spine</strong>. He actively
-            participates in <strong>national conferences and workshops</strong>,
-            staying updated with the latest advancements in{" "}
-            <strong>orthopedic and spine care</strong>.
-          </p>
+<p>
+  <strong>Dr. Charan</strong> has served in key roles at top hospitals
+  and universities, including <strong>NIMS University</strong> and{" "}
+  <strong>Apollo Spectra, Jaipur</strong>. He is a member of respected
+  medical associations such as <strong>MNAMS</strong>,{" "}
+  <strong>MASSI</strong>, and <strong>AO Spine and Orthopedic Association of India</strong>. He actively
+  participates in <strong>national conferences and workshops</strong>,
+  staying updated with the latest advancements in{" "}
+  <strong>orthopedic and spine care</strong>.
+</p>
+
 
           {/* Services Offered */}
           <div className="bg-white bg-gradient-to-b from-[#ffffff] to-[#ffffff] text-[#333] p-6 rounded-lg shadow">
@@ -91,7 +92,8 @@ function AboutDoctor() {
             </h2>
             <ul className="list-disc pl-5 space-y-2">
             <li>
-                <strong>Joint Pain</strong> and{" "}
+             
+                <strong> Arthritis and Rheumatology:</strong> <strong>Joint Pain</strong>{" "}and{" "}
                 <strong>Arthritis Treatment</strong> for all age groups
               </li>
               <li>
