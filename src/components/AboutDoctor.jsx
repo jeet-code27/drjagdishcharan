@@ -34,10 +34,10 @@ function AboutDoctor() {
               Dr. Jagdish Singh Charan
             </h2>
             <p className="text-blue-900 font-medium mt-1">
-              MBBS, DNB Ortho, FNB Spine Surgery, MNAMS
+            FNB & Spine Surgery, DNB Ortho, MNAMS, MBBS 
             </p>
             <p className="text-gray-600 text-sm mt-1 mb-4">
-              Spine & Orthopedic Surgeon | Apollo Spectra Jaipur
+              AO Spine and Orthopedic Association of India
             </p>
 
             {/* Icons and Experience */}
@@ -65,9 +65,9 @@ function AboutDoctor() {
             <strong>spine and orthopedic surgeon</strong> with over{" "}
             <strong>15 years</strong> of clinical expertise. He holds advanced
             qualifications including <strong>DNB Orthopedics</strong> and{" "}
-            <strong>FNB Spine Surgery</strong>, and has trained at leading
-            institutions like <strong>Apollo Hospitals</strong> and{" "}
-            <strong>SKIMS</strong>. His work focuses on{" "}
+            <strong>FNB & Spine Surgery</strong>, and has trained at leading
+            institutions like <strong>AO Spine and Orthopedic Association of India</strong> and{" "}
+             His work focuses on{" "}
             <strong>minimally invasive spine procedures</strong>,{" "}
             <strong>joint replacements</strong>, and{" "}
             <strong>complex trauma care</strong>.
@@ -90,6 +90,10 @@ function AboutDoctor() {
               Specialization
             </h2>
             <ul className="list-disc pl-5 space-y-2">
+            <li>
+                <strong>Joint Pain</strong> and{" "}
+                <strong>Arthritis Treatment</strong> for all age groups
+              </li>
               <li>
                 <strong>Endoscopic Spine Surgery</strong> and{" "}
                 <strong>Arthroscopic Procedures</strong>
@@ -118,10 +122,7 @@ function AboutDoctor() {
                 <strong>Management of Fractures</strong> and{" "}
                 <strong>Multiple Trauma Injuries</strong>
               </li>
-              <li>
-                <strong>Joint Pain</strong> and{" "}
-                <strong>Arthritis Treatment</strong> for all age groups
-              </li>
+             
             </ul>
           </div>
 

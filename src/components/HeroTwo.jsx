@@ -267,6 +267,10 @@ export default function HeroSectiontwo() {
           animation: float 6s ease-in-out infinite;
         }
       `}</style>
+
+
+
+
     </section>
   );
 }
