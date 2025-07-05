@@ -12,7 +12,7 @@ export default function ServiceHero() {
       {/* Overlay */}
       <div className="absolute   inset-0 bg-[#ffffff]"></div>
       <main className="relative bg-white/95 max-w-7xl w-full rounded-lg p-8 overflow-hidden shadow-lg">
-        <div className="relative flex flex-col md:flex-row items-center">
+        <div className="relative flex flex-col justify-center md:flex-row items-center">
           {/* Left side image with circles */}
           <div className="relative flex-shrink-0 mb-10 md:mb-0 md:mr-16">
             <div className="absolute w-60 h-60 rounded-full bg-[#003366] left-4 top-8"></div>
