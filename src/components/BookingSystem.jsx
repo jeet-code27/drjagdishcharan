@@ -333,7 +333,8 @@ const BookingSystem = () => {
       
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Date Selection */}
-        <div className='w-[100%] lg:w-[40%]'>
+        <div className='w-[100%] flex flex-col justify-center items-center  '>
+          <div>
           <label className="block text-red-600 font-bold mb-2">
             Please Select Date for Your Consultation*
           </label>
@@ -344,8 +345,8 @@ const BookingSystem = () => {
             onChange={(e) => setSelectedDate(e.target.value)}
             className="shadow border rounded w-full py-3 px-4 text-black leading-tight focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
             required
-            placeholder=''
-          />
+            placeholder='dd-mm-yyyy'
+          /></div>
         </div>
         
         {/* Time Slot Selection */}
