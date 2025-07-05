@@ -15,10 +15,14 @@ const ContactSection = () => {
         <form className="bg-white max-w-4xl w-screen p-6 rounded-lg drop-shadow-lg" aria-label="Contact Us Form">
           <div className='flex justify-center   items-center gap-4 pb-3 font-bold text-2xl text-blue-900 flex-wrap'>
 
-            <span className='min-w-fit'>Get in Touch   </span>
+            <span className='min-w-fit text-3xl'>Get in Touch   </span>
             
-            <span className="flex flex-row gap-2"><FaFacebookSquare className="cursor-pointer hover:scale-130 ease-in-out transition-all duration-300"/><FaInstagramSquare className="cursor-pointer hover:scale-130 ease-in-out transition-all duration-300" /><FaSquareWhatsapp className="cursor-pointer hover:scale-130 ease-in-out transition-all duration-300"/><FaSquareTwitter className="cursor-pointer hover:scale-130 ease-in-out transition-all duration-300"/>
-          <FaSquareYoutube className="cursor-pointer hover:scale-130 ease-in-out transition-all duration-300"/></span>
+            <span className="flex flex-row gap-2">
+              <FaFacebookSquare className="cursor-pointer hover:scale-130 ease-in-out transition-all duration-300 text-3xl"/>
+              <FaInstagramSquare className="cursor-pointer hover:scale-130 ease-in-out transition-all duration-300 text-3xl" />
+              <FaSquareWhatsapp className="cursor-pointer hover:scale-130 ease-in-out transition-all duration-300 text-3xl"/>
+              <FaSquareTwitter className="cursor-pointer hover:scale-130 ease-in-out transition-all duration-300 text-3xl"/>
+          <FaSquareYoutube className="cursor-pointer hover:scale-130 text-3xl ease-in-out transition-all duration-300"/></span>
           </div>
 
           <label htmlFor="firstName" className="block text-xs font-semibold text-gray-500 mb-1">FULL NAME *</label>
