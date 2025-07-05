@@ -1,5 +1,5 @@
 "use client";
-
+import { SiSocialblade } from "react-icons/si";
 import {
   BsFacebook,
   BsInstagram,
@@ -130,15 +130,16 @@ export default function Footer() {
         <hr className="my-6 border-gray-200 dark:border-gray-700" />
 
         {/* Bottom Row */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
-          <span className="text-gray-500 dark:text-gray-400 text-center md:text-left">
+        <div className="flex  gap-2 flex-col md:flex-row items-center justify-between  text-sm">
+          <span className="text-gray-500  dark:text-gray-400 text-center md:text-left">
             © {new Date().getFullYear()} <Link href="/" className="hover:underline">Agastya Spine & Ortho Aarogy</Link>. All Rights Reserved.
           </span>
-          <div className="flex space-x-4">
+<span className='lg:pr-50 sm:pl-0'> <a href='https://seocialmedia.in/' target='_blank' className='flex gap-1.5'><SiSocialblade className='size-[20px]' /> Powered by <span className='font-bold text-green-400 underline'> SEOcial Media Solutions</span></a></span>
+          <span className="flex space-x-4">
             <Link href="#" className="hover:text-blue-600"><BsFacebook size={20} /></Link>
             <Link href="#" className="hover:text-pink-600"><BsInstagram size={20} /></Link>
             <Link href="#" className="hover:text-sky-500"><BsTwitter size={20} /></Link>
-          </div>
+          </span>
         </div>
       </div>
     </footer>
