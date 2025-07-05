@@ -41,7 +41,7 @@ const MultiItemCarousel = () => {
         {slides.map((slide) => (
           <SwiperSlide key={slide.id}>
             <div className="bg-white rounded shadow p-0 hover:shadow-lg transition-all duration-300 ease-in-out overflow-hidden">
-              <div className="h-130 w-full">
+              <div className="h-100 w-full">
                 <img
                   src={slide.img} 
                   alt={slide.title}
