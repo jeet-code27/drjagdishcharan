@@ -6,15 +6,51 @@ import { usePathname } from "next/navigation";
 import { GoChevronDown } from "react-icons/go";
 
 const serviceItems = [
-  { title: "Spine Surgery", description: "Surgical treatment for spinal conditions and deformities.", path: "/services/service1" },
-  { title: "Disc Replacement", description: "Advanced procedures to replace damaged spinal discs.", path: "/services/service2" },
-  { title: "Minimally Invasive Spine Surgery", description: "Low-impact spinal surgery for faster fit recovery.", path: "/services/service3" },
-  { title: "Back & Neck Pain Management", description: "Comprehensive treatment for chronic back and neck pain.", path: "/services/service4" },
-  { title: "Physiotherapy", description: "Rehabilitation and recovery support through expert therapy.", path: "/services/service5" },
-  { title: "Orthopedic Surgery", description: "Treatment for musculoskeletal disorders and injuries.", path: "/services/service6" },
-  { title: "Sports Injury Treatment", description: "Specialized care and rehabilitation for sports injuries.", path: "/services/service7" },
-  { title: "Joint Replacement", description: "Hip, knee, and other joint replacement surgeries.", path: "/services/service8" },
+  {
+    title: "Spine Surgery",
+    description: "Surgical treatments for spinal conditions and deformities.",
+    path: "/services/service1",
+  },
+  {
+    title: "Disc Replacement",
+    description: "Advanced procedures to replace damaged spinal discs.",
+    path: "/services/service3",
+  },
+  {
+    title: "Minimally Invasive Spine Surgery",
+    description: "Low-impact spinal surgeries for faster recovery.",
+    path: "/services/service5",
+  },
+  {
+    title: "Spinal Deformity Correction",
+    description:
+      "Realigning the spine to restore balance and relieve chronic pain through advanced surgical care.",
+    path: "/services/service4",
+  },
+  {
+    title: "Fracture & Trauma Care",
+    description:
+      "Swift recovery starts here with expert treatment for bone injuries and accidents.",
+    path: "/services/service8",
+  },
+  {
+    title: "Endoscopic Spine & Arthroscopic Surgery",
+    description:
+      "Minimally invasive treatments for spine and joint conditions using endoscopic and arthroscopic techniques.",
+    path: "/services/service2",
+  },
+  {
+    title: "Sports Injury Treatment",
+    description: "Specialized care and rehabilitation for sports injuries.",
+    path: "/services/service7",
+  },
+  {
+    title: "Joint Replacement",
+    description: "Hip, knee, and other joint replacement surgeries for improved mobility.",
+    path: "/services/service6",
+  },
 ];
+
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

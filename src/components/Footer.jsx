@@ -138,7 +138,7 @@ export default function Footer() {
           <span className="flex space-x-4">
             <Link href="#" className="hover:text-blue-600"><BsFacebook size={20} /></Link>
             <Link href="#" className="hover:text-pink-600"><BsInstagram size={20} /></Link>
-            <Link href="#" className="hover:text-sky-500"><BsTwitter size={20} /></Link>
+             
           </span>
         </div>
       </div>

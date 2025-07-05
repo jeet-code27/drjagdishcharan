@@ -12,6 +12,7 @@ import Test from "@/components/Test";
 import Doctorinfo from "@/components/Doctorinfo";
 import WhyChoose from "@/components/WhyChoose";
 import HeroSectiontwo from "@/components/HeroTwo";
+import MultiItemCarousel from "@/components/MultiItemCarousel";
 export default function Home() {
   return (
      <>
@@ -20,6 +21,7 @@ export default function Home() {
       <AboutDoctor/>
       <Service/>
       <hr className="text-gray-300"></hr>
+      <MultiItemCarousel/>
      <Doctorinfo/>
       <GoogleReviews />
       <hr className="text-gray-300"></hr>
