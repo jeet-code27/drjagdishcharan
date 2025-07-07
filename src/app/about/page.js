@@ -5,6 +5,7 @@ import GoogleReviews from "@/components/GoogleReviews";
 import { motion } from "framer-motion";
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 export default function Home() {
   return (
     <div className="text-blue-800">
@@ -39,9 +40,12 @@ export default function Home() {
           transition={{ delay: 0.4, duration: 0.5 }}
           className="mt-8 flex flex-col sm:flex-row justify-center items-center gap-4"
         >
+          <Link href='/book-appointment'>
           <button className="bg-blue-700 text-white py-3 px-6 rounded-xl hover:bg-blue-800 transition-all duration-300">
             Book an Appointment
           </button>
+
+          </Link>
           <Link href={"/services"}  className="border border-blue-700 text-blue-700 py-3 px-6 rounded-xl hover:bg-blue-100 transition-all duration-300">
             Explore Treatment Options
           </Link>
@@ -54,20 +58,20 @@ export default function Home() {
     {/* Right Stats */}
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full">
       {[
-        { icon: "📍", label: "Years Experience", value: "10+" },
-        { icon: "💼", label: "Clinic", value: "1" },
-        { icon: "😊", label: "Happy Patients", value: "5000+" },
-        { icon: "📅", label: "Online Appointment", value: "500+" },
-        { icon: "🔬", label: "Research Publications", value: "15+" },
-        { icon: "🏅", label: "Awards Won", value: "8+" },
-        { icon: "🧠", label: "Specialized Procedures", value: "25+" },
-        { icon: "👨‍⚕", label: "Team Members", value: "12+" },
+        { icon: "/images/about/years-experience.webp", label: "Years Experience", value: "15+" },
+        { icon: "/images/about/clinic.webp", label: "Clinic", value: "1" },
+        { icon: "/images/about/happy-patients.webp", label: "Happy Patients", value: "5000+" },
+        { icon: "/images/about/online-appointment.webp", label: "Online Appointment", value: "7000+" },
+        { icon: "/images/about/research-publications.webp", label: "Research Publications", value: "15+" },
+        { icon: "/images/about/awards-won.webp", label: "Awards Won", value: "8+" },
+        { icon: "/images/about/specialized-procedures.webp", label: "Specialized Procedures", value: "25+" },
+        { icon: "/images/about/team.webp", label: "Team Members", value: "12+" },
       ].map((item, i) => (
         <div
           key={i}
           className="bg-white shadow-md rounded-xl px-6 py-8 text-center hover:shadow-lg transition-shadow"
         >
-          <div className="text-4xl mb-2">{item.icon}</div>
+          <div className="text-4xl flex justify-center mb-2"><Image height={60}  width={60} src={item.icon}></Image></div>
           <h3 className="text-2xl font-bold text-gray-800">{item.value}</h3>
           <p className="text-gray-600 text-sm mt-1">{item.label}</p>
         </div>

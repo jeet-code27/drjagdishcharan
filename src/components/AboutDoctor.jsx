@@ -34,7 +34,7 @@ function AboutDoctor() {
               Dr. Jagdish Singh Charan
             </h2>
             <p className="text-blue-900 font-medium mt-1">
-            FNB & Spine Surgery, DNB Ortho, MNAMS, FAOS Asia Specialist
+            FNB & Spine Surgery, DNB Ortho, MNAMS, FAOS Asia Specific
             </p>
            
 
@@ -46,7 +46,7 @@ function AboutDoctor() {
               </div>
               <div className="flex items-center gap-1">
                 <FaUserMd className="text-blue-600" />
-                <span>Spine Specialist</span>
+                <span>Spine Specific</span>
               </div>
             </div>
           </div>
@@ -62,15 +62,15 @@ function AboutDoctor() {
   <strong>Dr. Jagdish Singh Charan</strong> is a highly experienced{" "}
   <strong>spine and orthopedic surgeon</strong> with over{" "}
   <strong>15 years</strong> of clinical expertise. He holds advanced
-  qualifications including <strong>DNB Ortho</strong>,{" "}
-  <strong>FNB & Spine Surgery</strong>,{" "}
-  <strong>MNAMS</strong>, and <strong>FAOS Asia Specialist</strong>. He has trained at leading
-  institutions like <strong>Skims and Shri, Ahmedabad</strong>,{" "}
-  <strong>AO Spine</strong>, and the{" "}
+  qualifications including <strong>FNB & Spine Surgery </strong>,{" "}
+  <strong>DNB Ortho</strong>,{" "}
+  <strong>MNAMS</strong> and <strong>FAOS (Asia Specific)</strong>. He has trained at leading
+  institutions like <strong>SKIMS and SSHRI (Ahmedabad)</strong>.{" "}
+  {/* <strong>AO Spine</strong>, and the{" "}
   <strong>Orthopedic Association of India</strong>. His work focuses on{" "}
   <strong>minimally invasive spine procedures</strong>,{" "}
-  <strong>joint replacements</strong>, and{" "}
-  <strong>complex trauma care</strong>.
+  <strong>joint replacements</strong>, and{" "}`
+  <strong>complex trauma care</strong>. */}
 </p>
 
 <p>
@@ -78,7 +78,7 @@ function AboutDoctor() {
   and universities, including <strong>NIMS University</strong> and{" "}
   <strong>Apollo Spectra, Jaipur</strong>. He is a member of respected
   medical associations such as <strong>MNAMS</strong>,{" "}
-  <strong>MASSI</strong>, and <strong>AO Spine and Orthopedic Association of India</strong>. He actively
+  <strong>MASSI</strong>, <strong>AO Spine and Orthopedic Association of India</strong>. He actively
   participates in <strong>national conferences and workshops</strong>,
   staying updated with the latest advancements in{" "}
   <strong>orthopedic and spine care</strong>.

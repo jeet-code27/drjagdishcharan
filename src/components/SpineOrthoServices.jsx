@@ -6,57 +6,56 @@ export default function SpineOrthoServices() {
   const services = [
     {
       title: "Spine Surgery",
-      image: "/images/services/SpineSurgery.png", // replace with your image path or URL
-      description: "Surgical treatment for spinal conditions and deformities.",
-      path: "/services/service1",
+      image: "/images/services/SpineSurgery.png",
+      description: "Surgical care for spine conditions and deformities.",
+      path: "/services/endoscopic-spine-surgery",
     },
     {
-      title: "Physiotherapy",
-      image: "/images/services/Physiotherapy.png",
-      description:
-        "Rehabilitation and recovery support through expert therapy.",
-      path: "/services/service2",
+      title: "Fracture & Trauma Care",
+      image: "/images/services/OrthopedicSurgery.png",
+      description: "Expert treatment for fractures, injuries, and trauma cases.",
+      path: "/services/fracture-trauma-care",
     },
     {
       title: "Disc Replacement",
       image: "/images/services/DiscReplacement.png",
-      description: "Advanced procedures to replace damaged spinal discs.",
-      path: "/services/service3",
+      description: "Advanced disc replacement for spinal damage relief.",
+      path: "/services/disc-replacement-surgery",
     },
     {
-      title: "Orthopedic Surgery",
-      image: "/images/services/OrthopedicSurgery.png",
-      description: "Treatment for musculoskeletal disorders and injuries.",
-      path: "/services/service4",
+      title: "Endoscopic Spine & Arthroscopic Surgery",
+      image: "/images/services/scoliosis.png",
+      description: "Minimally invasive surgery for joints and spine conditions.",
+      path: "/services/endoscopic-spine-orthroscopic-surgery",
     },
     {
       title: "Minimally Invasive Spine Surgery",
       image: "/images/services/MinimallyInvasiveSpineSurgery.png",
-      description: "Low-impact spinal surgery for faster fit recovery.",
-      path: "/services/service5",
+      description: "Low-impact spine surgery for quicker recovery.",
+      path: "/services/minimally-invasive-spine-surgery",
     },
     {
       title: "Sports Injury Treatment",
       image: "/images/services/SportsInjuryTreatment.png",
-      description: "Specialized care and rehabilitation for sports injuries.",
-      path: "/services/service6",
+      description: "Treatment and rehab for common sports-related injuries.",
+      path: "/services/arthroscopy-Sports-injury-care",
     },
     {
-      title: "Back & Neck Pain Management",
-      image: "/images/services/Back-NeckPainManagement.png",
-      description: "Comprehensive treatment for chronic back and neck pain.",
-      path: "/services/service7",
+      title: "Spinal Deformity Correction",
+      image: "/images/services/SpinalDeformityCorrection.png",
+      description: "Surgical correction for spinal alignment and balance.",
+      path: "/services/spinal-deformity-correction",
     },
     {
       title: "Joint Replacement",
-      image: "/images/services/jointReplacement.png",
-      description: "Hip, knee, and other joint replacement surgeries.",
-      path: "/services/service8",
-    },
+      image: "/images/services/JointReplacement.png",
+      description: "Hip and knee replacements for better mobility.",
+      path: "/services/joint-replacement-surgery",
+    }
   ];
-
+  
   return (
-    <section className="py-12 px-4 bg-white">
+    <section className="py-12 px-2 bg-white">
       <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-6">
         {services.map((service, index) => (
           <div

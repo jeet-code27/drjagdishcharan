@@ -1,5 +1,6 @@
 "use client";
 
+ import Link from "next/link";
 import React from "react";
 
 export default function ScheduleHealthcare() {
@@ -22,8 +23,9 @@ export default function ScheduleHealthcare() {
       <h2 className="text-white text-3xl md:text-4xl font-bold mb-6">
         Schedule your healthcare <br /> visit now.
       </h2>
-
+      <Link href="/book-appointment">
       <div className="flex flex-col md:flex-row items-center gap-4">
+      
       <button
       className="
         text-white 
@@ -46,7 +48,9 @@ export default function ScheduleHealthcare() {
     >
       Book Appointment
     </button>
+   
     </div>
+    </Link>
     </section>
   );
 }

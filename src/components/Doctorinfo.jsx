@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-
+import Link from 'next/link';
 const Doctorinfo = () => {
   return (
     <div className="relative w-full bg-white  overflow-hidden my-20">
@@ -42,7 +42,8 @@ const Doctorinfo = () => {
 
             {/* Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="inline-flex items-center justify-center px-8 py-4 bg-black text-white font-semibold rounded-full hover:bg-gray-900 transition-colors duration-200 min-w-[200px]">
+              <Link href='/book-appointment'>
+              <button className="inline-flex cursor-pointer items-center justify-center px-8 py-4 bg-black text-white font-semibold rounded-full hover:bg-gray-900 transition-colors duration-200 min-w-[200px]">
                 <svg 
                   className="w-5 h-5 mr-2" 
                   fill="none" 
@@ -58,11 +59,13 @@ const Doctorinfo = () => {
                 </svg>
                 Book Consultation
               </button>
-              
+              </Link>
+              <Link href="/services">
               <button className="inline-flex items-center justify-center px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-full hover:bg-white/10 transition-colors duration-200 min-w-[150px]">
-                Our Doctors
+                Our Services
               </button>
-            </div>
+              </Link>
+            </div> 
           </div>
         </div>
 

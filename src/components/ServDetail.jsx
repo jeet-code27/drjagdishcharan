@@ -9,15 +9,16 @@ export default function ServDetail() {
     router.push(`/services/service${index + 1}`);
   };
   const services = [
-    "Spine Consultation",
-    "Endoscopic Spine Surgery",
-    "Disc Replacement Surgery",
-    "Spinal Deformity Correction",
-    "Minimally Invasive Spine Surgery",
-    "Joint Replacement Surgery",
-    "Arthroscopy & Sports Injury",
+    "Spine Surgery",
     "Fracture & Trauma Care",
+    "Disc Replacement",
+    "Endoscopic & Arthroscopic Surgery",
+    "Minimally Invasive Spine Surgery",
+    "Sports Injury Treatment",
+    "Spinal Deformity Correction",
+    "Joint Replacement"
   ];
+  
 
   return (
     <section className="py-12 px-4 rounded-2xl bg-white  ">

@@ -1,8 +1,8 @@
 'use client';
-
+import Link from 'next/link';
 import { useState, useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight, Phone, Calendar, MapPin, Award } from 'lucide-react';
-
+import WhatsAppButton from '@/components/WhatsAppButton';
 export default function HeroSectiontwo() {
   const slides = [
     {
@@ -171,6 +171,7 @@ export default function HeroSectiontwo() {
 
                     {/* Action Buttons */}
                     <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
+                    <Link href="/book-appointment">
                       <button className="group cursor-pointer relative px-8 py-4 bg-gradient-to-r from-teal-500 to-blue-600 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 overflow-hidden">
                         <span className="relative z-10 flex items-center justify-center">
                           <Calendar className="w-5 h-5 mr-2" />
@@ -178,13 +179,24 @@ export default function HeroSectiontwo() {
                         </span>
                         <div className="absolute inset-0 bg-gradient-to-r from-teal-600 to-blue-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                       </button>
-
-                      <button className="group px-8 cursor-pointer py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-full border-2 border-white/30 hover:bg-white/20 hover:border-white/50 transition-all duration-300">
+</Link>
+                      {/* <button className="group px-8 cursor-pointer py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-full border-2 border-white/30 hover:bg-white/20 hover:border-white/50 transition-all duration-300">
                         <span className="flex items-center justify-center">
                           <Phone className="w-5 h-5 mr-2" />
                           Call Now
                         </span>
-                      </button>
+                      </button> */}
+                      
+                      <WhatsAppButton>
+  <div className="group px-8 cursor-pointer py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-full border-2 border-white/30 hover:bg-white/20 hover:border-white/50 transition-all duration-300">
+  <span className="flex items-center justify-center">
+                          <Phone className="w-5 h-5 mr-2" />
+                          Call on Whatsapp
+                        </span>
+  </div>
+</WhatsAppButton>
+
+                      
                     </div>
 
                     {/* Contact Info */}

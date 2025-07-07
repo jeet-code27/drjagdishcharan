@@ -35,7 +35,7 @@ export default function TopNavbar() {
             <FaRegClock className="size-5"/>
               <div>
                 <div>Working Hours</div>
-                <div className="font-semibold text-base">Mon-Sat: 4PM - 7PM</div>
+                <div className="font-semibold text-base">Mon-Sat: 10PM - 5PM</div>
               </div>
             </div>
           </div>

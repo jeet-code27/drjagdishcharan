@@ -120,3 +120,6 @@ input,textarea{
   color: #171717;
 }
  
+button{
+  cursor: pointer;
+}

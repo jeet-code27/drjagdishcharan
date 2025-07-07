@@ -8,7 +8,7 @@ const serviceCards = [
     category: "Spine",
     title: "Endoscopic Spine Surgery",
     description: "Minimally invasive technique for faster recovery and less pain.",
-    href: "/services/endoscopic-spine",
+    href: "/services/endoscopic-spine-surgery",
     image: "/images/services/endoscopic-spine.jpeg",
   },
   {
@@ -24,34 +24,60 @@ const serviceCards = [
     category: "Joint",
     title: "Joint Replacements - Knee & Hip",
     description: "TKR and THR performed using modern implant technology and high-precision surgical methods.",
-    href: "/services/joint-replacement",
+    href: "/services/joint-replacement-surgery",
     image: "/images/services/joint-replacement.png",
   },
   {
     id: 4,
     category: "Ortho",
-    title: "Arthritis & Joint Pain Management",
+    title: "Spinal Deformity Correction",
     description: "Personalized care plans and pain-relief options for arthritis and other degenerative joint disorders.",
-    href: "/services/arthritis-management",
-    image: "/images/services/arthritis.png",
+    href: "/services/spinal-deformity-correction",
+    image: "/images/services/spinal-deformity.png",
   },
   {
     id: 5,
     category: "Infection",
-    title: "Bone TB & Orthopedic Infections",
+    title: "Disc Replacement Surgery",
     description: "Advanced diagnostic and treatment support for bone tuberculosis and musculoskeletal infections.",
-    href: "/services/bone-infections",
+    href: "/services/disc-replacement-surgery",
     image: "/images/services/bone-tb.jpg",
   },
   {
     id: 6,
     category: "Trauma",
-    title: "Fracture & Multiple Injury Care",
+    title: "Fracture & Trauma Care",
     description: "Comprehensive treatment for all types of fractures, trauma cases, and orthopedic emergencies.",
-    href: "/services/fracture-treatment",
+    href: "/services/fracture-trauma-care",
     image: "/images/services/fracture.jpg",
   },
+  {
+  id: 7,
+  category: "Trauma",
+  title: "Sports Injury Care",
+  description: "Comprehensive treatment for all types of fractures, trauma cases, and orthopedic emergencies.",
+  href: "/services/arthroscopy-Sports-injury-care",
+  image: "/images/services/arthritis.png",
+},
+{
+  id: 8,
+  category: "Trauma",
+  title: "Endoscopic Spine & Arthroscopic Surgery",
+  description: "Comprehensive treatment for all types of fractures, trauma cases, and orthopedic emergencies.",
+  href: "/services/endoscopic-spine-orthroscopic-surgery",
+  image: "/images/services/endoscopic-spine.jpeg",
+},
 ];
+
+
+ 
+
+// Fracture & Trauma Care
+// Spinal Deformity Correction
+
+ 
+
+
 
 const categories = ["All", "Spine", "Joint", "Ortho", "Infection", "Trauma"];
 

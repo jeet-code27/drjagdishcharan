@@ -11,24 +11,25 @@ import { FaMap, FaPhoneAlt } from "react-icons/fa";
 import { MdEmail, MdWatchLater } from "react-icons/md";
 
 const services = [
-  { name: "Spine Surgery", href: "/services/spine-surgery" },
-  { name: "Disc Replacement", href: "/services/disc-replacement" },
-  { name: "Minimally Invasive Spine Surgery", href: "/services/minimally-invasive" },
-  { name: "Back & Neck Pain Management", href: "/services/pain-management" },
-  { name: "Physiotherapy", href: "/services/physiotherapy" },
-  { name: "Orthopedic Surgery", href: "/services/orthopedic-surgery" },
-  { name: "Sports Injury Treatment", href: "/services/sports-injury" },
-  { name: "Joint Replacement", href: "/services/joint-replacement" }
+  { name: "Spine Surgery", href: "/services/endoscopic-spine-surgery" },
+  { name: "Fracture & Trauma Care", href: "/services/fracture-trauma-care" },
+  { name: "Disc Replacement", href: "/services/disc-replacement-surgery" },
+  { name: "Endoscopic Spine & Arthroscopic Surgery", href: "/services/endoscopic-spine-orthroscopic-surgery" },
+  { name: "Minimally Invasive Spine Surgery", href: "/services/minimally-invasive-spine-surgery" },
+  { name: "Sports Injury Treatment", href: "/services/arthroscopy-Sports-injury-care" },
+  { name: "Spinal Deformity Correction", href: "/services/spinal-deformity-correction" },
+  { name: "Joint Replacement", href: "/services/joint-replacement-surgery" }
 ];
+
 
 const quickLinks = [
   { name: "Home", href: "/" },
   { name: "About Us", href: "/about" },
   { name: "Services", href: "/services" },
-  { name: "Testimonials", href: "/testimonials" },
-  { name: "Blog", href: "/blog" },
+  
+  { name: "Blogs", href: "/blogs" },
   { name: "Contact Us", href: "/contact" },
-  { name: "Book Appointment", href: "/appointment" }
+  { name: "Book Appointment", href: "/book-appointment" }
 ];
 
 const legalLinks = [
@@ -60,10 +61,10 @@ export default function Footer() {
                 <FaPhoneAlt /> <Link href="tel:+919876543210">+91 8003474733</Link>
               </li>
               <li className="flex items-center gap-2">
-                <MdEmail /> <Link href="mailto:info@mayurspinecare.com">info@Jagdishspinecare.com</Link>
+                <MdEmail /> <Link href="mailto:info@mayurspinecare.com">jaggi.spine1104@gmail.com</Link>
               </li>
               <li className="flex items-center gap-2">
-                <MdWatchLater /> <span>Mon-Sat: 9:00 AM - 7:00 PM</span>
+                <MdWatchLater /> <span>Mon-Sat: 10:00 AM - 5:00 PM  </span>
               </li>
             </ul>
           </div>
@@ -114,18 +115,23 @@ export default function Footer() {
            
           </div>
         </div>
+
+
+
         <div className="w-full h-[350px] my-8 rounded-lg overflow-hidden shadow-lg">
-        <iframe
-  title="Custom Location"
-  src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3557.3753805200045!2d75.75136958947722!3d26.897749455694516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1719746260000!5m2!1sen!2sin"
+       <iframe
+  title="Clinic Location"
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3082.143465907961!2d74.62990707465741!3d26.511576777215556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396be74ffeab5ef9%3A0x4c479259f48baf1e!2zRHIuIEphZ2Rpc2ggU2luZ2ggQ2hhcmFuICjwnZWK8J2VofCdlZrwnZWf8J2VliDwnZWK8J2VpvCdlaPwnZWY8J2VlvCdlaDwnZWfKV8gQWdhc3R5YSAo4KSF4KSX4KS44KWN4KSk4KWN4KSvICkgU3BpbmUgYW5kIE9ydGhvIEFhcm9neWFt!5e1!3m2!1sen!2sin!4v1751885874907!5m2!1sen!2sin" 
   width="100%"
-  height="100%"
+  height="450"
   style={{ border: 0 }}
   allowFullScreen=""
   loading="lazy"
   referrerPolicy="no-referrer-when-downgrade"
 />
-
+ 
+ 
+ 
     </div>
         <hr className="my-6 border-gray-200 dark:border-gray-700" />
 

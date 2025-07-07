@@ -1,5 +1,5 @@
 "use client";
-
+import Link from "next/link";
 export default function ServiceHero() {
   return (
     <div
@@ -52,7 +52,7 @@ export default function ServiceHero() {
               rehabilitation care for spine disorders, fractures, joint issues,
               and all orthopaedic conditions with advanced medical expertise.
             </p>
-
+<Link href="/book-appointment" >
             <button className="relative mb-3  px-5 py-2 text-white font-bold rounded-full bg-[#006bb3] border-[3px] border-white/30 flex items-center justify-center gap-2 text-sm cursor-pointer overflow-hidden shadow-[0px_10px_20px_rgba(0,0,0,0.2)] transition-all duration-300 ease-in-out hover:scale-105 hover:border-white/90 group">
               {/* Shine Effect */}
               <span className="absolute top-0 left-[-100px] w-[100px] h-full opacity-60 bg-gradient-to-r from-transparent via-white to-transparent animate-shine"></span>
@@ -72,7 +72,7 @@ export default function ServiceHero() {
               </svg>
               Book Appointment
             </button>
-
+            </Link>
             {/* Stats */}
             <div className="flex justify-between max-w-md text-center select-none">
               <div>
@@ -80,11 +80,11 @@ export default function ServiceHero() {
                 <p className="text-gray-600 text-sm">Years Experience</p>
               </div>
               <div>
-                <p className="font-extrabold text-lg text-gray-900">5000+</p>
+                <p className="font-extrabold text-lg text-gray-900">1000+</p>
                 <p className="text-gray-600 text-sm">Surgeries Done</p>
               </div>
               <div>
-                <p className="font-extrabold text-lg text-gray-900">100K+</p>
+                <p className="font-extrabold text-lg text-gray-900">5000+</p>
                 <p className="text-gray-600 text-sm">Happy Patients</p>
               </div>
             </div>

@@ -9,45 +9,45 @@ const serviceItems = [
   {
     title: "Spine Surgery",
     description: "Surgical treatments for spinal conditions and deformities.",
-    path: "/services/service1",
+    path: "/services/endoscopic-spine-surgery",
   },
   {
     title: "Disc Replacement",
     description: "Advanced procedures to replace damaged spinal discs.",
-    path: "/services/service3",
+    path: "/services/disc-replacement-surgery",
   },
   {
     title: "Minimally Invasive Spine Surgery",
     description: "Low-impact spinal surgeries for faster recovery.",
-    path: "/services/service5",
+    path: "/services/minimally-invasive-spine-surgery",
   },
   {
     title: "Spinal Deformity Correction",
     description:
       "Realigning the spine to restore balance and relieve chronic pain through advanced surgical care.",
-    path: "/services/service4",
+    path: "/services/spinal-deformity-correction",
   },
   {
     title: "Fracture & Trauma Care",
     description:
       "Swift recovery starts here with expert treatment for bone injuries and accidents.",
-    path: "/services/service8",
+    path: "/services/fracture-trauma-care",
   },
   {
     title: "Endoscopic Spine & Arthroscopic Surgery",
     description:
       "Minimally invasive treatments for spine and joint conditions using endoscopic and arthroscopic techniques.",
-    path: "/services/service2",
+    path: "/services/endoscopic-spine-orthroscopic-surgery",
   },
   {
     title: "Sports Injury Treatment",
     description: "Specialized care and rehabilitation for sports injuries.",
-    path: "/services/service7",
+    path: "/services/arthroscopy-Sports-injury-care",
   },
   {
     title: "Joint Replacement",
     description: "Hip, knee, and other joint replacement surgeries for improved mobility.",
-    path: "/services/service6",
+    path: "/services/joint-replacement-surgery",
   },
 ];
 
