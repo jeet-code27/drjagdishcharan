@@ -6,9 +6,43 @@ import { motion } from "framer-motion";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import ServiceSlider from "@/components/ServiceSlider";
 export default function Home() {
+
+
+
+  const slides = [
+    {
+      image: "/images/home/slide4.jpg",
+      title: "Dr. Jagdish Singh Charan",
+      subtitle: "Relief for Back and Neck Pain Through Expert, Personalized Care",
+    },
+    {
+      image: "/images/services/joint-replacement.png",
+      title: "Dr. Jagdish Singh Charan",
+      subtitle:
+        "Joint Replacement Surgery – Move Freely Again with Expert Surgery for Pain-Free Living",
+    },
+    {
+      image: "/images/services/kneeinjury.webp",
+      title: "Dr. Jagdish Singh Charan",
+      subtitle:
+        "Sports Injury Care – Specialized Recovery for Athletes and Active Lifestyles",
+    },
+  ];
+  
+
+
+
+
+
+
   return (
     <div className="text-blue-800">
+
+<ServiceSlider slides={slides} />
+
+
       {/* Hero Section */}
       <section className="bg-blue-50 py-12 px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
