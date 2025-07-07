@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { useState, useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight, Phone, Calendar, MapPin, Award } from 'lucide-react';
 import WhatsAppButton from '@/components/WhatsAppButton';
+
 export default function HeroSectiontwo() {
   const slides = [
     {
@@ -15,13 +16,12 @@ export default function HeroSectiontwo() {
     },
     {
       id: 5,
-      image: '/images/home/slide6.webp', // Replace with the actual path where you save the uploaded logo image
+      image: '/images/home/slide6.webp',
       title: 'Agastya Spine & Ortho Aarogyam',
       subtitle: 'Excellence in Spine & Orthopedic Care',
       description: 'Delivering advanced treatments with expertise, ethics, and empathy for your complete musculoskeletal health.',
       specialty: 'Trusted Spine & Ortho Center'
-    }
-,    
+    },
     {
       id: 2,
       image: '/images/home/slide.jpg',
@@ -115,8 +115,6 @@ export default function HeroSectiontwo() {
       ref={containerRef}
       className="relative w-full h-screen overflow-hidden bg-gradient-to-br from-blue-900 to-teal-800"
       aria-label="Dr. Jagdish Singh Charan - Spine Surgeon Hero Section"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
     >
       {containerWidth > 0 && (
         <div style={sliderStyle}>
@@ -144,62 +142,56 @@ export default function HeroSectiontwo() {
                 </div>
 
                 {/* Content Overlay */}
-                <div className="absolute inset-0 flex items-center justify-start px-6 sm:px-12 lg:px-20">
-                  <div className="max-w-3xl text-left animate-fadeIn">
-                    {/* Specialty Badge */}
+                <div
+                  className="absolute inset-0 flex items-center justify-start px-6 sm:px-12 lg:px-20"
+                 
+                >
+                  <div className="max-w-3xl   text-left animate-fadeIn"
+                  
+                  onMouseEnter={() => setIsHovered(true)}
+                  onMouseLeave={() => setIsHovered(false)}
+                  
+                  >
                     <div className="inline-flex items-center px-4 py-2 bg-teal-500/20 backdrop-blur-sm rounded-full border border-teal-300/30 mb-6">
                       <Award className="w-4 h-4 text-teal-300 mr-2" />
                       <span className="text-teal-200 text-sm font-medium">{slide.specialty}</span>
                     </div>
 
-                    {/* Main Title */}
                     <h1 className="text-white text-4xl sm:text-5xl lg:text-7xl font-bold mb-4 leading-tight">
                       <span className="block text-transparent bg-clip-text bg-gradient-to-r from-white to-teal-200">
                         {slide.title}
                       </span>
                     </h1>
 
-                    {/* Subtitle */}
                     <h2 className="text-teal-200 text-xl sm:text-2xl lg:text-3xl font-semibold mb-6 opacity-90">
                       {slide.subtitle}
                     </h2>
 
-                    {/* Description */}
                     <p className="text-white/90 text-lg sm:text-xl lg:text-2xl mb-8 leading-relaxed max-w-2xl">
                       {slide.description}
                     </p>
 
-                    {/* Action Buttons */}
                     <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
-                    <Link href="/book-appointment">
-                      <button className="group cursor-pointer relative px-8 py-4 bg-gradient-to-r from-teal-500 to-blue-600 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 overflow-hidden">
-                        <span className="relative z-10 flex items-center justify-center">
-                          <Calendar className="w-5 h-5 mr-2" />
-                          Book Appointment
-                        </span>
-                        <div className="absolute inset-0 bg-gradient-to-r from-teal-600 to-blue-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                      </button>
-</Link>
-                      {/* <button className="group px-8 cursor-pointer py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-full border-2 border-white/30 hover:bg-white/20 hover:border-white/50 transition-all duration-300">
-                        <span className="flex items-center justify-center">
-                          <Phone className="w-5 h-5 mr-2" />
-                          Call Now
-                        </span>
-                      </button> */}
-                      
-                      <WhatsAppButton>
-  <div className="group px-8 cursor-pointer py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-full border-2 border-white/30 hover:bg-white/20 hover:border-white/50 transition-all duration-300">
-  <span className="flex items-center justify-center">
-                          <Phone className="w-5 h-5 mr-2" />
-                          Call on Whatsapp
-                        </span>
-  </div>
-</WhatsAppButton>
+                      <Link href="/book-appointment">
+                        <button className="group cursor-pointer relative px-8 py-4 bg-gradient-to-r from-teal-500 to-blue-600 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 overflow-hidden">
+                          <span className="relative z-10 flex items-center justify-center">
+                            <Calendar className="w-5 h-5 mr-2" />
+                            Book Appointment
+                          </span>
+                          <div className="absolute inset-0 bg-gradient-to-r from-teal-600 to-blue-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                        </button>
+                      </Link>
 
-                      
+                      <WhatsAppButton>
+                        <div className="group px-8 cursor-pointer py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-full border-2 border-white/30 hover:bg-white/20 hover:border-white/50 transition-all duration-300">
+                          <span className="flex items-center justify-center">
+                            <Phone className="w-5 h-5 mr-2" />
+                            Call on Whatsapp
+                          </span>
+                        </div>
+                      </WhatsAppButton>
                     </div>
 
-                    {/* Contact Info */}
                     <div className="mt-8 flex items-center text-white/80">
                       <MapPin className="w-4 h-4 mr-2 text-teal-300" />
                       <span className="text-sm">Agastya Spine & Ortho Aarogyam</span>
@@ -271,8 +263,7 @@ export default function HeroSectiontwo() {
         }
 
         @keyframes float {
-          0%,
-          100% {
+          0%, 100% {
             transform: translateY(0px);
           }
           50% {
@@ -288,10 +279,6 @@ export default function HeroSectiontwo() {
           animation: float 6s ease-in-out infinite;
         }
       `}</style>
-
-
-
-
     </section>
   );
 }
