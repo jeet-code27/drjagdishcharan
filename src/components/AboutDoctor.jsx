@@ -62,9 +62,9 @@ function AboutDoctor() {
   <strong>Dr. Jagdish Singh Charan</strong> is a highly experienced{" "}
   <strong>spine and orthopedic surgeon</strong> with over{" "}
   <strong>15 years</strong> of clinical expertise. He holds advanced
-  qualifications including <strong>FNB & Spine Surgery </strong>,{" "}
+  qualifications including <strong>FNB Spine Surgery </strong>,{" "}
   <strong>DNB Ortho</strong>,{" "}
-  <strong>MNAMS</strong> and <strong>FAOS (Asia Specific)</strong>. He has trained at leading
+  <strong>MNAMS</strong> and <strong>FAOS (Asia Pacific)</strong>. He has trained at leading
   institutions like <strong>SKIMS and SSHRI (Ahmedabad)</strong>.{" "}
   {/* <strong>AO Spine</strong>, and the{" "}
   <strong>Orthopedic Association of India</strong>. His work focuses on{" "}
