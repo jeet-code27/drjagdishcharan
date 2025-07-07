@@ -55,7 +55,7 @@ function AboutDoctor() {
         {/* Doctor Information Section */}
         <div className="w-full lg:w-3/5 space-y-8">
           <h1 className="text-4xl font-bold text-blue-900">
-            Dr. Jagdish Singh Charan — Expert Spine & Orthopedic Surgeon
+            Dr. Jagdish Singh Charan   <div className="text-3xl pt-2"> Expert Spine & Orthopedic Surgeon</div>
           </h1>
 
           <p> 

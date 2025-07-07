@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaWhatsapp, FaPhoneAlt, FaComments } from "react-icons/fa";
+import Link from "next/link";
+import WhatsAppButton from "./WhatsAppButton";
 
 export default function FloatingContactIcons() {
   const [showExtraMessages, setShowExtraMessages] = useState(false);
@@ -47,9 +49,11 @@ export default function FloatingContactIcons() {
                   </motion.div>
                 )}
               </AnimatePresence>
+              <WhatsAppButton>
               <div className="bg-green-500 p-3 rounded-full shadow-lg cursor-pointer">
                 <FaWhatsapp size={24} color="white" />
               </div>
+              </WhatsAppButton>
             </motion.div>
 
             {/* Call Icon */}
@@ -81,7 +85,8 @@ export default function FloatingContactIcons() {
                 )}
               </AnimatePresence>
               <div className="bg-blue-500 p-3 rounded-full shadow-lg cursor-pointer">
-                <FaPhoneAlt size={24} color="white" />
+             <Link href="tel:+91 8003474733" >
+             <FaPhoneAlt size={24} color="white" /></Link>
               </div>
             </motion.div>
           </>
@@ -92,6 +97,10 @@ export default function FloatingContactIcons() {
       <div className="relative flex items-center justify-center w-12 h-12" onClick={handleClick}>
         <span className="absolute inline-flex h-10 w-10 rounded-full border-2 border-green-400 opacity-75 animate-ping"></span>
         <div className="relative flex items-center justify-center w-12 h-12 bg-gradient-to-br from-green-400 to-green-500 rounded-full cursor-pointer shadow-lg hover:scale-110 transition-transform">
+
+
+         
+        
           <FaComments size={24} color="white" />
         </div>
       </div>

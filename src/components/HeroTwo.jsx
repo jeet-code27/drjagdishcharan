@@ -182,14 +182,14 @@ export default function HeroSectiontwo() {
                         </button>
                       </Link>
 
-                      <WhatsAppButton>
+                      <Link href="tel:+91 8003474733" >
                         <div className="group px-8 cursor-pointer py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-full border-2 border-white/30 hover:bg-white/20 hover:border-white/50 transition-all duration-300">
                           <span className="flex items-center justify-center">
-                            <Phone className="w-5 h-5 mr-2" />
-                            Call on Whatsapp
+                           <Phone className="w-5 h-5 mr-2" />
+                            Call Now
                           </span>
                         </div>
-                      </WhatsAppButton>
+                        </Link>
                     </div>
 
                     <div className="mt-8 flex items-center text-white/80">
