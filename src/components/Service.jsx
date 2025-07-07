@@ -16,7 +16,7 @@ const serviceCards = [
     category: "Spine",
     title: "Minimally Invasive Spine Surgery (MISS)",
     description: "Precise spinal procedures with less pain, reduced scarring, and quicker return to normal activities.",
-    href: "/services/minimally-invasive-spine",
+    href: "/services/minimally-invasive-spine-surgery",
     image: "/images/services/miss.jpg",
   },
   {
