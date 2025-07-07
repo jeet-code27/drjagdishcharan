@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import ConditionWeTreat from "@/components/ConditionWeTreat";
 import ServiceFeq from "@/components/ServiceFeq";
+import Bookbutton from "@/components/Bookbutton";
 const minimallyInvasiveConditions = [
   {
     title: "Herniated Discs",
@@ -92,9 +93,7 @@ export default function MinimallyInvasiveSpineSurgeryPage() {
               Advanced spine care with smaller cuts, less pain, and a faster
               path back to the life you love.
             </p>
-            <button className="px-6 py-3 bg-blue-600 text-white rounded-2xl shadow-lg">
-              Book Your Consultation
-            </button>
+            <Bookbutton/>
           </div>
 
           <Image

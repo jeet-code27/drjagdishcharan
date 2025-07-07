@@ -1,3 +1,4 @@
+import Bookbutton from "@/components/Bookbutton";
 import ConditionWeTreat from "@/components/ConditionWeTreat";
 import ServiceFeq from "@/components/ServiceFeq";
 import Image from "next/image";
@@ -68,9 +69,7 @@ export default function Home() {
           <p className="text-xl text-gray-700">
             Relief for Back and Neck Pain Through Expert, Personalized Care
           </p>
-          <button className="px-6 py-3 bg-blue-600 text-white rounded-2xl shadow-lg">
-            Book Your Consultation
-          </button>
+           <Bookbutton/>
         </div>
        
           <Image

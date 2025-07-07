@@ -2,6 +2,7 @@
 import Image from "next/image";
 import ConditionWeTreat from "@/components/ConditionWeTreat";
 import ServiceFeq from "@/components/ServiceFeq";
+import Bookbutton from "@/components/Bookbutton";
 
 export default function Home() {
   const faqs = [
@@ -66,9 +67,7 @@ export default function Home() {
           <p className="text-xl text-gray-700">
             Move Freely Again – Expert Surgery for Pain‑Free Living
           </p>
-          <button className="px-6 py-3 bg-blue-600 text-white rounded-2xl shadow-lg">
-            Book Your Consultation
-          </button>
+           <Bookbutton/>
         </div>
 
         <Image

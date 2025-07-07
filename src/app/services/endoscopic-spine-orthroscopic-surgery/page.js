@@ -1,6 +1,7 @@
 import ConditionWeTreat from "@/components/ConditionWeTreat";
 import Image from "next/image";
 import ServiceFeq from "@/components/ServiceFeq";
+import Bookbutton from "@/components/Bookbutton";
 export default function Home() {
   const conditions = [
     {
@@ -100,9 +101,7 @@ export default function Home() {
             vinyl, we’re here with surgical solutions that are sharp, subtle,
             and life-changing.
           </p>
-          <button className="px-6 py-3 bg-blue-600 text-white rounded-2xl shadow-lg">
-            Book Your Consultation
-          </button>
+         <Bookbutton/>
         </div>
       </section>
       <section className="mt-10">

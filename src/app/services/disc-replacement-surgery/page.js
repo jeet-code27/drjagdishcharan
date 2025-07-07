@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 import ConditionWeTreat from "@/components/ConditionWeTreat";
 import ServiceFeq from "@/components/ServiceFeq";
+import Bookbutton from "@/components/Bookbutton";
 export default function Home() {
   const discReplacementConditions = [
     {
@@ -109,9 +110,7 @@ export default function Home() {
               pain, and get you back to doing what you love — without the
               stiffness and limitations.
             </p>
-            <button className="px-6 py-3 bg-blue-600 text-white rounded-2xl shadow-lg">
-              Book Your Consultation
-            </button>
+            <Bookbutton/>
           </div>
         </section>
 

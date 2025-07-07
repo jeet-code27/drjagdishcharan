@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import ConditionWeTreat from "@/components/ConditionWeTreat";
 import ServiceFeq from "@/components/ServiceFeq";
+import Bookbutton from "@/components/Bookbutton";
 export default function Home() {
   const spinalDeformityConditions = [
     {
@@ -81,9 +82,7 @@ export default function Home() {
             Realigning the spine, restoring balance, and relieving chronic pain
             through advanced surgical care.
           </p>
-          <button className="px-6 py-3 bg-blue-600 text-white rounded-2xl shadow-lg">
-            Book Your Consultation
-          </button>
+           <Bookbutton/>
         </div>
 
         <Image
