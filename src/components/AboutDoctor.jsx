@@ -34,7 +34,7 @@ function AboutDoctor() {
               Dr. Jagdish Singh Charan
             </h2>
             <p className="text-blue-900 font-medium mt-1">
-            FNB & Spine Surgery, DNB Ortho, MNAMS, FAOS Asia Specific
+            FNB Spine Surgery, DNB Ortho, MNAMS, FAOS Asia Pacific
             </p>
            
 
