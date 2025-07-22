@@ -8,7 +8,8 @@ const serviceCards = [
     id: 1,
     category: "Spine",
     title: "Endoscopic Spine Surgery",
-    description: "Minimally invasive technique for faster recovery and less pain.",
+    description:
+      "Minimally invasive technique for faster recovery and less pain.",
     href: "/services/endoscopic-spine-surgery",
     image: "/images/services/endoscopic-spine.jpeg",
   },
@@ -16,7 +17,8 @@ const serviceCards = [
     id: 2,
     category: "Spine",
     title: "Minimally Invasive Spine Surgery (MISS)",
-    description: "Precise spinal procedures with less pain, reduced scarring, and quicker return to normal activities.",
+    description:
+      "Precise spinal procedures with less pain, reduced scarring, and quicker return to normal activities.",
     href: "/services/minimally-invasive-spine-surgery",
     image: "/images/services/miss.jpg",
   },
@@ -24,7 +26,8 @@ const serviceCards = [
     id: 3,
     category: "Joint",
     title: "Joint Replacements - Knee & Hip",
-    description: "TKR and THR performed using modern implant technology and high-precision surgical methods.",
+    description:
+      "TKR and THR performed using modern implant technology and high-precision surgical methods.",
     href: "/services/joint-replacement-surgery",
     image: "/images/services/joint-replacement.png",
   },
@@ -32,15 +35,17 @@ const serviceCards = [
     id: 4,
     category: "Ortho",
     title: "Spinal Deformity Correction",
-    description: "Personalized care plans and pain-relief options for arthritis and other degenerative joint disorders.",
+    description:
+      "Personalized care plans and pain-relief options for arthritis and other degenerative joint disorders.",
     href: "/services/spinal-deformity-correction",
-    image: "/images/services/spinal-deformity.png",
+    image: "/images/services/spinal-deformity.webp",
   },
   {
     id: 5,
     category: "Infection",
     title: "Disc Replacement Surgery",
-    description: "Advanced diagnostic and treatment support for bone tuberculosis and musculoskeletal infections.",
+    description:
+      "Advanced diagnostic and treatment support for bone tuberculosis and musculoskeletal infections.",
     href: "/services/disc-replacement-surgery",
     image: "/images/services/bone-tb.jpg",
   },
@@ -48,7 +53,8 @@ const serviceCards = [
     id: 6,
     category: "Trauma",
     title: "Fracture & Trauma Care",
-    description: "Comprehensive treatment for all types of fractures, trauma cases, and orthopedic emergencies.",
+    description:
+      "Comprehensive treatment for all types of fractures, trauma cases, and orthopedic emergencies.",
     href: "/services/fracture-trauma-care",
     image: "/images/services/fracture.jpg",
   },
@@ -56,7 +62,8 @@ const serviceCards = [
     id: 7,
     category: "Trauma",
     title: "Sports Injury Care",
-    description: "Comprehensive treatment for all types of fractures, trauma cases, and orthopedic emergencies.",
+    description:
+      "Comprehensive treatment for all types of fractures, trauma cases, and orthopedic emergencies.",
     href: "/services/arthroscopy-Sports-injury-care",
     image: "/images/services/arthritis.png",
   },
@@ -64,9 +71,10 @@ const serviceCards = [
     id: 8,
     category: "Trauma",
     title: "Endoscopic Spine & Arthroscopic Surgery",
-    description: "Comprehensive treatment for all types of fractures, trauma cases, and orthopedic emergencies.",
+    description:
+      "Comprehensive treatment for all types of fractures, trauma cases, and orthopedic emergencies.",
     href: "/services/endoscopic-spine-orthroscopic-surgery",
-    image: "/images/services/endoscopic-spine.jpeg",
+    image: "/images/services/endoscopic-spine1.jpg",
   },
 ];
 
@@ -97,7 +105,9 @@ const ServiceSection = () => {
           </h2>
 
           <p className="text-center text-gray-700 text-base sm:text-lg max-w-3xl mx-auto">
-            Discover specialized treatments in spine, joint, and orthopedic care — tailored for faster recovery, lasting relief, and enhanced mobility.
+            Discover specialized treatments in spine, joint, and orthopedic care
+            — tailored for faster recovery, lasting relief, and enhanced
+            mobility.
           </p>
         </motion.div>
 
@@ -109,7 +119,11 @@ const ServiceSection = () => {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.1 }}
+              transition={{
+                duration: 0.6,
+                ease: "easeOut",
+                delay: index * 0.1,
+              }}
             >
               <button
                 onClick={() => {
@@ -136,7 +150,11 @@ const ServiceSection = () => {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.1 }}
+              transition={{
+                duration: 0.6,
+                ease: "easeOut",
+                delay: index * 0.1,
+              }}
             >
               <a
                 href={card.href}

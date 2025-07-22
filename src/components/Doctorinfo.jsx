@@ -38,7 +38,7 @@ const Doctorinfo = () => {
 
               {/* Main Heading */}
               <h1 className="text-white text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-6">
-                Reserve Your Appointment:
+                Book Your Appointment:
               </h1>
 
               {/* Description */}
@@ -70,7 +70,7 @@ const Doctorinfo = () => {
                       d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
                     />
                   </svg>
-                  Book Consultation
+                  Book Appointment
                 </button>
               </Link>
 

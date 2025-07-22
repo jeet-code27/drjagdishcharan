@@ -110,7 +110,7 @@ export default function Home() {
         </motion.div>
         <motion.div variants={fadeInUp}>
           <Image
-            src="/images/services/endoscopic-spine.jpeg"
+            src="/images/services/endoscopic-spine1.jpg"
             alt="Happy patient walking after joint replacement"
             width={600}
             height={400}

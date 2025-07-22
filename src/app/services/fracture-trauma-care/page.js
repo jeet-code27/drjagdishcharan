@@ -83,129 +83,129 @@ export default function Home() {
 
   return (
     <motion.main
-      className="mx-auto mt-12 max-w-6xl px-4 py-10 text-gray-800"
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true }}
+    className="mx-auto mt-12 max-w-6xl px-4 py-10 text-gray-800"
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true }}
+    variants={staggerContainer}
+  >
+    {/* Hero Section */}
+    <motion.section
+      className="grid md:grid-cols-2 sm:grid-cols-1 gap-8 items-center"
       variants={staggerContainer}
     >
-      {/* Hero Section */}
-      <motion.section
-        className="grid md:grid-cols-2 sm:grid-cols-1 gap-8 items-center"
-        variants={staggerContainer}
-      >
-        <motion.div className="space-y-4" variants={fadeInRight}>
-          <motion.h1 className="text-4xl md:text-6xl font-bold leading-tight" variants={fadeInUp}>
-            Joint Replacement Surgery
-          </motion.h1>
-          <motion.p className="text-xl text-gray-700" variants={fadeInUp}>
-            Move Freely Again – Expert Surgery for Pain‑Free Living
-          </motion.p>
-          <motion.div variants={fadeInUp}>
-            <Bookbutton />
-          </motion.div>
-        </motion.div>
-
-        <motion.div variants={fadeInRight}>
-          <Image
-            src="/images/services/joint-replacement.png"
-            alt="Happy patient walking after joint replacement"
-            width={600}
-            height={400}
-            className="rounded-2xl shadow-lg object-cover"
-          />
-        </motion.div>
-      </motion.section>
-
-      {/* Details Sections */}
-      <motion.section
-        className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-16 mb-16 items-start px-4 sm:px-6"
-        variants={staggerContainer}
-      >
-        <motion.div variants={fadeInLeft}>
-          <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-gray-800">
-            What You're Feeling
-          </h2>
-          <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
-            Achy knees. Stiff hips. Joints that grind, pop, or scream when you try to move...
-          </p>
-        </motion.div>
-
-        <motion.div variants={fadeInRight}>
-          <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-gray-800">
-            How We Fix It
-          </h2>
-          <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
-            With precision joint replacement surgery, we swap out your damaged joint surfaces...
-          </p>
-        </motion.div>
-
-        <motion.div
-          className="w-full md:col-span-2 bg-gray-50 border-l-4 border-blue-500 rounded-3xl py-10 px-4 sm:px-6 mt-4"
-          variants={fadeInUp}
-        >
-          <motion.h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-800 mb-4" variants={fadeInUp}>
-            Our Treatment Approach
-          </motion.h2>
-          <motion.p className="text-base sm:text-lg text-center text-gray-600 mb-6 max-w-3xl mx-auto" variants={fadeInUp}>
-            You’re not just another set of X-rays. We tailor your joint care journey...
-          </motion.p>
-          <motion.ul className="text-base text-gray-700 space-y-3 max-w-3xl mx-auto" variants={staggerContainer}>
-            {[
-              "Pre-surgery planning that’s personal, not cookie-cutter",
-              "Implants chosen to match your activity level and anatomy",
-              "Minimally invasive techniques for quicker recovery",
-              "Home-friendly rehab that fits your lifestyle",
-              "Ongoing support to keep you on track and feeling strong",
-              "Simple, straight-up communication—no medical jargon overload",
-            ].map((item, index) => (
-              <motion.li key={index} variants={fadeInUp}>
-                {item}
-              </motion.li>
-            ))}
-          </motion.ul>
-        </motion.div>
-
-        <motion.div
-          className="w-full md:col-span-2 bg-gray-50 border-l-4 border-blue-500 rounded-3xl py-10 px-4 sm:px-6 mt-4"
-          variants={fadeInUp}
-        >
-          <motion.h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-800 mb-4" variants={fadeInUp}>
-            What You Can Expect
-          </motion.h2>
-          <motion.p className="text-base sm:text-lg text-center text-gray-600 mb-6 max-w-3xl mx-auto" variants={fadeInUp}>
-            The results speak louder than pain ever could...
-          </motion.p>
-          <motion.ul className="text-base text-gray-700 space-y-3 max-w-3xl mx-auto" variants={staggerContainer}>
-            {[
-              "Way less pain—sometimes gone entirely",
-              "Freedom to walk, bend, sit, and stand with ease",
-              "Restful sleep without that dull ache",
-              "More independence and fewer doctor visits",
-              "Confidence in movement and daily life",
-              "A renewed sense of strength, stability, and joy",
-              "Care that feels human, not robotic",
-            ].map((item, index) => (
-              <motion.li key={index} variants={fadeInUp}>
-                {item}
-              </motion.li>
-            ))}
-          </motion.ul>
-        </motion.div>
-      </motion.section>
-
-      <ConditionWeTreat conditions={conditions} />
-
-      <motion.section className="mb-10" variants={fadeInUp}>
-        <motion.h3 className="text-2xl font-semibold mb-2" variants={fadeInUp}>
-          Why Patients Trust Us
-        </motion.h3>
-        <motion.p variants={fadeInUp}>
-          Dr. Jagdish Singh Charan brings over 15 years of experience. Every consult is a conversation...
+      <motion.div className="space-y-4" variants={fadeInRight}>
+        <motion.h1 className="text-4xl md:text-6xl font-bold leading-tight" variants={fadeInUp}>
+          Fracture and Trauma Care
+        </motion.h1>
+        <motion.p className="text-xl text-gray-700" variants={fadeInUp}>
+          Get Back on Your Feet – Swift, Skilled Fracture & Injury Recovery
         </motion.p>
-      </motion.section>
-
-      <ServiceFeq faqs={faqs} />
-    </motion.main>
+        <motion.div variants={fadeInUp}>
+          <Bookbutton />
+        </motion.div>
+      </motion.div>
+  
+      <motion.div variants={fadeInRight}>
+        <Image
+          src="/images/services/fracture.jpg"
+          alt="Patient receiving care for fracture"
+          width={600}
+          height={400}
+          className="rounded-2xl shadow-lg object-cover"
+        />
+      </motion.div>
+    </motion.section>
+  
+    {/* Details Sections */}
+    <motion.section
+      className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-16 mb-16 items-start px-4 sm:px-6"
+      variants={staggerContainer}
+    >
+      <motion.div variants={fadeInLeft}>
+        <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-gray-800">
+          What You're Feeling
+        </h2>
+        <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
+          Sudden pain, swelling, bruising, or inability to move after a fall or accident? These could be signs of a fracture or traumatic injury that need immediate and expert attention.
+        </p>
+      </motion.div>
+  
+      <motion.div variants={fadeInRight}>
+        <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-gray-800">
+          How We Fix It
+        </h2>
+        <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
+          With precise diagnosis, realignment, and stabilization using advanced surgical or non-surgical methods, we help your bones and tissues heal correctly, safely, and quickly.
+        </p>
+      </motion.div>
+  
+      <motion.div
+        className="w-full md:col-span-2 bg-gray-50 border-l-4 border-blue-500 rounded-3xl py-10 px-4 sm:px-6 mt-4"
+        variants={fadeInUp}
+      >
+        <motion.h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-800 mb-4" variants={fadeInUp}>
+          Our Treatment Approach
+        </motion.h2>
+        <motion.p className="text-base sm:text-lg text-center text-gray-600 mb-6 max-w-3xl mx-auto" variants={fadeInUp}>
+          Every fracture and injury is different. Our trauma care plan is built just for you—with a goal of full, pain-free function.
+        </motion.p>
+        <motion.ul className="text-base text-gray-700 space-y-3 max-w-3xl mx-auto" variants={staggerContainer}>
+          {[
+            "Thorough imaging and accurate diagnosis",
+            "Stabilization using casts, splints, or surgical hardware",
+            "Minimally invasive surgical options when needed",
+            "Personalized rehabilitation for strength and mobility",
+            "Pain management with a focus on safety and comfort",
+            "Continued follow-up until you're fully recovered",
+          ].map((item, index) => (
+            <motion.li key={index} variants={fadeInUp}>
+              {item}
+            </motion.li>
+          ))}
+        </motion.ul>
+      </motion.div>
+  
+      <motion.div
+        className="w-full md:col-span-2 bg-gray-50 border-l-4 border-blue-500 rounded-3xl py-10 px-4 sm:px-6 mt-4"
+        variants={fadeInUp}
+      >
+        <motion.h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-800 mb-4" variants={fadeInUp}>
+          What You Can Expect
+        </motion.h2>
+        <motion.p className="text-base sm:text-lg text-center text-gray-600 mb-6 max-w-3xl mx-auto" variants={fadeInUp}>
+          From injury to full function, our goal is to restore your strength and confidence.
+        </motion.p>
+        <motion.ul className="text-base text-gray-700 space-y-3 max-w-3xl mx-auto" variants={staggerContainer}>
+          {[
+            "Rapid pain relief and swelling reduction",
+            "Accurate bone healing and alignment",
+            "Faster return to mobility and activity",
+            "Minimized risk of long-term complications",
+            "Ongoing support throughout recovery",
+            "Trust and compassion every step of the way",
+          ].map((item, index) => (
+            <motion.li key={index} variants={fadeInUp}>
+              {item}
+            </motion.li>
+          ))}
+        </motion.ul>
+      </motion.div>
+    </motion.section>
+  
+    <ConditionWeTreat conditions={conditions} />
+  
+    <motion.section className="mb-10" variants={fadeInUp}>
+      <motion.h3 className="text-2xl font-semibold mb-2" variants={fadeInUp}>
+        Why Patients Trust Us
+      </motion.h3>
+      <motion.p variants={fadeInUp}>
+        Dr. Jagdish Singh Charan brings over 15 years of trauma and orthopedic experience. Each treatment plan is built on compassion, skill, and a dedication to seeing you heal fully and fast.
+      </motion.p>
+    </motion.section>
+  
+    <ServiceFeq faqs={faqs} />
+  </motion.main>
+  
   );
 }
