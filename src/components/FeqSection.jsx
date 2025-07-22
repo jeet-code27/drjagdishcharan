@@ -73,6 +73,7 @@ export default function FeqSection() {
                 alt="Bone Tuberculosis Service"
                 width={200}
                 height={200}
+                  title="FAQ for Dr. Jagdish Singh Charan Orthopedic and Spine Surgeon"
                 className="object-cover rounded-md"
               />
             </motion.div>
@@ -84,12 +85,12 @@ export default function FeqSection() {
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.6, ease: "easeOut", delay: 0.6 }}
             >
-              <h1
+              <h2
                 id="faq-title"
                 className="text-3xl   font-bold text-blue-800 mt-[-30px] select-none"
               >
                 Frequently Asked Questions
-              </h1>
+              </h2>
 
               {/* Description */}
               <p

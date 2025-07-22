@@ -24,6 +24,34 @@ const slides = [
   },
 ];
 
+// Static metadata
+export const metadata = {
+  title: "Best Orthopedic & Spine Services | Dr Jagdish Singh Charan - Ajmer",
+  description:
+    "Explore advanced orthopedic and spine services offered by Dr. Jagdish Singh Charan in Ajmer, including joint replacement, spine surgery, fracture treatment, and compassionate bone care.",
+  keywords:
+    "Orthopedic services Ajmer, Spine surgery Ajmer, Joint replacement Ajmer, Fracture treatment Ajmer, Dr Jagdish Singh Charan, Bone specialist Ajmer, Orthopedic surgeon Ajmer, Spine specialist Ajmer",
+  openGraph: {
+    title: "Orthopedic & Spine Services | Dr Jagdish Singh Charan - Ajmer",
+    description:
+      "Discover specialized orthopedic and spine treatments by Dr. Jagdish Singh Charan in Ajmer for joint, bone, and spine health.",
+    images: [
+      {
+        url: "https://drjagdishsinghcharan.vercel.app/images/og-services.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Orthopedic & Spine Services by Dr Jagdish Singh Charan",
+      },
+    ],
+    type: "website",
+    url: "https://drjagdishsinghcharan.vercel.app/services",
+  },
+  alternates: {
+    canonical: "https://drjagdishsinghcharan.vercel.app/services",
+  },
+};
+
+
 export default function Home() {
   return (
     <>

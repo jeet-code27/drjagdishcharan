@@ -90,6 +90,7 @@ const MultiItemCarousel = () => {
                 <img
                   src={slide.img}
                   alt={slide.title}
+                  title={ `Dr. Jagdish Singh Charan ${slide.title}`}
                   className="w-full h-full object-cover"
                 />
               </div>

@@ -46,7 +46,7 @@ export default function Footer() {
           {/* Logo and Description */}
           <div className="space-y-4">
             <Link href="/" className="flex items-center space-x-3">
-              <Image src="/images/home/logo.png" width={40} height={40} alt="Agastya Logo" />
+              <Image src="/images/home/logo.png"   title="Dr. Jagdish Singh Charan Orthopedic and Spine Surgeon Logo"  width={40} height={40} alt="Agastya Logo" />
               <span className="text-xl font-semibold dark:text-green">
                 AGASTYA <span className="hindi">(अगस्त्य)</span> SPINE & ORTHO AAROGYAM
               </span>

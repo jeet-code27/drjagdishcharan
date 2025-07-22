@@ -13,61 +13,44 @@ import HeroSectiontwo from "@/components/HeroTwo";
 import MultiItemCarousel from "@/components/MultiItemCarousel";
 import Head from "next/head";
 
+
+// Static metadata
+export const metadata = {
+  title: "Dr Jagdish Singh Charan | Best Orthopedic & Spine Surgeon in Ajmer",
+  description:
+    "Dr. Jagdish Singh Charan is a leading Orthopedic and Spine Surgeon in Ajmer providing advanced treatments for bone, joint, and spine conditions with compassionate care.",
+  keywords:
+    "Dr Jagdish Singh Charan, Orthopedic Surgeon Ajmer, Spine Surgeon Ajmer, Bone Specialist Ajmer, Joint Replacement Ajmer, Best Orthopedic Doctor Ajmer, Spine Specialist Ajmer",
+  openGraph: {
+    title: "Dr Jagdish Singh Charan | Orthopedic & Spine Surgeon in Ajmer",
+    description:
+      "Consult Dr. Jagdish Singh Charan, Orthopedic & Spine Surgeon in Ajmer, for advanced treatments, joint replacement, and compassionate bone and spine care.",
+    images: [
+      {
+        url: "https://drjagdishsinghcharan.vercel.app/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Dr Jagdish Singh Charan",
+      },
+    ],
+    type: "website",
+    url: "https://drjagdishsinghcharan.vercel.app/",
+  },
+  alternates: {
+    canonical: "https://drjagdishsinghcharan.vercel.app/",
+  },
+};
+
+
+
 export default function Home() {
+
+
+
+
   return (
     <>
-      <Head>
-        <title>Dr Jagdish Singh Charan | Orthopedic & Spine Surgeon in Ajmer</title>
-        <meta
-          name="description"
-          content="Consult Dr. Jagdish Singh Charan, top Orthopedic and Spine Surgeon in Ajmer, for advanced treatments, joint replacement, and compassionate bone and spine care."
-        />
-        <meta
-          name="keywords"
-          content="Dr Jagdish Singh Charan, Orthopedic Surgeon Ajmer, Spine Surgeon Ajmer, Bone Specialist Ajmer, Joint Replacement Ajmer, Best Orthopedic Doctor Ajmer, Spine Specialist Ajmer"
-        />
-        <link
-          rel="canonical"
-          href="https://drjagdishsinghcharan.vercel.app/"
-        />
-        <meta name="robots" content="index, follow" />
-        <meta name="author" content="Dr Jagdish Singh Charan" />
-        <meta name="publisher" content="Dr Jagdish Singh Charan" />
-
-        {/* Open Graph Meta */}
-        <meta
-          property="og:title"
-          content="Dr Jagdish Singh Charan | Orthopedic & Spine Surgeon in Ajmer"
-        />
-        <meta
-          property="og:description"
-          content="Consult Dr. Jagdish Singh Charan, Orthopedic & Spine Surgeon in Ajmer, for advanced treatments and compassionate care."
-        />
-        <meta
-          property="og:image"
-          content="https://drjagdishsinghcharan.vercel.app/images/og-image.jpg"
-        />
-        <meta
-          property="og:url"
-          content="https://drjagdishsinghcharan.vercel.app/"
-        />
-        <meta property="og:type" content="website" />
-
-        {/* Twitter Card Meta */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="Dr Jagdish Singh Charan | Orthopedic & Spine Surgeon in Ajmer"
-        />
-        <meta
-          name="twitter:description"
-          content="Consult Dr. Jagdish Singh Charan for expert orthopedic and spine care in Ajmer with advanced treatment options."
-        />
-        <meta
-          name="twitter:image"
-          content="https://drjagdishsinghcharan.vercel.app/images/og-image.jpg"
-        />
-      </Head>
+       
 
       <HeroSectiontwo />
       <AboutDoctor />

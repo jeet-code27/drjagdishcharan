@@ -1,46 +1,39 @@
-import ContactSection from "@/components/ContactSection";
-import ContactInformation from "../../components/ContactInformation";
-import { Divide } from "lucide-react";
-import FeqSection from "@/components/FeqSection";
-import MultiItemCarousel from "@/components/MultiItemCarousel";
-import ServiceSlider from "@/components/ServiceSlider";
-export default function Contact() {
+ import Contact from '@/components/Contact'
+import React from 'react'
+ // Static metadata
+export const metadata = {
+  title: "Contact Dr Jagdish Singh Charan | Orthopedic & Spine Surgeon in Ajmer",
+  description:
+    "Contact Dr. Jagdish Singh Charan, leading Orthopedic and Spine Surgeon in Ajmer. Book appointments or inquire about advanced bone, joint, and spine treatments today.",
+  keywords:
+    "Contact Dr Jagdish Singh Charan, Orthopedic Surgeon Ajmer, Spine Surgeon Ajmer, Book Appointment Ajmer, Bone Specialist Contact Ajmer, Best Orthopedic Doctor Ajmer",
+  openGraph: {
+    title: "Contact Dr Jagdish Singh Charan | Orthopedic & Spine Surgeon in Ajmer",
+    description:
+      "Reach out to Dr. Jagdish Singh Charan for appointments and consultations regarding orthopedic and spine treatments in Ajmer.",
+    images: [
+      {
+        url: "https://drjagdishsinghcharan.vercel.app/images/contact-og.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Contact Dr Jagdish Singh Charan Orthopedic and Spine Surgeon",
+      },
+    ],
+    type: "website",
+    url: "https://drjagdishsinghcharan.vercel.app/contact",
+  },
+  alternates: {
+    canonical: "https://drjagdishsinghcharan.vercel.app/contact",
+  },
+};
 
-  const slides = [
-    {
-      image: "/images/home/slide4.jpg",
-      title: "Dr. Jagdish Singh Charan",
-      subtitle: "Relief for Back and Neck Pain Through Expert, Personalized Care",
-    },
-    {
-      image: "/images/services/joint-replacement.png",
-      title: "Dr. Jagdish Singh Charan",
-      subtitle:
-        "Joint Replacement Surgery – Move Freely Again with Expert Surgery for Pain-Free Living",
-    },
-    {
-      image: "/images/services/kneeinjury.webp",
-      title: "Dr. Jagdish Singh Charan",
-      subtitle:
-        "Sports Injury Care – Specialized Recovery for Athletes and Active Lifestyles",
-    },
-  ];
-
-
-
-  return (
-< >
-<ServiceSlider slides={slides} />
-<ContactInformation/>
-<ContactSection/>
-<MultiItemCarousel/>
-<FeqSection/>
-
-
-
-</>
-
-
-
-  )
-}
+ function Contactpage() {
+   return (
+     <div>
+       <Contact/>
+     </div>
+   )
+ }
+ 
+ export default Contactpage
+ 

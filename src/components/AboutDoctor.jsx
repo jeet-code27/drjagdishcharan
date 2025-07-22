@@ -30,6 +30,7 @@ function AboutDoctor() {
                 src="/images/home/doctor2.jpg" // update the path as needed
                 alt="Dr. Jagdish Singh Charan"
                 fill
+                  title="Dr. Jagdish Singh Charan Orthopedic and Spine Surgeon doctor image"
                 className="rounded-xl object-cover"
                 sizes="(max-width: 640px) 100vw, 
            (max-width: 768px) 100vw, 

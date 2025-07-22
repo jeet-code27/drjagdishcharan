@@ -93,12 +93,15 @@ export default function Navbar() {
         <Link
           href="/"
           className="flex items-center space-x-3"
+         
           onClick={handleLinkClick}
         >
           <img
             src="/images/home/logo.png"
+              title="Dr. Jagdish Singh Charan Orthopedic and Spine Surgeon Logo"
             className="h-10 sm:h-12"
-            alt="Logo"
+            alt="Dr. Jagdish Singh Charan Aurthopadic Spine"
+              
           />
           <span className="text-[12px] sm:text-sm md:text-base lg:text-lg xl:text-xl font-semibold text-blue-900 whitespace-nowrap">
             AGASTYA <span className="hidden sm:inline">(अगस्त्य)</span> SPINE &

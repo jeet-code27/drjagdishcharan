@@ -44,7 +44,7 @@ const WhyChoose = ({ imagePath = "/images/home/allService.jpg" }) => {
           </h3>
           </motion.div>
 
-          <h1 className="text-3xl sm:text-4xl lg:text-4xl font-bold text-gray-900 leading-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-4xl font-bold text-gray-900 leading-tight">
           <motion.div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -62,7 +62,7 @@ const WhyChoose = ({ imagePath = "/images/home/allService.jpg" }) => {
             >
             <span className="text-blue-600">For Everyone</span>
             </motion.div>
-          </h1>
+          </h2>
         </div>
 
         {/* Main Content Grid */}
@@ -87,6 +87,7 @@ const WhyChoose = ({ imagePath = "/images/home/allService.jpg" }) => {
                   src={imagePath}
                   alt="Healthcare Professional"
                   width={600}
+                    title="Why choose the Dr. Jagdish Singh Charan Orthopedic and Spine Surgeon"
                   height={600}
                   className="w-full h-auto object-cover"
                   priority

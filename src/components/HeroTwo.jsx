@@ -162,11 +162,11 @@ export default function HeroSectiontwo() {
                       <span className="text-teal-200 text-sm font-medium">{slide.specialty}</span>
                     </div>
 
-                    <h1 className="text-white text-4xl sm:text-5xl lg:text-7xl font-bold mb-4 leading-tight">
+                    <h2 className="text-white text-4xl sm:text-5xl lg:text-7xl font-bold mb-4 leading-tight">
                       <span className="block text-transparent bg-clip-text bg-gradient-to-r from-white to-teal-200">
                         {slide.title}
                       </span>
-                    </h1>
+                    </h2>
 
                     <h2 className="text-teal-200 text-xl sm:text-2xl lg:text-3xl font-semibold mb-6 opacity-90">
                       {slide.subtitle}

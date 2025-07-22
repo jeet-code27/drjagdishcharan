@@ -80,6 +80,7 @@ const ClientBlogPage = ({ blogs }) => {
                 }
                 transition={{ duration: 0.6, delay: 0.1 }}
                 className="text-4xl pb-2 md:text-5xl font-extrabold bg-gradient-to-br from-blue-900 via-blue-800 to-teal-600 bg-clip-text text-transparent mb-6"
+                style={{ wordSpacing: "-.10em" }}
               >
                 Orthopedic & Spine Health Blog by Dr. Jagdish Singh Charan
               </motion.h1>

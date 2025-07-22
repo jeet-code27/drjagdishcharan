@@ -23,6 +23,7 @@ const Doctorinfo = () => {
           src="/images/home/backstyle.png"
           alt="Background pattern"
           fill
+          title='back image'
           className="object-cover"
         />
       </div>
@@ -43,9 +44,9 @@ const Doctorinfo = () => {
               </div>
 
               {/* Main Heading */}
-              <h1 className="text-white text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-6">
+              <h2 className="text-white text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-6">
                 Book Your Appointment:
-              </h1>
+              </h2>
 
               {/* Description */}
               <p className="text-white/90 text-base sm:text-lg leading-relaxed mb-8">
@@ -100,6 +101,7 @@ const Doctorinfo = () => {
               src="/images/home/bookimg.jpg"
               alt="Medical professional on phone"
               fill
+                title="Dr. Jagdish Singh Charan Orthopedic and Spine Surgeon contact"
               className="object-cover object-center rounded-2xl"
               priority
             />
