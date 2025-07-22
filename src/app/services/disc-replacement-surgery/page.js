@@ -1,6 +1,5 @@
-import DiskReplacement from '@/components/DiskReplacement'
-import React from 'react'
-
+import DiskReplacement from "@/components/DiskReplacement";
+import React from "react";
 
 // Static metadata
 export const metadata = {
@@ -15,29 +14,26 @@ export const metadata = {
       "Get advanced cervical and lumbar disc replacement surgery in Ajmer by Dr. Jagdish Singh Charan for effective spine treatment and pain relief.",
     images: [
       {
-        url: "https://drjagdishsinghcharan.vercel.app/images/disc-replacement-og.jpg",
+        url: "https://drjagdishcharan.in/images/disc-replacement-og.jpg",
         width: 1200,
         height: 630,
         alt: "Disc Replacement Surgery by Dr Jagdish Singh Charan",
       },
     ],
     type: "website",
-    url: "https://drjagdishsinghcharan.vercel.app/services/disc-replacement-surgery",
+    url: "https://drjagdishcharan.in/services/disc-replacement-surgery",
   },
   alternates: {
-    canonical: "https://drjagdishsinghcharan.vercel.app/services/disc-replacement-surgery",
+    canonical: "https://drjagdishcharan.in/services/disc-replacement-surgery",
   },
 };
-
-
-
 
 function DiskReplacementpage() {
   return (
     <div>
-      <DiskReplacement/>
+      <DiskReplacement />
     </div>
-  )
+  );
 }
 
-export default DiskReplacementpage
+export default DiskReplacementpage;

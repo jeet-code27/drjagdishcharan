@@ -37,20 +37,19 @@ export const metadata = {
       "Discover specialized orthopedic and spine treatments by Dr. Jagdish Singh Charan in Ajmer for joint, bone, and spine health.",
     images: [
       {
-        url: "https://drjagdishsinghcharan.vercel.app/images/og-services.jpg",
+        url: "https://drjagdishcharan.in/images/og-services.jpg",
         width: 1200,
         height: 630,
         alt: "Orthopedic & Spine Services by Dr Jagdish Singh Charan",
       },
     ],
     type: "website",
-    url: "https://drjagdishsinghcharan.vercel.app/services",
+    url: "https://drjagdishcharan.in/services",
   },
   alternates: {
-    canonical: "https://drjagdishsinghcharan.vercel.app/services",
+    canonical: "https://drjagdishcharan.in/services",
   },
 };
-
 
 export default function Home() {
   return (

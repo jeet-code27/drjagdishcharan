@@ -13,7 +13,6 @@ import HeroSectiontwo from "@/components/HeroTwo";
 import MultiItemCarousel from "@/components/MultiItemCarousel";
 import Head from "next/head";
 
-
 // Static metadata
 export const metadata = {
   title: "Dr Jagdish Singh Charan | Best Orthopedic & Spine Surgeon in Ajmer",
@@ -27,31 +26,23 @@ export const metadata = {
       "Consult Dr. Jagdish Singh Charan, Orthopedic & Spine Surgeon in Ajmer, for advanced treatments, joint replacement, and compassionate bone and spine care.",
     images: [
       {
-        url: "https://drjagdishsinghcharan.vercel.app/images/og-image.jpg",
+        url: "https://drjagdishcharan.in/images/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Dr Jagdish Singh Charan",
       },
     ],
     type: "website",
-    url: "https://drjagdishsinghcharan.vercel.app/",
+    url: "https://drjagdishcharan.in/",
   },
   alternates: {
-    canonical: "https://drjagdishsinghcharan.vercel.app/",
+    canonical: "https://drjagdishcharan.in/",
   },
 };
 
-
-
 export default function Home() {
-
-
-
-
   return (
     <>
-       
-
       <HeroSectiontwo />
       <AboutDoctor />
       <Service />

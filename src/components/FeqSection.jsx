@@ -98,7 +98,7 @@ export default function FeqSection() {
                 className="text-base text-[#444c59] leading-relaxed max-w-2xl mx-auto select-none"
               >
                 Find answers to common questions about our urology services.
-                Can't find what you're looking for? Contact us directly.
+                Can't find what you're looking for ?  
               </p>
             </motion.div>
           </div>

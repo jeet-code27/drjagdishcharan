@@ -1,6 +1,5 @@
- import JointReplacement from '@/components/JointReplacement'
-import React from 'react'
-  
+import JointReplacement from "@/components/JointReplacement";
+import React from "react";
 
 // Static metadata
 export const metadata = {
@@ -15,29 +14,26 @@ export const metadata = {
       "Get specialized joint replacement surgery in Ajmer by Dr. Jagdish Singh Charan for knee, hip, and shoulder joints with advanced orthopedic care.",
     images: [
       {
-        url: "https://drjagdishsinghcharan.vercel.app/images/joint-replacement-og.jpg",
+        url: "https://drjagdishcharan.in/images/joint-replacement-og.jpg",
         width: 1200,
         height: 630,
         alt: "Joint Replacement Surgery by Dr Jagdish Singh Charan",
       },
     ],
     type: "website",
-    url: "https://drjagdishsinghcharan.vercel.app/services/joint-replacement-surgery",
+    url: "https://drjagdishcharan.in/services/joint-replacement-surgery",
   },
   alternates: {
-    canonical: "https://drjagdishsinghcharan.vercel.app/services/joint-replacement-surgery",
+    canonical: "https://drjagdishcharan.in/services/joint-replacement-surgery",
   },
 };
 
+function jointReplacementpage() {
+  return (
+    <div>
+      <JointReplacement />
+    </div>
+  );
+}
 
-
- function jointReplacementpage() {
-   return (
-     <div>
-   <JointReplacement/>
-     </div>
-   )
- }
- 
- export default jointReplacementpage
- 
+export default jointReplacementpage;

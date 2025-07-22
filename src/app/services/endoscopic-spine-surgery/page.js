@@ -1,6 +1,5 @@
- import SpineSurgery from '@/components/SpineSurgery'
-import React from 'react'
- 
+import SpineSurgery from "@/components/SpineSurgery";
+import React from "react";
 
 // Static metadata
 export const metadata = {
@@ -15,28 +14,26 @@ export const metadata = {
       "Consult Dr. Jagdish Singh Charan for minimally invasive endoscopic spine surgery in Ajmer, ensuring faster recovery and effective treatment for spinal conditions.",
     images: [
       {
-        url: "https://drjagdishsinghcharan.vercel.app/images/endoscopic-spine-og.jpg",
+        url: "https://drjagdishcharan.in/images/endoscopic-spine-og.jpg",
         width: 1200,
         height: 630,
         alt: "Endoscopic Spine Surgery by Dr Jagdish Singh Charan",
       },
     ],
     type: "website",
-    url: "https://drjagdishsinghcharan.vercel.app/services/endoscopic-spine-surgery",
+    url: "https://drjagdishcharan.in/services/endoscopic-spine-surgery",
   },
   alternates: {
-    canonical: "https://drjagdishsinghcharan.vercel.app/services/endoscopic-spine-surgery",
+    canonical: "https://drjagdishcharan.in/services/endoscopic-spine-surgery",
   },
 };
 
+function SpineSurgerypage() {
+  return (
+    <div>
+      <SpineSurgery />
+    </div>
+  );
+}
 
- function SpineSurgerypage() {
-   return (
-     <div>
-      <SpineSurgery/>
-     </div>
-   )
- }
- 
- export default SpineSurgerypage
- 
+export default SpineSurgerypage;
