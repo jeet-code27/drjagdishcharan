@@ -3,6 +3,21 @@ import Image from "next/image";
 import ConditionWeTreat from "@/components/ConditionWeTreat";
 import ServiceFeq from "@/components/ServiceFeq";
 import Bookbutton from "@/components/Bookbutton";
+import { motion } from "framer-motion";
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
+
+const staggerContainer = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
 
 export default function Home() {
   const faqs = [
@@ -57,112 +72,114 @@ export default function Home() {
   ];
 
   return (
-    <main className="mx-auto mt-12  max-w-5xl px-4 py-10 text-gray-800">
+    <motion.main
+      className="mx-auto mt-12  max-w-6xl px-4 py-10 text-gray-800"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      variants={staggerContainer}
+    >
       {/* Hero Section */}
       <section className="grid md:grid-cols-2  sm:grid-cols-1 gap-8 items-center">
-        <div className="space-y-4">
+        <motion.div className="space-y-4" variants={fadeInUp}>
           <h1 className="text-4xl md:text-6xl font-bold  leading-tight">
             Joint Replacement Surgery
           </h1>
           <p className="text-xl text-gray-700">
             Move Freely Again – Expert Surgery for Pain‑Free Living
           </p>
-           <Bookbutton/>
-        </div>
+          <Bookbutton />
+        </motion.div>
 
-        <Image
-          src="/images/services/joint-replacement.png"
-          alt="Happy patient walking after joint replacement"
-          width={600}
-          height={400}
-          className="rounded-2xl shadow-lg object-cover"
-        />
+        <motion.div variants={fadeInUp}>
+          <Image
+            src="/images/services/joint-replacement.png"
+            alt="Happy patient walking after joint replacement"
+            width={600}
+            height={400}
+            className="rounded-2xl shadow-lg object-cover"
+          />
+        </motion.div>
       </section>
 
-    <section className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-16 mb-16 items-start px-4 sm:px-6">
-  {/* What's Going On */}
-  <div>
-    <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-gray-800">
-      What You're Feeling
-    </h2>
-    <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
-      Achy knees. Stiff hips. Joints that grind, pop, or scream when you
-      try to move. Whether it’s from arthritis, injury, or plain old
-      wear-and-tear, joint pain can quietly take over your life—stealing
-      your steps, your sleep, and your spark.
-    </p>
-  </div>
+      {/* Details Sections */}
+      <motion.section
+        className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-16 mb-16 items-start px-4 sm:px-6"
+        variants={staggerContainer}
+      >
+        <motion.div variants={fadeInUp}>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-gray-800">
+            What You're Feeling
+          </h2>
+          <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
+            Achy knees. Stiff hips. Joints that grind, pop, or scream when you
+            try to move. Whether it’s from arthritis, injury, or plain old
+            wear-and-tear, joint pain can quietly take over your life—stealing
+            your steps, your sleep, and your spark.
+          </p>
+        </motion.div>
 
-  {/* Solution */}
-  <div>
-    <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-gray-800">
-      How We Fix It
-    </h2>
-    <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
-      With precision joint replacement surgery, we swap out your damaged
-      joint surfaces for smooth, strong implants that bring back comfort
-      and motion. Our modern, muscle-sparing techniques help you heal
-      faster, move better, and get back to doing what you love—without the
-      limp.
-    </p>
-  </div>
+        <motion.div variants={fadeInUp}>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-gray-800">
+            How We Fix It
+          </h2>
+          <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
+            With precision joint replacement surgery, we swap out your damaged
+            joint surfaces for smooth, strong implants that bring back comfort
+            and motion. Our modern, muscle-sparing techniques help you heal
+            faster, move better, and get back to doing what you love—without the
+            limp.
+          </p>
+        </motion.div>
 
-  {/* Our Treatment Approach */}
-  <div className="w-full md:col-span-2 bg-gray-50 border-l-4 border-blue-500 rounded-3xl py-10 px-4 sm:px-6 mt-4">
-    <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-800 mb-4">
-      Our Treatment Approach
-    </h2>
-    <p className="text-base sm:text-lg text-center text-gray-600 mb-6 max-w-3xl mx-auto">
-      You’re not just another set of X-rays. We tailor your joint care
-      journey to your goals—whether that’s walking the dog, dancing at
-      your kid’s wedding, or just getting through the day without pain.
-    </p>
-    <ul className="text-base text-gray-700 space-y-3 max-w-3xl mx-auto">
-      <li> Pre-surgery planning that’s personal, not cookie-cutter</li>
-      <li> Implants chosen to match your activity level and anatomy</li>
-      <li> Minimally invasive techniques for quicker recovery</li>
-      <li> Home-friendly rehab that fits your lifestyle</li>
-      <li> Ongoing support to keep you on track and feeling strong</li>
-      <li> Simple, straight-up communication—no medical jargon overload</li>
-    </ul>
-  </div>
+        <motion.div
+          className="w-full md:col-span-2 bg-gray-50 border-l-4 border-blue-500 rounded-3xl py-10 px-4 sm:px-6 mt-4"
+          variants={fadeInUp}
+        >
+          <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-800 mb-4">
+            Our Treatment Approach
+          </h2>
+          <p className="text-base sm:text-lg text-center text-gray-600 mb-6 max-w-3xl mx-auto">
+            You’re not just another set of X-rays. We tailor your joint care
+            journey to your goals—whether that’s walking the dog, dancing at
+            your kid’s wedding, or just getting through the day without pain.
+          </p>
+          <ul className="text-base text-gray-700 space-y-3 max-w-3xl mx-auto">
+            <li> Pre-surgery planning that’s personal, not cookie-cutter</li>
+            <li> Implants chosen to match your activity level and anatomy</li>
+            <li> Minimally invasive techniques for quicker recovery</li>
+            <li> Home-friendly rehab that fits your lifestyle</li>
+            <li> Ongoing support to keep you on track and feeling strong</li>
+            <li> Simple, straight-up communication—no medical jargon overload</li>
+          </ul>
+        </motion.div>
 
-  {/* Benefits of Our Care */}
-  <div className="w-full md:col-span-2 bg-gray-50 border-l-4 border-blue-500 rounded-3xl py-10 px-4 sm:px-6 mt-4">
-    <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-800 mb-4">
-      What You Can Expect
-    </h2>
-    <p className="text-base sm:text-lg text-center text-gray-600 mb-6 max-w-3xl mx-auto">
-      The results speak louder than pain ever could. With joint
-      replacement done right, here’s what patients often notice:
-    </p>
-    <ul className="text-base text-gray-700 space-y-3 max-w-3xl mx-auto">
-      <li> Way less pain—sometimes gone entirely</li>
-      <li> Freedom to walk, bend, sit, and stand with ease</li>
-      <li> Restful sleep without that dull ache</li>
-      <li> More independence and fewer doctor visits</li>
-      <li> Confidence in movement and daily life</li>
-      <li> A renewed sense of strength, stability, and joy</li>
-      <li> Care that feels human, not robotic</li>
-    </ul>
-  </div>
-</section>
-
-{/* 
-      Secondary Image
-      <section className="flex justify-center">
-        <Image
-          src="/images/joint-team.jpg"
-          alt="Surgical team performing joint replacement"
-          width={700}
-          height={450}
-          className="rounded-2xl shadow-lg object-cover"
-        />
-      </section> */}
+        <motion.div
+          className="w-full md:col-span-2 bg-gray-50 border-l-4 border-blue-500 rounded-3xl py-10 px-4 sm:px-6 mt-4"
+          variants={fadeInUp}
+        >
+          <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-800 mb-4">
+            What You Can Expect
+          </h2>
+          <p className="text-base sm:text-lg text-center text-gray-600 mb-6 max-w-3xl mx-auto">
+            The results speak louder than pain ever could. With joint
+            replacement done right, here’s what patients often notice:
+          </p>
+          <ul className="text-base text-gray-700 space-y-3 max-w-3xl mx-auto">
+            <li> Way less pain—sometimes gone entirely</li>
+            <li> Freedom to walk, bend, sit, and stand with ease</li>
+            <li> Restful sleep without that dull ache</li>
+            <li> More independence and fewer doctor visits</li>
+            <li> Confidence in movement and daily life</li>
+            <li> A renewed sense of strength, stability, and joy</li>
+            <li> Care that feels human, not robotic</li>
+          </ul>
+        </motion.div>
+      </motion.section>
 
       <ConditionWeTreat conditions={conditions} />
 
-      <section className="mb-10">
+      <motion.section className="mb-10" variants={fadeInUp}>
         <h3 className="text-2xl font-semibold mb-2">Why Patients Trust Us</h3>
         <p>
           Dr. Jagdish Singh Charan brings over 15 years of experience. Every
@@ -170,10 +187,9 @@ export default function Home() {
           cutting-edge techniques, same-day discharges, and a support team that
           truly cares.
         </p>
-      </section>
+      </motion.section>
 
-      {/* FAQs */}
       <ServiceFeq faqs={faqs} />
-    </main>
+    </motion.main>
   );
 }

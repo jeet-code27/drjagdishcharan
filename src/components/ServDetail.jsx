@@ -1,24 +1,44 @@
-
-'use client';
+"use client";
 import { CheckCircle } from "lucide-react";
-import { useRouter } from 'next/navigation'; // not next/router
+import { useRouter } from "next/navigation"; // not next/router
 export default function ServDetail() {
   const router = useRouter();
 
-  const handleRedirect = (index) => {
-    router.push(`/services/service${index + 1}`);
-  };
-  const services = [
-    "Spine Surgery",
-    "Fracture & Trauma Care",
-    "Disc Replacement",
-    "Endoscopic & Arthroscopic Surgery",
-    "Minimally Invasive Spine Surgery",
-    "Sports Injury Treatment",
-    "Spinal Deformity Correction",
-    "Joint Replacement"
-  ];
   
+  const services = [
+    {
+      title: "Spine Surgery",
+      path: "/endoscopic-spine-surgery",
+    },
+    {
+      title: "Fracture & Trauma Care",
+      path: "/fracture-trauma-care",
+    },
+    {
+      title: "Disc Replacement",
+      path: "/disc-replacement-surgery",
+    },
+    {
+      title: "Endoscopic & Arthroscopic Surgery",
+      path: "/endoscopic-spine-orthroscopic-surgery",
+    },
+    {
+      title: "Minimally Invasive Spine Surgery",
+      path: "/minimally-invasive-spine-surgery",
+    },
+    {
+      title: "Sports Injury Treatment",
+      path: "/arthroscopy-Sports-injury-care",
+    },
+    {
+      title: "Spinal Deformity Correction",
+      path: "/spinal-deformity-correction",
+    },
+    {
+      title: "Joint Replacement",
+      path: "/joint-replacement-surgery",
+    },
+  ];
 
   return (
     <section className="py-12 px-4 rounded-2xl bg-white  ">
@@ -31,14 +51,14 @@ export default function ServDetail() {
             className="rounded-xl w-full object-cover"
           />
 
-          <div className="absolute bottom-4 left-4 bg-blue-200 rounded-xl p-1 w-40 text-center shadow-md">
+          {/* <div className="absolute bottom-4 left-4 bg-blue-200 rounded-xl p-1 w-40 text-center shadow-md">
             <p className="text-gray-800 text-xl font-semibold mb-2">
               Certified
             </p>
             <span className="inline-block bg-white text-gray-800  text-xs px-3 py-1 rounded-full">
               Spine & Orthopedic Surgeon
             </span>
-          </div>
+          </div> */}
         </div>
 
         {/* Right: Text Content */}
@@ -58,12 +78,12 @@ export default function ServDetail() {
             {services.map((service, index) => (
               <div
                 key={index}
-                onClick={() => handleRedirect(index)}
+                onClick={() =>router.push(`/services/${service.path}`) }
                 className="cursor-pointer flex flex-wrap items-start text-gray-800 hover:bg-gray-100 rounded-lg p-2 transition"
               >
                 <span className="flex flex-row items-center break-words">
                   <CheckCircle className="w-4 h-4 text-blue-800 mr-2 flex-shrink-0" />
-                  {service}
+                  {service.title}
                 </span>
               </div>
             ))}

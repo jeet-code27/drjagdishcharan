@@ -1,12 +1,13 @@
 "use client";
 import Head from "next/head";
 import Image from "next/image";
-import { useState } from "react";
+import { motion } from "framer-motion";
 import ConditionWeTreat from "@/components/ConditionWeTreat";
 import ServiceFeq from "@/components/ServiceFeq";
 import Bookbutton from "@/components/Bookbutton";
+
 export default function Home() {
-  const discReplacementConditions = [
+    const discReplacementConditions = [
     {
       title: "Degenerative Disc Disease",
       description:
@@ -84,25 +85,43 @@ export default function Home() {
     <>
       <main className="max-w-6xl mx-auto px-4 py-12 text-gray-800">
         {/* Hero Section */}
-        <section className="grid md:grid-cols-2 mt-12 sm:grid-cols-1 gap-8 items-center">
-          {/* Heading Section */}
-          <div className="space-y-4">
+        <motion.section
+          className="grid md:grid-cols-2 mt-12 sm:grid-cols-1 gap-8 items-center"
+          initial={{ opacity: 0, x:-50 }}
+        animate={{ opacity: 1, y: 0 ,x:0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <motion.div
+            className="space-y-4"
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
             <h1 className="text-4xl md:text-5xl font-bold leading-tight">
               Disc Replacement Surgery
             </h1>
-          </div>
+          </motion.div>
 
-          {/* Image */}
-          <Image
-            src="/images/services/disk-replacement.png"
-            alt="Patient recovering after disk replacement surgery"
-            width={600}
-            height={400}
-            className="rounded-2xl shadow-lg object-cover"
-          />
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.7, delay: 0.4 }}
+          >
+            <Image
+              src="/images/services/disk-replacement.png"
+              alt="Patient recovering after disk replacement surgery"
+              width={600}
+              height={400}
+              className="rounded-2xl shadow-lg object-cover"
+            />
+          </motion.div>
 
-          {/* Text + CTA */}
-          <div className="lg:row-span-2">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="lg:row-span-2"
+          >
             <p className="mb-6 w-auto">
               Tired of living with chronic back or neck pain that just won't
               quit? Disc replacement surgery offers a motion-preserving
@@ -110,12 +129,18 @@ export default function Home() {
               pain, and get you back to doing what you love — without the
               stiffness and limitations.
             </p>
-            <Bookbutton/>
-          </div>
-        </section>
+            <Bookbutton />
+          </motion.div>
+        </motion.section>
 
         {/* What Is It Section */}
-        <section className="mt-10">
+        <motion.section
+          className="mt-10"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
           <h3 className="text-2xl font-semibold mb-2">
             What is Disc Replacement Surgery?
           </h3>
@@ -126,92 +151,113 @@ export default function Home() {
             bones together, disc replacement keeps your spine flexible — helping
             you move more freely with less long-term impact.
           </p>
+        </motion.section>
+
+        {/* What's Going On + How We Fix It + 2 Blue Boxes */}
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-16 mb-16 items-start px-4 sm:px-6">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-gray-800">
+              What You're Feeling
+            </h2>
+            <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
+              Persistent neck or lower back pain. Stiffness that won’t quit...
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-gray-800">
+              How We Fix It
+            </h2>
+            <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
+              Disc Replacement Surgery removes the damaged disc and replaces it...
+            </p>
+          </motion.div>
+
+          <motion.div
+            className="w-full md:col-span-2 bg-gray-50 border-l-4 border-blue-500 rounded-3xl py-10 px-4 sm:px-6 mt-4"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-800 mb-4">
+              Our Treatment Approach
+            </h2>
+            <p className="text-base sm:text-lg text-center text-gray-600 mb-6 max-w-3xl mx-auto">
+              Every spine is different. That’s why we start with a thorough assessment...
+            </p>
+            <ul className="text-gray-700 text-base space-y-3 max-w-3xl mx-auto">
+              <li>• Advanced imaging to pinpoint which disc is the culprit</li>
+              <li>• Minimally invasive techniques for faster healing</li>
+              <li>• Motion-preserving implants built to last</li>
+              <li>• Personalized rehab plans to regain flexibility and strength</li>
+              <li>• Clear, jargon-free communication every step of the way</li>
+              <li>• Emphasis on lifestyle adjustments that support long-term spine health</li>
+            </ul>
+          </motion.div>
+
+          <motion.div
+            className="w-full md:col-span-2 bg-gray-50 border-l-4 border-blue-500 rounded-3xl py-10 px-4 sm:px-6 mt-4"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-800 mb-4">
+              What You Can Expect
+            </h2>
+            <p className="text-base sm:text-lg text-center text-gray-600 mb-6 max-w-3xl mx-auto">
+              Disc replacement surgery can be a game-changer. Here’s what many of our
+              patients experience...
+            </p>
+            <ul className="text-gray-700 text-base space-y-3 max-w-3xl mx-auto">
+              <li>• Reduced or eliminated neck or back pain</li>
+              <li>• Improved range of motion and spine flexibility</li>
+              <li>• Faster recovery compared to spinal fusion</li>
+              <li>• Fewer long-term complications and follow-ups</li>
+              <li>• Increased energy and comfort in daily movement</li>
+              <li>• Lower dependence on pain medications</li>
+              <li>• Freedom to get back to the life you love</li>
+            </ul>
+          </motion.div>
         </section>
 
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-16 mb-16 items-start px-4 sm:px-6">
-  {/* What's Going On */}
-  <div>
-    <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-gray-800">
-      What You're Feeling
-    </h2>
-    <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
-      Persistent neck or lower back pain. Stiffness that won’t quit. Pain that
-      radiates down your arms or legs. Maybe it’s a herniated disc, maybe it’s
-      degenerative disc disease. Either way, the cartilage between your
-      vertebrae is worn out, and your spine is crying for help.
-    </p>
-  </div>
-
-  {/* Solution */}
-  <div>
-    <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-gray-800">
-      How We Fix It
-    </h2>
-    <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
-      Disc Replacement Surgery removes the damaged disc and replaces it with an
-      artificial one designed to restore natural movement. Unlike spinal fusion,
-      this option keeps your flexibility while easing nerve pressure, pain, and
-      instability. It's modern spine care that moves with you.
-    </p>
-  </div>
-
-  {/* Our Treatment Approach */}
-  <div className="w-full md:col-span-2 bg-gray-50 border-l-4 border-blue-500 rounded-3xl py-10 px-4 sm:px-6 mt-4">
-    <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-800 mb-4">
-      Our Treatment Approach
-    </h2>
-    <p className="text-base sm:text-lg text-center text-gray-600 mb-6 max-w-3xl mx-auto">
-      Every spine is different. That’s why we start with a thorough assessment
-      of your condition, goals, and lifestyle before customizing a surgical and
-      recovery plan that works just for you.
-    </p>
-    <ul className="text-gray-700 text-base space-y-3 max-w-3xl mx-auto">
-      <li>• Advanced imaging to pinpoint which disc is the culprit</li>
-      <li>• Minimally invasive techniques for faster healing</li>
-      <li>• Motion-preserving implants built to last</li>
-      <li>• Personalized rehab plans to regain flexibility and strength</li>
-      <li>• Clear, jargon-free communication every step of the way</li>
-      <li>• Emphasis on lifestyle adjustments that support long-term spine health</li>
-    </ul>
-  </div>
-
-  {/* Benefits of Our Care */}
-  <div className="w-full md:col-span-2 bg-gray-50 border-l-4 border-blue-500 rounded-3xl py-10 px-4 sm:px-6 mt-4">
-    <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-800 mb-4">
-      What You Can Expect
-    </h2>
-    <p className="text-base sm:text-lg text-center text-gray-600 mb-6 max-w-3xl mx-auto">
-      Disc replacement surgery can be a game-changer. Here’s what many of our
-      patients experience when they follow their recovery plan:
-    </p>
-    <ul className="text-gray-700 text-base space-y-3 max-w-3xl mx-auto">
-      <li>• Reduced or eliminated neck or back pain</li>
-      <li>• Improved range of motion and spine flexibility</li>
-      <li>• Faster recovery compared to spinal fusion</li>
-      <li>• Fewer long-term complications and follow-ups</li>
-      <li>• Increased energy and comfort in daily movement</li>
-      <li>• Lower dependence on pain medications</li>
-      <li>• Freedom to get back to the life you love</li>
-    </ul>
-  </div>
-</section>
-
-
-
+        {/* Conditions (already animated with hover inside the component) */}
         <ConditionWeTreat conditions={discReplacementConditions} />
 
-        <section className="mb-10">
+        {/* Trust Section */}
+        <motion.section
+          className="mb-10"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
           <h3 className="text-2xl font-semibold mb-2">Why Patients Trust Us</h3>
           <p>
-            Dr. Jagdish Singh Charan brings over 15 years of experience. Every
-            consult is a conversation, not a lecture. Our clinic offers
-            cutting-edge techniques, same-day discharges, and a support team
-            that truly cares.
+            Dr. Jagdish Singh Charan brings over 15 years of experience...
           </p>
-        </section>
-        {/* Second full‑width image */}
-        <ServiceFeq faqs={discReplacementFaqs} />
+        </motion.section>
+
         {/* FAQs */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <ServiceFeq faqs={discReplacementFaqs} />
+        </motion.div>
       </main>
     </>
   );

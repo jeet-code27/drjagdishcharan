@@ -1,9 +1,36 @@
-import Bookbutton from "@/components/Bookbutton";
+"use client";
+import Image from "next/image";
 import ConditionWeTreat from "@/components/ConditionWeTreat";
 import ServiceFeq from "@/components/ServiceFeq";
-import Image from "next/image";
+import Bookbutton from "@/components/Bookbutton";
+import { motion } from "framer-motion";
 
-const conditions = [
+const fadeInUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
+
+const fadeInLeft = {
+  hidden: { opacity: 0, x: -60 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.7, ease: "easeOut" } },
+};
+
+const fadeInRight = {
+  hidden: { opacity: 0, x: 60 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.7, ease: "easeOut" } },
+};
+
+const staggerContainer = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.25,
+    },
+  },
+};
+
+export default function Home() {
+ const conditions = [
   {
     title: "Herniated Discs",
     description:
@@ -57,21 +84,31 @@ const faqs = [
     a: "Every surgery carries some risk, but in experienced hands using modern tools, the complication rate is low and the success rate is high.",
   },
 ];
-
-export default function Home() {
   return (
-    <main className="mx-auto mt-12  max-w-5xl px-4 py-10 text-gray-800">
-      <section className="grid md:grid-cols-2  sm:grid-cols-1 gap-8 items-center">
-        <div className="space-y-4">
-          <h1 className="text-4xl md:text-6xl font-bold  leading-tight">
+    <motion.main
+      className="mx-auto mt-12 max-w-6xl px-4 py-10 text-gray-800"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      variants={staggerContainer}
+    >
+      <motion.section
+        className="grid md:grid-cols-2 sm:grid-cols-1 gap-8 items-center"
+        variants={staggerContainer}
+      >
+        <motion.div className="space-y-4" variants={fadeInLeft}>
+          <motion.h1 className="text-4xl md:text-6xl font-bold leading-tight" variants={fadeInUp}>
             Spine Surgery
-          </h1>
-          <p className="text-xl text-gray-700">
+          </motion.h1>
+          <motion.p className="text-xl text-gray-700" variants={fadeInUp}>
             Relief for Back and Neck Pain Through Expert, Personalized Care
-          </p>
-           <Bookbutton/>
-        </div>
-       
+          </motion.p>
+          <motion.div variants={fadeInUp}>
+            <Bookbutton />
+          </motion.div>
+        </motion.div>
+
+        <motion.div variants={fadeInRight}>
           <Image
             src="/images/services/spine.jpg"
             alt="Happy patient walking after joint replacement"
@@ -79,97 +116,71 @@ export default function Home() {
             height={400}
             className="rounded-2xl shadow-lg object-cover"
           />
-        
-      </section>
+        </motion.div>
+      </motion.section>
 
-      <section className="grid grid-cols-1 gap-10 mt-16 mb-16 items-start">
-        {/* What's Going On */}
-      <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-8">
-  {/* What You're Feeling */}
-  <div className="w-full">
-    <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-gray-800">
-      What You're Feeling
-    </h2>
-    <p className="text-gray-700 leading-relaxed text-base sm:text-lg">
-      Herniated discs, spinal stenosis, and nerve compression can make
-      everyday movements—like tying your shoes or getting out of bed—feel
-      like a battle. When rest, therapy, and meds stop helping, pain can
-      start calling the shots.
-    </p>
-  </div>
+      <motion.section className="grid grid-cols-1 gap-10 mt-16 mb-16 items-start" variants={staggerContainer}>
+        <motion.div className="w-full grid grid-cols-1 md:grid-cols-2 gap-8" variants={staggerContainer}>
+          <motion.div className="w-full" variants={fadeInLeft}>
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-gray-800">
+              What You're Feeling
+            </h2>
+            <p className="text-gray-700 leading-relaxed text-base sm:text-lg">
+              Herniated discs, spinal stenosis, and nerve compression can make everyday movements—like tying your shoes or getting out of bed—feel like a battle. When rest, therapy, and meds stop helping, pain can start calling the shots.
+            </p>
+          </motion.div>
 
-  {/* How We Fix It */}
-  <div className="w-full">
-    <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-gray-800">
-      How We Fix It
-    </h2>
-    <p className="text-gray-700 leading-relaxed text-base sm:text-lg">
-      Our minimally invasive spine surgery relieves pressure on nerves,
-      strengthens weak spots, and restores proper alignment. It’s all
-      about getting you back to moving freely, sleeping soundly, and
-      living on your own terms.
-    </p>
-  </div>
-</div>
+          <motion.div className="w-full" variants={fadeInRight}>
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-gray-800">
+              How We Fix It
+            </h2>
+            <p className="text-gray-700 leading-relaxed text-base sm:text-lg">
+              Our minimally invasive spine surgery relieves pressure on nerves, strengthens weak spots, and restores proper alignment. It’s all about getting you back to moving freely, sleeping soundly, and living on your own terms.
+            </p>
+          </motion.div>
+        </motion.div>
 
-
-        {/* Our Treatment Approach */}
-        <div className="w-full col-span-2 bg-gray-50 border-l-4 border-blue-500 rounded-3xl py-12 px-6 mt-8">
+        <motion.div className="w-full col-span-2 bg-gray-50 border-l-4 border-blue-500 rounded-3xl py-12 px-6 mt-8" variants={fadeInUp}>
           <h2 className="text-3xl font-bold text-center text-gray-800 mb-4">
             Our Treatment Approach
           </h2>
           <p className="text-lg text-center text-gray-600 mb-6 max-w-3xl mx-auto">
-            We work side-by-side with you to build a care plan that fits your
-            life—not the other way around. Everything we do is practical,
-            personal, and focused on results that last.
+            We work side-by-side with you to build a care plan that fits your life—not the other way around. Everything we do is practical, personal, and focused on results that last.
           </p>
-          <ul className="text-gray-700 space-y-3 max-w-3xl mx-auto list-none list-inside">
-            <li>
-              Regular check-ins to track your recovery and make adjustments
-            </li>
-            <li>Clear, simple explanations of what’s happening and why</li>
-            <li>Medication plans that are easy to follow</li>
-            <li>Everyday lifestyle tweaks to reduce stress on your spine</li>
-            <li>Realistic, step-by-step goals you can stick to</li>
-            <li>Support and education for both you and your family</li>
-          </ul>
-        </div>
+          <motion.ul className="text-gray-700 space-y-3 max-w-3xl mx-auto list-none list-inside" variants={staggerContainer}>
+            {["Regular check-ins to track your recovery and make adjustments", "Clear, simple explanations of what’s happening and why", "Medication plans that are easy to follow", "Everyday lifestyle tweaks to reduce stress on your spine", "Realistic, step-by-step goals you can stick to", "Support and education for both you and your family"].map((item, index) => (
+              <motion.li key={index} variants={fadeInUp}>{item}</motion.li>
+            ))}
+          </motion.ul>
+        </motion.div>
 
-        {/* Benefits of Our Care */}
-        <div className="w-full col-span-2 bg-gray-50 border-l-4 border-blue-500 rounded-3xl py-12 px-6">
+        <motion.div className="w-full col-span-2 bg-gray-50 border-l-4 border-blue-500 rounded-3xl py-12 px-6" variants={fadeInUp}>
           <h2 className="text-3xl font-bold text-center text-gray-800 mb-4">
             What You Can Expect
           </h2>
           <p className="text-lg text-center text-gray-600 mb-6 max-w-3xl mx-auto">
-            When you stick with your recovery plan, the payoff is real. Here’s
-            what our patients often tell us they experience:
+            When you stick with your recovery plan, the payoff is real. Here’s what our patients often tell us they experience:
           </p>
-          <ul className="text-gray-700 space-y-3 max-w-3xl mx-auto list-none list-inside">
-            <li>Fewer ER visits and urgent care panics</li>
-            <li>Less pain, more control over your day-to-day life</li>
-            <li>More energy to do what you love</li>
-            <li>Lower reliance on medications over time</li>
-            <li>A stronger, more mobile spine</li>
-            <li>Confidence in managing your own recovery</li>
-            <li>Care from specialists who actually listen</li>
-          </ul>
-        </div>
-      </section>
+          <motion.ul className="text-gray-700 space-y-3 max-w-3xl mx-auto list-none list-inside" variants={staggerContainer}>
+            {["Fewer ER visits and urgent care panics", "Less pain, more control over your day-to-day life", "More energy to do what you love", "Lower reliance on medications over time", "A stronger, more mobile spine", "Confidence in managing your own recovery", "Care from specialists who actually listen"].map((item, index) => (
+              <motion.li key={index} variants={fadeInUp}>{item}</motion.li>
+            ))}
+          </motion.ul>
+        </motion.div>
+      </motion.section>
 
       <ConditionWeTreat conditions={conditions} />
 
-      <section className="mb-10">
-        <h3 className="text-2xl font-semibold mb-2">Why Patients Trust Us</h3>
-        <p>
-          Dr. Jagdish Singh Charan brings over 15 years of experience. Every
-          consult is a conversation, not a lecture. Our clinic offers
-          cutting-edge techniques, same-day discharges, and a support team that
-          truly cares.
-        </p>
-      </section>
-      {/* Second full‑width image */}
+      <motion.section className="mb-10" variants={fadeInUp}>
+        <motion.h3 className="text-2xl font-semibold mb-2" variants={fadeInUp}>
+          Why Patients Trust Us
+        </motion.h3>
+        <motion.p variants={fadeInUp}>
+          Dr. Jagdish Singh Charan brings over 15 years of experience. Every consult is a conversation, not a lecture. Our clinic offers cutting-edge techniques, same-day discharges, and a support team that truly cares.
+        </motion.p>
+      </motion.section>
+
       <ServiceFeq faqs={faqs} />
-      {/* FAQs */}
-    </main>
+    </motion.main>
   );
 }

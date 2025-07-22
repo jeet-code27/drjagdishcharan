@@ -71,114 +71,145 @@ export default function Home() {
   ];
 
   return (
-    <main className="mx-auto mt-12  max-w-6xl px-4 py-10 text-gray-800">
-      {/* Hero Section */}
-      <section className="grid md:grid-cols-2 sm:grid-cols-1 gap-8 items-center mt-12 mb-12">
-        <div className="space-y-4">
-          <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-            Spinal Deformity&nbsp;Correction
-          </h1>
-          <p className="text-xl text-gray-700">
-            Realigning the spine, restoring balance, and relieving chronic pain
-            through advanced surgical care.
-          </p>
-           <Bookbutton/>
-        </div>
+   <motion.main
+  className="mx-auto mt-12 max-w-6xl px-4 py-10 text-gray-800"
+  initial={{ opacity: 0, y: 50 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8 }}
+>
+  {/* Hero Section */}
+  <motion.section
+    className="grid md:grid-cols-2 sm:grid-cols-1 gap-8 items-center mt-12 mb-12"
+    initial={{ opacity: 0, y: 40 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6 }}
+    viewport={{ once: true }}
+  >
+    <motion.div
+      className="space-y-4 z-20"
+      initial={{ opacity: 0, x: -30 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+    >
+      <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+        Spinal Deformity&nbsp;Correction
+      </h1>
+      <p className="text-xl text-gray-700">
+        Realigning the spine, restoring balance, and relieving chronic pain
+        through advanced surgical care.
+      </p>
+      <Bookbutton />
+    </motion.div>
 
-        <Image
-          src="/images/services/spinal-deformity.png"
-          alt="Patient standing tall after spinal correction surgery"
-          width={600}
-          height={400}
-          className="rounded-4xl shadow-lg -z-10 object-cover"
-        />
-      </section>
+    <motion.div
+      initial={{ opacity: 0, scale: 0.9 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.6, delay: 0.2 }}
+      viewport={{ once: true }}
+    >
+      <Image
+        src="/images/services/spinal-deformity.png"
+        alt="Patient standing tall after spinal correction surgery"
+        width={600}
+        height={400}
+        className="rounded-4xl shadow-lg  object-cover"
+      />
+    </motion.div>
+  </motion.section>
 
-      {/* Problem & Solution */}
-     <section className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-16 mb-16 items-start px-4 sm:px-6">
-  {/* What's Going On */}
-  <div>
-    <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-gray-800">
-      What You're Feeling
-    </h2>
-    <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
-      Chronic back pain, uneven posture, shoulder height differences, or
-      even difficulty breathing — spinal deformities like scoliosis or
-      kyphosis don’t just affect your appearance, they limit how you live.
-      When bracing and exercises no longer work, it’s time for a smarter fix.
+  {/* Problem & Solution */}
+  <motion.section
+    className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-16 mb-16 items-start px-4 sm:px-6"
+    initial={{ opacity: 0, y: 40 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6 }}
+    viewport={{ once: true }}
+  >
+    <div>
+      <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-gray-800">
+        What You're Feeling
+      </h2>
+      <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
+        Chronic back pain, uneven posture, shoulder height differences...
+      </p>
+    </div>
+
+    <div>
+      <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-gray-800">
+        How We Fix It
+      </h2>
+      <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
+        Through advanced spinal correction surgery, we carefully realign...
+      </p>
+    </div>
+
+    <motion.div
+      className="w-full md:col-span-2 bg-gray-50 border-l-4 border-blue-500 rounded-3xl py-10 px-4 sm:px-6 mt-4"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.6, delay: 0.2 }}
+      viewport={{ once: true }}
+    >
+      <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-800 mb-4">
+        Our Treatment Approach
+      </h2>
+      <p className="text-base sm:text-lg text-center text-gray-600 mb-6 max-w-3xl mx-auto">
+        Spinal correction isn’t a one-size-fits-all fix...
+      </p>
+      <ul className="text-gray-700 text-base space-y-3 max-w-3xl mx-auto">
+        <li>• In-depth diagnostics using X-rays...</li>
+        <li>• Clear breakdowns of your spinal curve...</li>
+        <li>• Surgical plans that prioritize...</li>
+        <li>• Post-op rehab...</li>
+        <li>• Regular follow-ups...</li>
+        <li>• Support for your emotional...</li>
+      </ul>
+    </motion.div>
+
+    <motion.div
+      className="w-full md:col-span-2 bg-gray-50 border-l-4 border-blue-500 rounded-3xl py-10 px-4 sm:px-6 mt-4"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.6, delay: 0.3 }}
+      viewport={{ once: true }}
+    >
+      <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-800 mb-4">
+        What You Can Expect
+      </h2>
+      <p className="text-base sm:text-lg text-center text-gray-600 mb-6 max-w-3xl mx-auto">
+        Real results. Real relief. This isn’t just about straighter spines...
+      </p>
+      <ul className="text-gray-700 text-base space-y-3 max-w-3xl mx-auto">
+        <li>• Better posture and balance</li>
+        <li>• Reduced pain and stiffness</li>
+        <li>• Greater confidence...</li>
+        <li>• Improved lung and organ function...</li>
+        <li>• Less fatigue and more energy...</li>
+        <li>• Renewed independence...</li>
+        <li>• Backed by a team that’s with you...</li>
+      </ul>
+    </motion.div>
+  </motion.section>
+
+  {/* Static sections (or animate as needed) */}
+  <ConditionWeTreat conditions={spinalDeformityConditions} />
+
+  <motion.section
+    className="mb-10"
+    initial={{ opacity: 0 }}
+    whileInView={{ opacity: 1 }}
+    transition={{ duration: 0.5 }}
+    viewport={{ once: true }}
+  >
+    <h3 className="text-2xl font-semibold mb-2">Why Patients Trust Us</h3>
+    <p>
+      Dr. Jagdish Singh Charan brings over 15 years of experience...
     </p>
-  </div>
+  </motion.section>
 
-  {/* Solution */}
-  <div>
-    <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-gray-800">
-      How We Fix It
-    </h2>
-    <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
-      Through advanced spinal correction surgery, we carefully realign
-      your spine, relieve pressure on nerves, and stabilize weakened
-      areas. Our goal? A straighter, stronger back that supports your
-      life—not limits it.
-    </p>
-  </div>
+  <ServiceFeq faqs={spinalDeformityFaqs} />
+</motion.main>
 
-  {/* Our Treatment Approach */}
-  <div className="w-full md:col-span-2 bg-gray-50 border-l-4 border-blue-500 rounded-3xl py-10 px-4 sm:px-6 mt-4">
-    <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-800 mb-4">
-      Our Treatment Approach
-    </h2>
-    <p className="text-base sm:text-lg text-center text-gray-600 mb-6 max-w-3xl mx-auto">
-      Spinal correction isn’t a one-size-fits-all fix. That’s why we work
-      hand-in-hand with you to create a customized plan built around your
-      goals, comfort, and lifestyle.
-    </p>
-    <ul className="text-gray-700 text-base space-y-3 max-w-3xl mx-auto">
-      <li>• In-depth diagnostics using X-rays, MRI, and physical assessments</li>
-      <li>• Clear breakdowns of your spinal curve, what’s causing it, and how we fix it</li>
-      <li>• Surgical plans that prioritize function and mobility</li>
-      <li>• Post-op rehab built around movement, posture, and daily habits</li>
-      <li>• Regular follow-ups to fine-tune your recovery</li>
-      <li>• Support for your emotional and physical well-being through every step</li>
-    </ul>
-  </div>
-
-  {/* Benefits of Our Care */}
-  <div className="w-full md:col-span-2 bg-gray-50 border-l-4 border-blue-500 rounded-3xl py-10 px-4 sm:px-6 mt-4">
-    <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-800 mb-4">
-      What You Can Expect
-    </h2>
-    <p className="text-base sm:text-lg text-center text-gray-600 mb-6 max-w-3xl mx-auto">
-      Real results. Real relief. This isn’t just about straighter
-      spines—it’s about stronger lives. Here’s what patients often share
-      post-surgery:
-    </p>
-    <ul className="text-gray-700 text-base space-y-3 max-w-3xl mx-auto">
-      <li>• Better posture and balance</li>
-      <li>• Reduced pain and stiffness</li>
-      <li>• Greater confidence in movement and appearance</li>
-      <li>• Improved lung and organ function (especially in severe curves)</li>
-      <li>• Less fatigue and more energy for everyday life</li>
-      <li>• Renewed independence and mobility</li>
-      <li>• Backed by a team that’s with you the whole way</li>
-    </ul>
-  </div>
-</section>
-
-
-      <ConditionWeTreat conditions={spinalDeformityConditions} />
-
-      <section className="mb-10">
-        <h3 className="text-2xl font-semibold mb-2">Why Patients Trust Us</h3>
-        <p>
-          Dr. Jagdish Singh Charan brings over 15 years of experience. Every
-          consult is a conversation, not a lecture. Our clinic offers
-          cutting-edge techniques, same-day discharges, and a support team that
-          truly cares.
-        </p>
-      </section>
-      {/* Second full‑width image */}
-      <ServiceFeq faqs={spinalDeformityFaqs} />
-      {/* FAQs */}
-    </main>
   );
 }

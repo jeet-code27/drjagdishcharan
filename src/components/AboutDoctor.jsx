@@ -1,11 +1,20 @@
-import React from "react";
+"use client";
+
+
+import React, { useRef } from "react";
 import Image from "next/image";
 import { IoLocation } from "react-icons/io5";
-import { FaPhoneAlt } from "react-icons/fa";
+import { FaPhoneAlt, FaUserMd } from "react-icons/fa";
 import { BsClockHistory } from "react-icons/bs";
-import { FaUserMd } from "react-icons/fa";
+ 
+import { motion } from "framer-motion";
+
 
 function AboutDoctor() {
+
+
+  
+
   return (
     <section
       style={{ background: "linear-gradient(to bottom, #ffffff, #F0F8FF)" }}
@@ -42,7 +51,7 @@ function AboutDoctor() {
             <div className="flex justify-center gap-6 text-sm text-gray-700 border-t pt-4">
               <div className="flex items-center gap-1">
                 <BsClockHistory className="text-blue-600" />
-                <span>15+ Years</span>
+                <span>10+ Years</span>
               </div>
               <div className="flex items-center gap-1">
                 <FaUserMd className="text-blue-600" />
@@ -58,24 +67,37 @@ function AboutDoctor() {
             Dr. Jagdish Singh Charan   <div className="text-3xl pt-2"> Expert Spine & Orthopedic Surgeon</div>
           </h1>
 
+         
+          <motion.div
+    initial={{ opacity: 0, y: 50 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true, amount: 0.2 }} // amount: % of element in view to trigger
+    transition={{ duration: 0.6, ease: "easeOut" }}
+  >
           <p> 
   <strong>Dr. Jagdish Singh Charan</strong> is a highly experienced{" "}
   <strong>spine and orthopedic surgeon</strong> with over{" "}
-  <strong>15 years</strong> of clinical expertise. He holds advanced
+  <strong>10 years</strong> of clinical expertise. He holds advanced
   qualifications including <strong>FNB Spine Surgery </strong>,{" "}
   <strong>DNB Ortho</strong>,{" "}
   <strong>MNAMS</strong> and <strong>FAOS (Asia Pacific)</strong>. He has trained at leading
-  institutions like <strong>SKIMS and SSHRI (Ahmedabad)</strong>.{" "}
+  institutions like <strong>SKIMS, Apollo (Bangalore)</strong> and <strong> SSHRI (Ahmedabad)</strong>.{" "}
   {/* <strong>AO Spine</strong>, and the{" "}
   <strong>Orthopedic Association of India</strong>. His work focuses on{" "}
   <strong>minimally invasive spine procedures</strong>,{" "}
   <strong>joint replacements</strong>, and{" "}`
   <strong>complex trauma care</strong>. */}
 </p>
-
+</motion.div>
+<motion.div
+    initial={{ opacity: 0, y: 50 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true, amount: 0.2 }} // amount: % of element in view to trigger
+    transition={{ duration: 0.6, ease: "easeOut" }}
+  >
 <p>
   <strong>Dr. Charan</strong> has served in key roles at top hospitals
-  and universities, including <strong>NIMS University</strong> and{" "}
+  and universities, including <strong>NIMS University </strong> and{" "}
   <strong>Apollo Spectra, Jaipur</strong>. He is a member of respected
   medical associations such as <strong>MNAMS</strong>,{" "}
   <strong>MASSI</strong>, <strong>AO Spine and Orthopedic Association of India</strong>. He actively
@@ -84,7 +106,13 @@ function AboutDoctor() {
   <strong>orthopedic and spine care</strong>.
 </p>
 
-
+</motion.div>
+<motion.div
+    initial={{ opacity: 0, y: 50 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true, amount: 0.2 }} // amount: % of element in view to trigger
+    transition={{ duration: 0.6, ease: "easeOut" }}
+  >
           {/* Services Offered */}
           <div className="bg-white bg-gradient-to-b from-[#ffffff] to-[#ffffff] text-[#333] p-6 rounded-lg shadow">
             <h2 className="text-2xl font-semibold text-blue-800 mb-4">
@@ -127,7 +155,7 @@ function AboutDoctor() {
              
             </ul>
           </div>
-
+          </motion.div>
           {/* Research & Publications
           <div className="bg-white p-6 rounded-lg shadow">
             <h2 className="text-2xl font-semibold text-blue-800 mb-4">Research & Publications</h2>

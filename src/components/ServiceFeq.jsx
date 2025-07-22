@@ -5,7 +5,7 @@ export default function ServiceFeq ({faqs}){
         {faqs.map(({ q, a } ,index) => (
           <details 
             key={index}
-            className="mb-4 rounded-md border-l-4 border-blue-600 bg-white p-4 shadow transition-transform duration-300 ease-in-out hover:scale-110"
+            className="mb-4 rounded-md border-l-4 border-blue-600 active:border-t-blue-600 bg-white p-4 shadow transition-transform duration-300 ease-in-out hover:scale-110"
           >
             <summary className="cursor-pointer font-medium text-lg text-gray-900">
               {q}

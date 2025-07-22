@@ -28,10 +28,10 @@ const ContactInformation = () => {
           </div>
           <h3 className="mb-2 font-semibold text-gray-900">Email</h3>
           <a
-            href="mailto:mayurchildrenhospital@gmail.com"
+            href="mailto:jaggi.spine1104@gmail.com"
             className="text-[#06539b] hover:underline"
           >
-            info@Jagdishspinecare.com
+            jaggi.spine1104@gmail.com
           </a>
         </div>
 

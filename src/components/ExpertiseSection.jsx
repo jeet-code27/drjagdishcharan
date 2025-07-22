@@ -8,12 +8,8 @@ import SpineOrthoServices from "./SpineOrthoServices";
 const ExpertiseSection = () => {
   return (
     <section className="py-1 px-4 bg-[#ffffff]">
-       
-         
-       <ServDetail/>
-         
-<SpineOrthoServices/>
- 
+      <ServDetail />
+      <SpineOrthoServices />
     </section>
   );
 };

@@ -79,117 +79,199 @@ export default function MinimallyInvasiveSpineSurgeryPage() {
   useEffect(() => {
     document.title = "Minimally Invasive Spine Surgery | Dr. Manish Sharma";
   }, []);
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+        delayChildren: 0.3,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { opacity: 0, y: 30 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        staggerChildren: 0.10,
+        delayChildren: 0.3,
+      },
+    },
+  };
+
+  const fadeIn = {
+    hidden: { opacity: 0, scale: 0.95, y: 40 },
+    show: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.7 } },
+  };
 
   return (
     <>
       {/* HERO SECTION */}
-      <main className="mx-auto mt-12  max-w-6xl px-4 py-10 text-gray-800">
-        <section className="grid md:grid-cols-2  sm:grid-cols-1 gap-8 items-center">
-          <div className="space-y-4">
-            <h1 className="text-4xl md:text-6xl font-bold  leading-tight">
+      <motion.main
+        initial="hidden"
+        animate="show"
+        variants={fadeIn}
+        className="mx-auto mt-12 max-w-6xl px-4 py-10 text-gray-800"
+      >
+        {/* HERO SECTION */}
+        <motion.section
+          className="grid md:grid-cols-2 sm:grid-cols-1 gap-8 items-center"
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+        >
+          <motion.div className="space-y-4" variants={item}>
+            <motion.h1
+              className="text-4xl md:text-6xl font-bold leading-tight"
+              variants={item}
+            >
               Minimally Invasive Spine Surgery
-            </h1>
-            <p className="text-xl text-gray-700">
+            </motion.h1>
+            <motion.p className="text-xl text-gray-700" variants={item}>
               Advanced spine care with smaller cuts, less pain, and a faster
               path back to the life you love.
+            </motion.p>
+            <motion.div variants={item}>
+              <Bookbutton />
+            </motion.div>
+          </motion.div>
+
+          <motion.div
+            variants={item}
+            whileHover={{ scale: 1.05 }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
+            <Image
+              src="/images/services/miss.jpg"
+              alt="Happy patient walking after joint replacement"
+              width={600}
+              height={400}
+              className="rounded-2xl shadow-lg object-cover"
+            />
+          </motion.div>
+        </motion.section>
+
+        {/* INFO SECTIONS */}
+        <motion.section
+          className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-16 mb-16 items-start px-4 sm:px-6"
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+        >
+          <motion.div variants={item}>
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-gray-800">
+              What You're Feeling
+            </h2>
+            <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
+              Nagging neck or back pain... it’s stopping you from living fully.
             </p>
-            <Bookbutton/>
-          </div>
+          </motion.div>
 
-          <Image
-            src="/images/services/miss.jpg"
-            alt="Happy patient walking after joint replacement"
-            width={600}
-            height={400}
-            className="rounded-2xl shadow-lg object-cover"
-          />
-        </section>
-      
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-16 mb-16 items-start px-4 sm:px-6">
-  {/* What's Going On */}
-  <div>
-    <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-gray-800">
-      What You're Feeling
-    </h2>
-    <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
-      Nagging neck or back pain. Numbness down your arms or legs. Maybe
-      it’s a herniated disc, spinal stenosis, or a pinched nerve—but
-      whatever the name, the reality is the same: it hurts, it’s
-      exhausting, and it’s stopping you from living fully.
-    </p>
-  </div>
+          <motion.div variants={item}>
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-gray-800">
+              How We Fix It
+            </h2>
+            <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
+              MISS is all about precision with less disruption...
+            </p>
+          </motion.div>
 
-  {/* Solution */}
-  <div>
-    <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-gray-800">
-      How We Fix It
-    </h2>
-    <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
-      Minimally Invasive Spine Surgery (MISS) is all about precision with
-      less disruption. Using tiny incisions, advanced imaging, and
-      specialized tools, we treat the problem without disturbing healthy
-      tissue—so you recover faster, move better, and bounce back with less
-      downtime.
-    </p>
-  </div>
+          <motion.div
+            className="w-full md:col-span-2 bg-gray-50 border-l-4 border-blue-500 rounded-3xl py-10 px-4 sm:px-6 mt-4"
+            variants={fadeIn}
+          >
+            <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-800 mb-4">
+              Our Treatment Approach
+            </h2>
+            <p className="text-base sm:text-lg text-center text-gray-600 mb-6 max-w-3xl mx-auto">
+              We don’t believe in cookie-cutter care...
+            </p>
+            <motion.ul
+              className="text-base text-gray-700 space-y-3 max-w-3xl mx-auto"
+              variants={container}
+            >
+              {[
+                "Comprehensive imaging to target exactly what’s causing your pain",
+                "Minimally invasive techniques to reduce scarring and trauma",
+                "Smaller incisions mean less blood loss, faster healing",
+                "Post-surgical plans that prioritize mobility and comfort",
+                "Clear milestones to track your comeback step by step",
+                "Accessible, real-world guidance every step of the way",
+              ].map((text, idx) => (
+                <motion.li key={idx} variants={item}>
+                  • {text}
+                </motion.li>
+              ))}
+            </motion.ul>
+          </motion.div>
 
-  {/* Our Treatment Approach */}
-  <div className="w-full md:col-span-2 bg-gray-50 border-l-4 border-blue-500 rounded-3xl py-10 px-4 sm:px-6 mt-4">
-    <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-800 mb-4">
-      Our Treatment Approach
-    </h2>
-    <p className="text-base sm:text-lg text-center text-gray-600 mb-6 max-w-3xl mx-auto">
-      We don’t believe in cookie-cutter care. Every spine is unique—so
-      your treatment plan should be too. Here’s how we keep things
-      patient-first, precise, and personal.
-    </p>
-    <ul className="text-base text-gray-700 space-y-3 max-w-3xl mx-auto">
-      <li> Comprehensive imaging to target exactly what’s causing your pain</li>
-      <li> Minimally invasive techniques to reduce scarring and trauma</li>
-      <li> Smaller incisions mean less blood loss, faster healing</li>
-      <li> Post-surgical plans that prioritize mobility and comfort</li>
-      <li> Clear milestones to track your comeback step by step</li>
-      <li> Accessible, real-world guidance every step of the way</li>
-    </ul>
-  </div>
+          <motion.div
+            className="w-full md:col-span-2 bg-gray-50 border-l-4 border-blue-500 rounded-3xl py-10 px-4 sm:px-6 mt-4"
+            variants={fadeIn}
+          >
+            <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-800 mb-4">
+              What You Can Expect
+            </h2>
+            <p className="text-base sm:text-lg text-center text-gray-600 mb-6 max-w-3xl mx-auto">
+              This isn’t just about getting back on your feet—it’s about
+              reclaiming your freedom.
+            </p>
+            <motion.ul
+              className="text-base text-gray-700 space-y-3 max-w-3xl mx-auto"
+              variants={container}
+            >
+              {[
+                "Shorter hospital stays—or even same-day discharge",
+                "Less post-op pain and fewer complications",
+                "Faster return to daily routines, work, and workouts",
+                "Smaller scars, but bigger results",
+                "Improved mobility and reduced nerve symptoms",
+                "More confidence in your body’s strength and movement",
+                "Support from a care team that actually has your back—literally",
+              ].map((text, idx) => (
+                <motion.li key={idx} variants={item}>
+                  • {text}
+                </motion.li>
+              ))}
+            </motion.ul>
+          </motion.div>
+        </motion.section>
 
-  {/* Benefits of Our Care */}
-  <div className="w-full md:col-span-2 bg-gray-50 border-l-4 border-blue-500 rounded-3xl py-10 px-4 sm:px-6 mt-4">
-    <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-800 mb-4">
-      What You Can Expect
-    </h2>
-    <p className="text-base sm:text-lg text-center text-gray-600 mb-6 max-w-3xl mx-auto">
-      This isn’t just about getting back on your feet—it’s about
-      reclaiming your freedom. With minimally invasive spine care,
-      patients often notice:
-    </p>
-    <ul className="text-base text-gray-700 space-y-3 max-w-3xl mx-auto">
-      <li> Shorter hospital stays—or even same-day discharge</li>
-      <li> Less post-op pain and fewer complications</li>
-      <li> Faster return to daily routines, work, and workouts</li>
-      <li> Smaller scars, but bigger results</li>
-      <li> Improved mobility and reduced nerve symptoms</li>
-      <li> More confidence in your body’s strength and movement</li>
-      <li> Support from a care team that actually has your back—literally</li>
-    </ul>
-  </div>
-</section>
+        {/* STATIC SECTIONS WITH FADE */}
+        <motion.div
+          variants={fadeIn}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+        >
+          <ConditionWeTreat conditions={minimallyInvasiveConditions} />
+        </motion.div>
 
+        <motion.section
+          className="mb-10"
+          variants={fadeIn}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+        >
+          <h3 className="text-2xl font-semibold mb-2">Why Patients Trust Us</h3>
+          <p>Dr. Jagdish Singh Charan brings over 15 years of experience...</p>
+        </motion.section>
 
-      <ConditionWeTreat conditions={minimallyInvasiveConditions} />
-
-      <section className="mb-10">
-        <h3 className="text-2xl font-semibold mb-2">Why Patients Trust Us</h3>
-        <p>
-          Dr. Jagdish Singh Charan brings over 15 years of experience. Every
-          consult is a conversation, not a lecture. Our clinic offers
-          cutting-edge techniques, same-day discharges, and a support team that
-          truly cares.
-        </p>
-      </section>
-      {/* Second full‑width image */}
-      <ServiceFeq faqs={minimallyInvasiveSpineFaqs} />
-      </main>
+        <motion.div
+          variants={fadeIn}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+        >
+          <ServiceFeq faqs={minimallyInvasiveSpineFaqs} />
+        </motion.div>
+      </motion.main>
     </>
   );
 }
