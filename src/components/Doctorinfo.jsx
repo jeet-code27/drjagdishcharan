@@ -4,9 +4,15 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet";
+import Head from "next/head";
+ 
 
 const Doctorinfo = () => {
   return (
+<>
+
+
     <div className="relative w-full bg-white overflow-hidden my-20">
       {/* Blue Background - Left 80% */}
       <div className="absolute left-0 top-0 w-full lg:w-[80%] rounded-r-3xl h-full bg-[#003153]"></div>
@@ -104,6 +110,7 @@ const Doctorinfo = () => {
      
       </div>
     </div>
+    </>
   );
 };
 
