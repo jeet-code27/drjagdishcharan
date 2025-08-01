@@ -3,7 +3,7 @@ import React from "react";
 // Static metadata
 export const metadata = {
   title:
-    "Contact Dr Jagdish Singh Charan | Orthopedic & Spine Surgeon in Ajmer",
+    "Contact Dr Jagdish  Charan | Orthopedic & Spine Surgeon in Ajmer",
   description:
     "Contact Dr. Jagdish Singh Charan, leading Orthopedic and Spine Surgeon in Ajmer. Book appointments or inquire about advanced bone, joint, and spine treatments today.",
   keywords:
@@ -27,6 +27,14 @@ export const metadata = {
   alternates: {
     canonical: "https://drjagdishcharan.in/contact",
   },
+   robots: "index, follow",
+  authors: [
+    {
+      name: "Dr. Jagdish Singh Charan",
+      url: "https://drjagdishcharan.in/",
+    },
+  ],
+  publisher: "Dr. Jagdish Singh Charan",
 };
 
 function Contactpage() {

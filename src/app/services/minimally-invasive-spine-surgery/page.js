@@ -4,7 +4,7 @@ import MinimallyInvasiveSpineSurgeryPage from "@/components/MinimallyInvasiveSpi
 // Static metadata
 export const metadata = {
   title:
-    "Best Minimally Invasive Spine Surgery in Ajmer | Dr Jagdish Singh Charan",
+    "Best Minimally Invasive Spine Surgery in Ajmer | Dr Jagdish ",
   description:
     "Get advanced minimally invasive spine surgery in Ajmer by Dr. Jagdish Singh Charan for faster recovery, reduced pain, and effective spine treatment solutions.",
   keywords:
@@ -29,6 +29,14 @@ export const metadata = {
     canonical:
       "https://drjagdishcharan.in/services/minimally-invasive-spine-surgery",
   },
+  robots: "index, follow",
+  authors: [
+    {
+      name: "Dr. Jagdish Singh Charan",
+      url: "https://drjagdishcharan.in/",
+    },
+  ],
+  publisher: "Dr. Jagdish Singh Charan",
 };
 
 function MinimallyInvasiveSpineSurgeryPages() {

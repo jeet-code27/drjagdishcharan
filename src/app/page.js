@@ -15,7 +15,7 @@ import Head from "next/head";
 
 // Static metadata
 export const metadata = {
-  title: "Dr Jagdish Singh Charan | Best Orthopedic & Spine Surgeon in Ajmer",
+  title: "Best Orthopedic & Spine Surgeon in Ajmer |Dr Jagdish Charan",
   description:
     "Dr. Jagdish Singh Charan is a leading Orthopedic and Spine Surgeon in Ajmer providing advanced treatments for bone, joint, and spine conditions with compassionate care.",
   keywords:
@@ -38,6 +38,14 @@ export const metadata = {
   alternates: {
     canonical: "https://drjagdishcharan.in/",
   },
+  robots: "index, follow",
+  authors: [
+    {
+      name: "Dr. Jagdish Singh Charan",
+      url: "https://drjagdishcharan.in/",
+    },
+  ],
+  publisher: "Dr. Jagdish Singh Charan",
 };
 
 export default function Home() {

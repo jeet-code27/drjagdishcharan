@@ -34,7 +34,7 @@ export async function generateMetadata({ params }) {
       title: blog.title,
       description: blog.metaDescription || blog.excerpt || blog.content.substring(0, 160),
       type: 'article',
-      url: `https://drvishnuagrawal.in/blogs/${blog.slug}`,
+      url: `https://drjagdishcharan.in/blogs/${blog.slug}`,
       images: [
         {
           url: blog.image || '/images/urology-placeholder.jpg',
@@ -141,7 +141,7 @@ export default async function SingleBlogPage({ params }) {
             <h1 className="text-4xl font-bold bg-gradient-to-br from-blue-900 via-blue-800 to-teal-600 bg-clip-text text-transparent mb-4">Blog Not Found</h1>
             <p className="text-gray-700 mb-4">Could not find blog with slug: {slug}</p>
             <Link 
-              href="/blog"
+              href="/blogs"
               className="inline-block bg-gradient-to-br from-blue-900 via-blue-800 to-teal-600 text-white px-4 py-2 rounded-lg hover:opacity-90 transition duration-300"
             >
               Back to Blogs
@@ -184,7 +184,7 @@ export default async function SingleBlogPage({ params }) {
                 </div>
               </div>
               <div>
-                <p className="font-medium text-gray-900">Dr. Vishnu Agrawal</p>
+                <p className="font-medium text-gray-900">Dr. Jagdish Charan</p>
                 <p className="text-sm text-gray-500">Published on {formattedDate}</p>
               </div>
             </div>

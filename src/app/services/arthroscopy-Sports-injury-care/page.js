@@ -29,6 +29,14 @@ export const metadata = {
     canonical:
       "https://drjagdishcharan.in/services/arthroscopy-Sports-injury-care",
   },
+   robots: "index, follow",
+  authors: [
+    {
+      name: "Dr. Jagdish Singh Charan",
+      url: "https://drjagdishcharan.in/",
+    },
+  ],
+  publisher: "Dr. Jagdish Singh Charan",
 };
 
 function Arthroscopypage() {

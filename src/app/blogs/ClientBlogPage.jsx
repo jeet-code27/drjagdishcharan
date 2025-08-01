@@ -6,6 +6,40 @@ import { Hospital, Stethoscope, Bone } from "lucide-react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
+export const metadata = {
+  title: "Blog | Dr Jagdish Singh Charan – Orthopedic & Spine Health Tips in Ajmer",
+  description:
+    "Explore expert insights, tips, and updates from Dr. Jagdish Singh Charan on orthopedic and spine health. Stay informed on the latest in joint care, surgery, and recovery.",
+  keywords:
+    "Orthopedic Blog Ajmer, Spine Health Tips, Dr Jagdish Singh Charan Blog, Bone Care Articles, Joint Replacement Info, Orthopedic Advice India, Spine Surgery Updates",
+  openGraph: {
+    title: "Blog | Dr Jagdish Singh Charan – Orthopedic & Spine Health Tips",
+    description:
+      "Get expert advice and the latest updates from Dr. Jagdish Singh Charan on bone, joint, and spine care. Your guide to better orthopedic health starts here.",
+    images: [
+      {
+        url: "https://drjagdishcharan.in/images/blog-og.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Dr Jagdish Singh Charan Blog Cover",
+      },
+    ],
+    type: "website",
+    url: "https://drjagdishcharan.in/blog",
+  },
+  alternates: {
+    canonical: "https://drjagdishcharan.in/blog",
+  },
+  robots: "index, follow",
+  authors: [
+    {
+      name: "Dr. Jagdish Singh Charan",
+      url: "https://drjagdishcharan.in/",
+    },
+  ],
+  publisher: "Dr. Jagdish Singh Charan",
+};
+ 
 const ClientBlogPage = ({ blogs }) => {
   // Set up intersection observers for different sections
   const [badgeRef, badgeInView] = useInView({

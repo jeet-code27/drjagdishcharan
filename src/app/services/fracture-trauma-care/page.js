@@ -2,7 +2,7 @@ import FractureandTraumaCare from "@/components/FractureandTraumaCare";
 import React from "react";
 // Static metadata
 export const metadata = {
-  title: "Top Fracture & Trauma Care in Ajmer | Dr Jagdish Singh Charan",
+  title: "Top Fracture & Trauma Care in Ajmer | Dr Jagdish ",
   description:
     "Get expert fracture and trauma care treatment in Ajmer by Dr. Jagdish Singh Charan, providing prompt and advanced orthopedic solutions for bone injuries and emergencies.",
   keywords:
@@ -24,7 +24,14 @@ export const metadata = {
   },
   alternates: {
     canonical: "https://drjagdishcharan.in/services/fracture-trauma-care",
-  },
+  }, robots: "index, follow",
+  authors: [
+    {
+      name: "Dr. Jagdish Singh Charan",
+      url: "https://drjagdishcharan.in/",
+    },
+  ],
+  publisher: "Dr. Jagdish Singh Charan",
 };
 
 function FractureandTraumaCarepage() {

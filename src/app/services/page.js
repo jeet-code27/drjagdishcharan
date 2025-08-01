@@ -26,7 +26,7 @@ const slides = [
 
 // Static metadata
 export const metadata = {
-  title: "Best Orthopedic & Spine Services | Dr Jagdish Singh Charan - Ajmer",
+  title: "Best Orthopedic & Spine Services in ajmer | Dr Jagdish  Charan ",
   description:
     "Explore advanced orthopedic and spine services offered by Dr. Jagdish Singh Charan in Ajmer, including joint replacement, spine surgery, fracture treatment, and compassionate bone care.",
   keywords:
@@ -49,6 +49,14 @@ export const metadata = {
   alternates: {
     canonical: "https://drjagdishcharan.in/services",
   },
+  robots: "index, follow",
+  authors: [
+    {
+      name: "Dr. Jagdish Singh Charan",
+      url: "https://drjagdishcharan.in/",
+    },
+  ],
+  publisher: "Dr. Jagdish Singh Charan",
 };
 
 export default function Home() {

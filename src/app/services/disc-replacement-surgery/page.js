@@ -3,7 +3,7 @@ import React from "react";
 
 // Static metadata
 export const metadata = {
-  title: "Top Disc Replacement Surgery in Ajmer | Dr Jagdish Singh Charan",
+  title: "Top Disc Replacement Surgery in Ajmer | Dr Jagdish ",
   description:
     "Consult Dr. Jagdish Singh Charan for advanced disc replacement surgery in Ajmer to relieve neck and back pain with minimally invasive spine treatment options.",
   keywords:
@@ -26,6 +26,14 @@ export const metadata = {
   alternates: {
     canonical: "https://drjagdishcharan.in/services/disc-replacement-surgery",
   },
+   robots: "index, follow",
+  authors: [
+    {
+      name: "Dr. Jagdish Singh Charan",
+      url: "https://drjagdishcharan.in/",
+    },
+  ],
+  publisher: "Dr. Jagdish Singh Charan",
 };
 
 function DiskReplacementpage() {

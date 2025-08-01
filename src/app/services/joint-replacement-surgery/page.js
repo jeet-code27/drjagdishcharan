@@ -3,7 +3,7 @@ import React from "react";
 
 // Static metadata
 export const metadata = {
-  title: "Best Joint Replacement Surgery in Ajmer | Dr Jagdish Singh Charan",
+  title: "Best Joint Replacement Surgery in Ajmer | Dr Jagdish ",
   description:
     "Consult Dr. Jagdish Singh Charan for advanced joint replacement surgery in Ajmer, offering knee, hip, and shoulder replacement with modern techniques for faster recovery.",
   keywords:
@@ -25,7 +25,14 @@ export const metadata = {
   },
   alternates: {
     canonical: "https://drjagdishcharan.in/services/joint-replacement-surgery",
-  },
+  }, robots: "index, follow",
+  authors: [
+    {
+      name: "Dr. Jagdish Singh Charan",
+      url: "https://drjagdishcharan.in/",
+    },
+  ],
+  publisher: "Dr. Jagdish Singh Charan",
 };
 
 function jointReplacementpage() {

@@ -4,7 +4,7 @@ import React from "react";
 // Static metadata
 export const metadata = {
   title:
-    "Top Endoscopic Spine & Arthroscopic Surgery in Ajmer | Dr Jagdish Singh Charan",
+    "Top Endoscopic Spine & Arthroscopic Surgery in Ajmer | Dr Jagdish",
   description:
     "Consult Dr. Jagdish Singh Charan in Ajmer for advanced endoscopic spine and arthroscopic surgeries, offering minimally invasive treatments for faster recovery and effective orthopedic care.",
   keywords:
@@ -29,6 +29,14 @@ export const metadata = {
     canonical:
       "https://drjagdishcharan.in/services/endoscopic-spine-orthroscopic-surgery",
   },
+   robots: "index, follow",
+  authors: [
+    {
+      name: "Dr. Jagdish Singh Charan",
+      url: "https://drjagdishcharan.in/",
+    },
+  ],
+  publisher: "Dr. Jagdish Singh Charan",
 };
 
 function EndoscopicSpinepage() {

@@ -4,7 +4,7 @@ import React from "react";
 // Static metadata
 export const metadata = {
   title:
-    "Best Spinal Deformity Correction Surgery in Ajmer | Dr Jagdish Singh Charan",
+    "Best Spinal Deformity Correction Surgery in Ajmer | Dr Jagdish ",
   description:
     "Consult Dr. Jagdish Singh Charan for advanced spinal deformity correction surgery in Ajmer, offering expert treatment for scoliosis, kyphosis, and other spinal deformities.",
   keywords:
@@ -29,6 +29,14 @@ export const metadata = {
     canonical:
       "https://drjagdishcharan.in/services/spinal-deformity-correction",
   },
+  robots: "index, follow",
+  authors: [
+    {
+      name: "Dr. Jagdish Singh Charan",
+      url: "https://drjagdishcharan.in/",
+    },
+  ],
+  publisher: "Dr. Jagdish Singh Charan",
 };
 
 function SpinalDeformityCorrectionpage() {
