@@ -1,0 +1,12 @@
+# robots.txt for drjagdishcharan.in
+
+User-agent: *
+Allow: /
+
+# Block admin and system files
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+
+# Sitemap location
+Sitemap: https://drjagdishcharan.in/sitemap.xml
