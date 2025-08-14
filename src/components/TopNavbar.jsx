@@ -43,11 +43,11 @@ export default function TopNavbar() {
           {/* Right Section – Social Icons */}
           <div className="flex space-x-6">
             
-            <a href="#" aria-label="Instagram" className="social-icon">
+            <a href="https://www.facebook.com/jagdish.charan.92/?_rdr" target="_blank" aria-label="Instagram" className="social-icon">
             <FaFacebookF className="scale-150"/>
               
             </a>
-            <a href="#" aria-label="Facebook" className="social-icon">
+            <a href="https://www.instagram.com/docjaggi/" target="_black" aria-label="Facebook" className="social-icon">
             <AiFillInstagram className="scale-200"/>
             </a>
           </div>

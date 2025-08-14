@@ -48,7 +48,7 @@ export default function SpineOrthoServices() {
     },
     {
       title: "Joint Replacement",
-      image: "/images/services/JointReplacement.png",
+      image: "/images/services/jointReplacement.png",
       description: "Hip and knee replacements for better mobility.",
       path: "/services/joint-replacement-surgery",
     }

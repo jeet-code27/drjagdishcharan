@@ -143,8 +143,8 @@ export default function Footer() {
           </span>
 <span className='lg:pr-50 sm:pl-0'> <a href='https://seocialmedia.in/' target='_blank' className='flex gap-1.5'><SiSocialblade className='size-[20px]' /> Powered by <span className='font-bold text-green-400 underline'> SEOcial Media Solutions</span></a></span>
           <span className="flex space-x-4">
-            <Link href="#" className="hover:text-blue-600"><BsFacebook size={20} /></Link>
-            <Link href="#" className="hover:text-pink-600"><BsInstagram size={20} /></Link>
+            <Link target="_blank" href="https://www.facebook.com/jagdish.charan.92/?_rdr" className="hover:text-blue-600"><BsFacebook size={20} /></Link>
+            <Link target="_blank" href="https://www.instagram.com/docjaggi/" className="hover:text-pink-600"><BsInstagram size={20} /></Link>
              
           </span>
         </div>

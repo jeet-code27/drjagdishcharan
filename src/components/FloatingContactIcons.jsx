@@ -10,10 +10,9 @@ export default function FloatingContactIcons() {
   const [hoveredIcon, setHoveredIcon] = useState(null);
 
   return (
-    <div className="fixed bottom-4 left-4 right-4 flex justify-between items-end z-50">
-
-      {/* Left side WhatsApp */}
-      <div className="flex flex-col items-start space-y-2">
+    <>
+      {/* WhatsApp (bottom-left) */}
+      <div className="fixed bottom-4 left-4 z-50">
         <AnimatePresence>
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -22,7 +21,7 @@ export default function FloatingContactIcons() {
             transition={{ duration: 0.3 }}
             onMouseEnter={() => setHoveredIcon("whatsapp")}
             onMouseLeave={() => setHoveredIcon(null)}
-            className="relative flex items-center"
+            className="relative inline-flex items-center"
           >
             {hoveredIcon === "whatsapp" && (
               <motion.div
@@ -44,8 +43,8 @@ export default function FloatingContactIcons() {
         </AnimatePresence>
       </div>
 
-      {/* Right side Call */}
-      <div className="flex flex-col items-end space-y-2">
+      {/* Call (bottom-right) */}
+      <div className="fixed bottom-4 right-4 z-50">
         <AnimatePresence>
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -54,7 +53,7 @@ export default function FloatingContactIcons() {
             transition={{ duration: 0.3 }}
             onMouseEnter={() => setHoveredIcon("call")}
             onMouseLeave={() => setHoveredIcon(null)}
-            className="relative flex items-center"
+            className="relative inline-flex items-center"
           >
             {hoveredIcon === "call" && (
               <motion.div
@@ -75,7 +74,6 @@ export default function FloatingContactIcons() {
           </motion.div>
         </AnimatePresence>
       </div>
-
-    </div>
+    </>
   );
 }

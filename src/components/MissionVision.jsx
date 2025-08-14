@@ -80,7 +80,7 @@ export default function MissionVision() {
             <Image
               alt="Portrait of Dr. Jagdish Singh Charan"
               className="w-12 h-12 rounded-full object-cover"
-              src="/images/home/doctor.png"
+              src="/images/home/doctor2.jpg"
               width={48}
               height={48}
             />

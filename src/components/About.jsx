@@ -7,18 +7,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import ServiceSlider from "@/components/ServiceSlider";
-import { Fullscreen } from "lucide-react";
-
-
-
-
-
-
-
-
-
-
-
+ 
 export default function About() {
   const slides = [
     {
