@@ -1,17 +1,18 @@
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import HeroSection from "@/components/HeroSection";
+ 
 import AboutDoctor from "@/components/AboutDoctor";
-import Service from "@/components/Service";
+ 
 import FeqSection from "@/components/FeqSection";
-import GoogleReviews from "@/components/GoogleReviews";
-import TopNavbar from "@/components/TopNavbar";
-import Test from "@/components/Test";
+ 
 import Doctorinfo from "@/components/Doctorinfo";
 import WhyChoose from "@/components/WhyChoose";
 import HeroSectiontwo from "@/components/HeroTwo";
-import MultiItemCarousel from "@/components/MultiItemCarousel";
+ 
 import Head from "next/head";
+import React, { Suspense } from "react";
+const GoogleReviews  = React.lazy(() => import("@/components/GoogleReviews"));
+const Service  = React.lazy(() => import("@/components/Service"));
+const MultiItemCarousel  = React.lazy(() => import("@/components/MultiItemCarousel"));
+
 
 // Static metadata
 export const metadata = {
@@ -53,11 +54,23 @@ export default function Home() {
     <>
       <HeroSectiontwo />
       <AboutDoctor />
-      <Service />
+
+      <Suspense fallback={<div>Loading Service...</div>}>
+        <Service />
+      </Suspense>
+
       <hr className="text-gray-300" />
-      <MultiItemCarousel />
+
+      <Suspense fallback={<div>Loading  Gallery images...</div>}>
+        <MultiItemCarousel />
+      </Suspense>
+
       <Doctorinfo />
-      <GoogleReviews />
+
+      <Suspense fallback={<div>Loading Google Reviews...</div>}>
+        <GoogleReviews />
+      </Suspense>
+
       <hr className="text-gray-300" />
       <WhyChoose />
       <FeqSection />

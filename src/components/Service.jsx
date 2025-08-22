@@ -165,6 +165,7 @@ const ServiceSection = () => {
                 <img
                   src={card.image}
                   alt={card.title}
+                  loading="lazy"
                     title={`Dr. Jagdish Singh Charan ${card.title}`}
                   className="w-full h-48 object-cover mb-4 rounded"
                 />

@@ -3,7 +3,7 @@ import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
-import Link from "next/link";
+ 
 
 export default function ServiceSlider({ slides }) {
   const [activeIndex, setActiveIndex] = useState(0);
